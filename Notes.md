@@ -90,7 +90,7 @@ _A: match a single character
 
 ## Order
 
-#### ORDER BY [characteristic] 
+#### ORDER BY [characteristic] [ASC/DESC]
 
 Always be last clause in SELECT statement
 
