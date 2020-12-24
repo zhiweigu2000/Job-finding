@@ -73,3 +73,17 @@ Order of evaluation: AND before OR, use ()
 
 NOT: exclude options
 
+LIKE: wildcards
+
+Wildcards: special character used to match parts of a value, for text, not for numemrical data
+
+%A: anything ends with A
+
+A%: anything starts with A
+
+%A%: anything that includes A
+
+A%B: anything starts with A and ends with B
+
+_A: match a single character
+
