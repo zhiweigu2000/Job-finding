@@ -87,3 +87,46 @@ A%B: anything starts with A and ends with B
 
 _A: match a single character
 
+
+## Order
+
+#### ORDER BY [characteristic] 
+
+Always be last clause in SELECT statement
+
+Sort by column positions or column names
+
+DESC: descending order, only for column it directly precedes
+
+ASC: ascending order, only for column it directly precedes
+
+
+## Math calculation
+
+#### SELECT [calculation] AS [column name]
+
+Addition, subtraction, multiplication, division
+
+
+## Aggregate functions
+
+#### SELECT [function ([column])] AS [column name]
+
+AVG(), COUNT(), MIN(), MAX(), SUM()
+
+COUNT(*): include null values
+
+COUNT([column]): ignore null values
+
+COUNT(DISTINCT [column]): distinct values not assumed
+
+MAX, MIN, SUM, AVG: ignore null values
+
+
+## Group by
+
+#### GROUP BY [column] HAVING [condition] 
+
+NULL will be grouped together
+
+WHERE does not apply for groups, use HAVING for groups
