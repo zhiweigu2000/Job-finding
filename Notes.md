@@ -52,3 +52,24 @@ Single line: - -
 
 Section: /* ... */
 
+
+## Where
+
+#### SELECT [column_name] FROM [table_name] WHERE [column name operator value]
+
+<>: not equal
+
+BETWEEN a AND b: range a to b, inclusive
+
+IS NULL: rows with no value
+
+IN (condition1, condition2, ...): similar to or, with long list of options, order does not matter, can use another SELECT
+
+OR: not evaluate second condition if first condition is met
+
+AND: meet both conditions
+
+Order of evaluation: AND before OR, use ()
+
+NOT: exclude options
+
