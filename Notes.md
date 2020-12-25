@@ -130,3 +130,14 @@ MAX, MIN, SUM, AVG: ignore null values
 NULL will be grouped together
 
 WHERE does not apply for groups, use HAVING for groups
+
+
+## Subquery
+
+#### WHERE [column] IN 
+
+####     (SELECT [column] FROM [table] where [condition])
+
+Always perform innermost SELECT first
+
+
