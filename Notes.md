@@ -55,7 +55,7 @@ Section: /* ... */
 
 ## Where
 
-#### SELECT [column_name] FROM [table_name] WHERE [column name operator value]
+#### SELECT [column] FROM [table] WHERE [column operator value]
 
 <>: not equal
 
@@ -139,5 +139,45 @@ WHERE does not apply for groups, use HAVING for groups
 ####     (SELECT [column] FROM [table] where [condition])
 
 Always perform innermost SELECT first
+
+
+## Join
+
+Cartesian join: cross join
+
+#### SELECT [column] FROM [table1] CROSS JOIN [table2]
+
+Inner join: select matching values
+
+#### SELECT [column] FROM [table1] INNER JOIN [table2] ON [table1.column] = [table2.column]
+
+#### SELECT [column] FROM [table] AS [aliase]
+
+Self join: treat one table as two
+
+#### SELECT [column] FROM [table] AS [aliase1], [table] AS [aliase2]
+
+Left join: all from table 1, match from table 2
+
+#### SELECT [column] FROM [table1] LEFT JOIN [table2] ON [table1.column] = [table2.column]
+
+Right join: all from table 2, match from table 1
+
+#### SELECT [column] FROM [table1] RIGHT JOIN [table2] ON [table1.column] = [table2.column]
+
+Left join could be turn into right join by changing order of tables
+
+Full outer join: match in either table 1 or table 2
+
+#### SELECT [column] FROM [table1] FULL OUTER JOIN [table2] ON [table1.column] = [table2.column]
+
+If not matched, return NULL
+
+
+
+
+
+
+
 
 
