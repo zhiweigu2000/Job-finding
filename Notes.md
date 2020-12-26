@@ -174,6 +174,15 @@ Full outer join: match in either table 1 or table 2
 If not matched, return NULL
 
 
+## Union
+
+Combine results from two SELECT statement with same number of columns, same data type, same order
+
+#### SELECT [column] FROM [table1] 
+
+#### UNION
+
+#### SELECT [column] FROM [table2] 
 
 
 
