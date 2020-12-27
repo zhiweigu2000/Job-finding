@@ -17,7 +17,7 @@ Foreign keys: one or more columns that could be used to identify a single row in
 
 ## Select
 
-#### SELECT [column] FROM [table] LIMIT [number of rows];
+#### SELECT [column] FROM [table] LIMIT [number of rows]
 
 *: every column
 
@@ -185,8 +185,23 @@ Combine results from two SELECT statement with same number of columns, same data
 #### SELECT [column] FROM [table2] 
 
 
+## Text strings
 
+Concatenate: join two strings
 
+#### SELECT [string1] || [string2]
+
+Substring
+
+#### SELECT SUBSTR ([string], [starting position], [length of string])
+
+Trim
+
+#### SELECT TRIM ([string])
+
+Upper/lower
+
+#### SELECT UPPER/LOWER ([column name]) FROM [table]
 
 
 
