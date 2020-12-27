@@ -204,4 +204,19 @@ Upper/lower
 #### SELECT UPPER/LOWER ([column name]) FROM [table]
 
 
+## Date and time
+
+DATE: YYYY-MM-DD
+
+DATETIME, TIMESTAMP: YYYY-MM-DD HH:MI:SS
+
+STRFTIME: Select year/month/day 
+
+#### SELECT STRFTIME([%Y/%M/%D], [column])
+
+Current date 
+
+#### SELECT DATE ('now')
+
+#### SELECT STRFTIME ('%Y %M %D', 'now')
 
