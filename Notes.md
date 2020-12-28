@@ -220,3 +220,19 @@ Current date
 
 #### SELECT STRFTIME ('%Y %M %D', 'now')
 
+
+## Case
+
+#### SELECT
+
+#### CASE
+
+#### WHEN [C1] THEN [E1]
+
+#### WHEN [C2] THEN [E2]
+
+#### ELSE [E3]
+
+#### END [name]
+
+
