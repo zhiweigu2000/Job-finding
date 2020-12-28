@@ -236,3 +236,10 @@ Current date
 #### END [name]
 
 
+## Views
+
+#### CREATE VIEW [view_name] AS SELECT [column] FROM [table]
+
+Create a temporary table
+
+
