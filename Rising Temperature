@@ -1,0 +1,6 @@
+# Select days with a higher temperature than previous day
+
+SELECT a.id
+FROM weather AS a
+JOIN weather AS b ON b.RecordDate = SUBDATE(a.RecordDate, 1)
+WHERE a.temperature > b.temperature
