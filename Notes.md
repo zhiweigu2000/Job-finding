@@ -232,6 +232,10 @@ Current date
 
 #### SELECT STRFTIME ('%Y %M %D', 'now')
 
+#### SUBDATE([date], [day])
+
+#### SUBDATE([date], INTERVAL [length] [unit])
+
 
 ## Case
 
