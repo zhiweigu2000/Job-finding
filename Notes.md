@@ -21,6 +21,18 @@ Foreign keys: one or more columns that could be used to identify a single row in
 
 *: every column
 
+#### LIMIT [count] OFFSET [skip]
+
+OFFSET: skip number of rows before return
+
+LIMIT: return number of rows
+
+
+## Delete
+
+#### DELETE FROM [table] WHERE [condition]
+
+
 
 ## Create
 
@@ -99,12 +111,6 @@ Sort by column positions or column names
 DESC: descending order, only for column it directly precedes
 
 ASC: ascending order, only for column it directly precedes
-
-#### LIMIT [count] OFFSET [skip]
-
-OFFSET: skip number of rows before return
-
-LIMIT: return number of rows
 
 
 ## Math calculation
