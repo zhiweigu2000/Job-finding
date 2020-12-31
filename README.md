@@ -8,6 +8,12 @@ Here are some questions I find interesting from LeetCode
 
 Easy: 
 
-Second Highest Salary
+Delete Duplicate Emails
 
 Duplicate Emails
+
+Rising Temperature
+
+Second Highest Salary
+
+Swap Salary
