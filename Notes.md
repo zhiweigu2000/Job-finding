@@ -33,6 +33,14 @@ LIMIT: return number of rows
 #### DELETE FROM [table] WHERE [condition]
 
 
+## Update
+
+#### UPDATE [table]
+
+#### SET [column] = [value]
+
+#### WHERE [condition]
+
 
 ## Create
 
