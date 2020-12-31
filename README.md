@@ -8,12 +8,12 @@ Here are some questions I find interesting from LeetCode
 
 Easy: 
 
-Delete Duplicate Emails
+* Delete Duplicate Emails
 
-Duplicate Emails
+* Duplicate Emails
 
-Rising Temperature
+* Rising Temperature
 
-Second Highest Salary
+* Second Highest Salary
 
-Swap Salary
+* Swap Salary
