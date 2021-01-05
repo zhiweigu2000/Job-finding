@@ -1,0 +1,8 @@
+# Highest salary for each department
+
+SELECT d.name AS Department, e.name AS Employee, e.salary AS Salary
+FROM department AS d INNER JOIN employee AS e ON e.departmentid = d.id
+WHERE (e.departmentid, e.salary) IN 
+(SELECT departmentid, MAX(salary) FROM employee GROUP BY departmentid)
+
+# Use IN to find out maximum
