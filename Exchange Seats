@@ -1,0 +1,13 @@
+# Exchange seats
+
+SELECT 
+(CASE
+    WHEN mod(id, 2) = 0 THEN id-1
+    WHEN mod(id, 2) = 1 AND id = total THEN id
+    ELSE id+1
+    END) AS id, student
+FROM seat, 
+(SELECT COUNT(*) AS total FROM seat) AS seat_count
+ORDER BY id ASC
+
+# Similar to swap salary
