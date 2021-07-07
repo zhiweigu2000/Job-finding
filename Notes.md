@@ -1,6 +1,6 @@
-# SQL for Data Science 
+# SQL Notes
 
-From Coursera by UC Davis
+From SQL for Data Science on Coursera by UC Davis and other online sources
 
 SQL: read, write, update data
 
@@ -59,13 +59,6 @@ Primary keys must have a value
 #### VALUES
 
 #### ([values]);
-
-
-## Create temporary table
-
-#### CREATE TEMPORARY TABLE [table name] AS
-
-#### (SELECT);
 
 
 ## Comment
@@ -152,6 +145,8 @@ MAX, MIN, SUM, AVG: ignore null values
 NULL will be grouped together
 
 WHERE does not apply for groups, use HAVING for groups
+
+HAVING used only after GROUP BY
 
 
 ## Subquery
