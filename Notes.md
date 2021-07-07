@@ -144,9 +144,9 @@ MAX, MIN, SUM, AVG: ignore null values
 
 NULL will be grouped together
 
-WHERE does not apply for groups, use HAVING for groups
+WHERE does not apply for groups, WHERE before GROUP BY
 
-HAVING used only after GROUP BY
+HAVING for groups, HAVING after GROUP BY
 
 
 ## Subquery
@@ -221,27 +221,6 @@ Trim
 Upper/lower
 
 #### SELECT UPPER/LOWER ([column name]) FROM [table]
-
-
-## Date and time
-
-DATE: YYYY-MM-DD
-
-DATETIME, TIMESTAMP: YYYY-MM-DD HH:MI:SS
-
-STRFTIME: Select year/month/day 
-
-#### SELECT STRFTIME([%Y/%M/%D], [column])
-
-Current date 
-
-#### SELECT DATE ('now')
-
-#### SELECT STRFTIME ('%Y %M %D', 'now')
-
-#### SUBDATE([date], [day])
-
-#### SUBDATE([date], INTERVAL [length] [unit])
 
 
 ## Case
