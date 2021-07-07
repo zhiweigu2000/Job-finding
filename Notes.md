@@ -4,15 +4,17 @@ From Coursera by UC Davis
 
 SQL: read, write, update data
 
-Relational model: allow easy querying, intuitive
+Relational model: tables linked to other tables
 
 Transactional model: operational
 
 ER model: show relationships, links
 
-Primary keys: a columen whose values unique indentify each row in a table
+Primary keys: a column whose values are unique and can be used to identify each row in a table, only one primary key in the table
 
 Foreign keys: one or more columns that could be used to identify a single row in a table
+
+Unique keys: columns that have unique values
 
 
 ## Select
