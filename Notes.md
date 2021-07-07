@@ -167,7 +167,7 @@ Cartesian join: cross join
 
 #### SELECT [column] FROM [table1] CROSS JOIN [table2]
 
-Inner join: select matching values
+Inner join: select matching values, values that both table 1 and table 2 have
 
 #### SELECT [column] FROM [table1] INNER JOIN [table2] ON [table1.column] = [table2.column]
 
