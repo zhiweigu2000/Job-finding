@@ -164,6 +164,8 @@ Always perform innermost SELECT first
 ## Join
 
 Cartesian join: cross join
+![image](https://user-images.githubusercontent.com/76275089/124778283-70b3d980-df73-11eb-8d17-b7cf71b2550d.png)
+
 
 #### SELECT [column] FROM [table1] CROSS JOIN [table2]
 
