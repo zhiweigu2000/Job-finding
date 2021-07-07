@@ -163,37 +163,43 @@ Always perform innermost SELECT first
 
 ## Join
 
-Cartesian join: cross join
-![image](https://user-images.githubusercontent.com/76275089/124778283-70b3d980-df73-11eb-8d17-b7cf71b2550d.png)
-
+Cross join: include all values, match everything in table A to table B
+![image](https://user-images.githubusercontent.com/76275089/124779233-30a12680-df74-11eb-8708-2a005a51eda5.png)
 
 #### SELECT [column] FROM [table1] CROSS JOIN [table2]
 
+
 Inner join: select matching values, values that both table 1 and table 2 have
+![image](https://user-images.githubusercontent.com/76275089/124779197-2848eb80-df74-11eb-97f8-e7b0bbec65c4.png)
 
 #### SELECT [column] FROM [table1] INNER JOIN [table2] ON [table1.column] = [table2.column]
 
-#### SELECT [column] FROM [table] AS [aliase]
 
-Self join: treat one table as two
-
-#### SELECT [column] FROM [table] AS [aliase1], [table] AS [aliase2]
-
-Left join: all from table 1, match from table 2
+Left (outer) join: all from table 1, match ones from table 2
+![image](https://user-images.githubusercontent.com/76275089/124779154-20894700-df74-11eb-8d9d-14b582966ce1.png)
 
 #### SELECT [column] FROM [table1] LEFT JOIN [table2] ON [table1.column] = [table2.column]
 
-Right join: all from table 2, match from table 1
+
+Right (outer) join: all from table 2, match ones from table 1
+![image](https://user-images.githubusercontent.com/76275089/124779117-17987580-df74-11eb-8e1c-2cc16272a933.png)
 
 #### SELECT [column] FROM [table1] RIGHT JOIN [table2] ON [table1.column] = [table2.column]
 
-Left join could be turn into right join by changing order of tables
+
 
 Full outer join: match in either table 1 or table 2
 
 #### SELECT [column] FROM [table1] FULL OUTER JOIN [table2] ON [table1.column] = [table2.column]
 
-If not matched, return NULL
+Outer join: If not matched, return NULL
+
+
+
+Self join: treat one table as two
+
+#### SELECT [column] FROM [table] AS [aliase1], [table] AS [aliase2]
+
 
 
 ## Union
