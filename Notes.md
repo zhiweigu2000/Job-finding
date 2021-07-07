@@ -164,6 +164,7 @@ Always perform innermost SELECT first
 
 
 ## Join
+![image](https://user-images.githubusercontent.com/76275089/124783488-afe42980-df77-11eb-9e51-b14ae3b289e0.png)
 
 #### SELECT [column] FROM [table1] CROSS JOIN [table2]
 
@@ -197,8 +198,9 @@ Self join: treat one table as two
 
 
 ## Union
+![image](https://user-images.githubusercontent.com/76275089/124783537-bb375500-df77-11eb-97bd-e72c99b63a60.png)
 
-Combine results from two SELECT statement with same number of columns, same data type, same order
+Combine results from two SELECT statement with same number of columns, same data type, same order, up and down
 
 #### SELECT [column] FROM [table1] 
 
