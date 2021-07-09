@@ -245,3 +245,31 @@ Upper/lower
 Create a temporary table
 
 
+## Window function
+
+Rows can maintain their separate identities
+
+#### SELECT [function ([column])] OVER (PARTITION BY [column] ORDER BY [column]) AS [column name]
+
+PARTITION BY: order in groups
+
+Functions: 
+
+SUM()/AVG()/COUNT()
+
+ROW_NUMBER(): return row number
+
+RANK()/DENSE_RANK(): return rank number, rank skips number for identical rows (e.g. 1, 2, 2, 4, 5), dense rank does not (e.g. 1, 2, 2, 3, 4)
+
+NTILE([number]): return percentile number
+
+LAG([column], [number]) / LEAD([column], [number]): lag returns one row later, lead returns one row earlier
+
+#### SELECT [function ([column])] OVER [column] AS [column name] 
+
+#### FROM [table] WHERE [condition]
+
+#### WINDOW [function] AS (PARTITION BY [column] ORDER BY [column]) 
+
+
+
