@@ -2,18 +2,14 @@
 
 This is a place to practice SQL
 
-Notes: notes taken from SQL for data science from Coursera, contains basic SQL syntex
+Notes: notes taken from SQL for data science from Coursera and other online sources
 
 Here are some questions I find interesting from LeetCode
 
-Easy: 
+Easy: 175, 176, 181, 182, 183, 196, 197, 511, 512, 595, 596, 620, 627
 
-* Delete Duplicate Emails
+Medium: 177, 178, 180, 184, 626, 534
 
-* Duplicate Emails
+Hard: 185
 
-* Rising Temperature
-
-* Second Highest Salary
-
-* Swap Salary
+This week: 511, 512, 534 
