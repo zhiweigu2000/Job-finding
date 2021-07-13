@@ -20,3 +20,19 @@ Avoid over-fitting
 
 Model use k-1 fold for training, validate on remaining fold
 
+
+#### Parametric model
+
+Parametric model: number of paramaters is fixed
+
+Non-parametric model: number of parameters can grow
+
+
+#### Regression
+
+
+#### SVM
+
+
+#### Decision tree
+
