@@ -33,6 +33,14 @@ Non-parametric model: number of parameters can grow
 
 #### SVM
 
+Support Vector Machine: find out a plane that differentiate two categories
+
+Usually used for classification problem
+
+Maximize margin
+
+Transform data into linear
+
 
 #### Decision tree
 
