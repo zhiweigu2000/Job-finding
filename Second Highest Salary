@@ -1,9 +1,0 @@
-# Return second highest salary, if does not exist, return NULL
-
-SELECT(
-    SELECT DISTINCT Salary
-    FROM Employee
-    ORDER BY Salary DESC
-    LIMIT 1 OFFSET 1) AS SecondHighestSalary; 
-
-# Return 1 line, skip 1 line before return
