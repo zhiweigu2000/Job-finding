@@ -1,5 +1,0 @@
-# Delete duplicate emails, only keep the smallest id on original table
-
-DELETE a
-FROM person AS a, person AS b
-WHERE a.id > b.id AND a.email = b.email
