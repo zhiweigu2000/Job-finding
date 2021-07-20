@@ -70,7 +70,9 @@ Section: /* ... */
 
 ## Where
 
-#### SELECT [column] FROM [table] WHERE [column operator value]
+#### SELECT [column] FROM [table] WHERE [column operator value] 
+
+#### SELECT [column] FROM [table] WHERE [column] in [query] and [column] in [query]
 
 <>: not equal
 
