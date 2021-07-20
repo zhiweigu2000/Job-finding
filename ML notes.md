@@ -40,21 +40,28 @@ Linear regression: least square y = ax + b
 
 Logistic regression: for classification problem b0 + b1x1 + b2x2 = ln(p)
 
+Deal with high dimensions, strong correlation
+
+Minimize cost function: gradient descent
+
+Regularion: prevent overfitting, add a extra term into the cost function
+![image](https://user-images.githubusercontent.com/76275089/126343104-20a3b405-53aa-43d8-830a-35a0fc425e7c.png)
+
 
 #### SVM
 
 Support Vector Machine: find out a plane that differentiate two categories, maximize margin
 
-Usually used for classification problem
-
 Transform data into linear
 
-Supporting vector: the cloest training examples
+Supporting vector: the closet training example, important for determining the plane
 
 
 #### Decision tree
 
 Decision tree: divide based on different properties
+
+Deal with non-linear cases
 
 
 #### KNN
@@ -74,7 +81,9 @@ Principal Component Analysis: reduce number of variables
 
 Standardization z = (value - mean) / sd
 
-Covariance matrix calculation, calculate enginvalues, find principle component
+Covariance matrix calculation, calculate first several eiginvalues and euginvectors, find major components that are orthogonal
+
+Orthogonal: most distinct, cover more information
 
 Recast data along principle component
 
@@ -83,5 +92,5 @@ Recast data along principle component
 
 K-means clustering:  minimize the distance of the points in a cluster with their centroid
 
-Select k centroids, assign points to cloest centroids, calculate new centroids
+Select k centroids, assign points to cloest centroids, calculate new centroids until converge
 
