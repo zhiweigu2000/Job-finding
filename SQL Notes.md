@@ -183,10 +183,6 @@ Left (outer) join: all from table 1, match ones from table 2
 Right (outer) join: all from table 2, match ones from table 1
 ![image](https://user-images.githubusercontent.com/76275089/124779117-17987580-df74-11eb-8e1c-2cc16272a933.png)
 
-#### SELECT [column] FROM [table1] FULL OUTER JOIN [table2] ON [table1.column] = [table2.column]
-
-Full outer join: match in either table 1 or table 2
-
 Outer join: If not matched, return NULL
 
 #### SELECT [column] FROM [table] AS [aliase1], [table] AS [aliase2]
@@ -204,6 +200,8 @@ Combine results from two SELECT statement with same number of columns, same data
 #### UNION
 
 #### SELECT [column] FROM [table2] 
+
+Full union: do not remove duplicates
 
 
 ## Text strings
