@@ -13,7 +13,7 @@ Hard: 185
 
 Binary search: 1, 69, 702
 
-Divide and Conquer: 53, 153, 154, 169, 912
+Divide and Conquer: 53, 153, 154, 169, 347, 912, 973
 
 Trees: 226, 257, 341, 1448 
 
