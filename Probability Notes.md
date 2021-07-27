@@ -18,6 +18,7 @@ P(AB) = P(A)* P(B)
 
 Binomial distribution when p is nearly 0, n closes to infinite
 ![image](https://user-images.githubusercontent.com/76275089/127008287-01ab230b-589e-4add-af2e-2eaa0e6803c0.png)
+![image](https://user-images.githubusercontent.com/76275089/127169902-a1c024bb-8690-4c2b-b278-51bc629ef48f.png)
 
 
 #### Joint distribution
@@ -33,6 +34,7 @@ Addition rule: E(X+Y) = E(X) + E(Y)
 
 Indicator: E(I) = P(A), E(X) = P(A1) + P(A2) + ...
 
+
 Tail sum formula
 
 ![image](https://user-images.githubusercontent.com/76275089/127009830-f8db9c88-f0eb-44ef-b4f5-0df95597198b.png)
@@ -44,6 +46,76 @@ If X > 0, then P(X >= a) <= E(X)/a for every a > 0
 ![image](https://user-images.githubusercontent.com/76275089/127011327-bba6de29-3073-4fd6-9899-7d66cf623e4a.png)
 
 E(aX+b) = aE(X) + b
+
+
+#### Standard deviation
+
+![image](https://user-images.githubusercontent.com/76275089/127164059-36491ba7-de67-4d06-983d-bf59fcc4785c.png)
+
+Var(X) = E(X^2) - (E(X))^2
+
+SD(aX+ b) = |a|SD(X)
+
+Standardization: X* = (X - E(X))/SD(X), E(X*) = 0, SD(X*) = 1
+
+P(X <= b) = P(X* <= (b-E(X))/SD(X))
+
+![image](https://user-images.githubusercontent.com/76275089/127167393-3e9c296f-fce8-43f9-a7ed-25db105f23a5.png)
+
+If X and Y are independent, Var(X) + Var(Y) = Var(X + Y)
+
+![image](https://user-images.githubusercontent.com/76275089/127168250-8ced2ac7-ff94-4662-9a0f-a08f0b356d04.png)
+
+
+#### Uniform distribution
+
+f(x) = 1/(b - a) for a < x < b
+
+E(X) = (a + b)/2
+
+Var(X) = (b - a) ^ 2/12
+
+
+#### Exponential distribution
+
+![image](https://user-images.githubusercontent.com/76275089/127177889-2952802b-1f3d-42af-8eb5-a12e9ff2316e.png)
+
+Memoryless property: given survival to time t, the chance of surviving a further time s is the same as the chance of surviving to time s in the first place
+
+![image](https://user-images.githubusercontent.com/76275089/127178761-a9e503a7-eb64-45c1-9118-f7c9c2c8c2cc.png)
+
+
+#### Gamma distribution
+
+![image](https://user-images.githubusercontent.com/76275089/127178807-2493408f-2c06-4b22-aa67-94a1958ff468.png)
+
+
+#### Change of variable
+
+![image](https://user-images.githubusercontent.com/76275089/127179828-32e5c51c-2086-4d81-82cd-bd10ff42be57.png)
+
+
+#### Cumulative distribution function
+
+A probability distribution over the line is completely determined by its cdf
+
+Fmax(x) = F1(x)F2(x)...Fn(x)
+
+Fmin(x) = 1 - (1-F1(x))(1-F2(x))...(1-Fn(x))
+
+
+#### Beta distribution
+
+![image](https://user-images.githubusercontent.com/76275089/127180798-25d5a198-a0d3-4d5f-8fd4-88eddfb67c23.png)
+
+E(X) = r/(r + s)
+
+
+
+
+
+
+
 
 
 
