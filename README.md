@@ -13,8 +13,14 @@ Hard: 185
 
 Binary search: 1, 69, 702
 
+Divide from the middle, move left or right pointer
+
 Divide and Conquer: 53, 153, 154, 169, 347, 912, 973
 
 Trees: 226, 235, 236, 257, 341, 1448 
+
+Greedy: 605
+
+Assume all can be completed, when finish 1, minus 1
 
 
