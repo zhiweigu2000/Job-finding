@@ -19,7 +19,7 @@ Divide and Conquer: 53, 153, 154, 169, 347, 912, 973
 
 Trees: 226, 235, 236, 257, 341, 1448 
 
-Greedy: 12, 13, 605
+Greedy: 12, 13, 455, 605
 
 Assume all can be completed, when finish 1, minus 1
 
