@@ -23,4 +23,6 @@ Greedy: 12, 13, 455, 605
 
 Assume all can be completed, when finish 1, minus 1
 
+Binary tree: 94, 102, 107, 144, 145
+
 
