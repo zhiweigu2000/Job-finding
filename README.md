@@ -17,12 +17,11 @@ Divide from the middle, move left or right pointer
 
 Divide and Conquer: 53, 153, 154, 169, 347, 912, 973
 
-Trees: 226, 235, 236, 257, 341, 1448 
+Trees: 94, 101, 102, 104, 107, 110, 111, 144, 145, 222, 226, 235, 236, 257, 341, 1448 
 
 Greedy: 12, 13, 455, 605
 
 Assume all can be completed, when finish 1, minus 1
 
-Binary tree: 94, 102, 107, 144, 145
 
 
