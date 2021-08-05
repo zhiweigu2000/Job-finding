@@ -111,6 +111,18 @@ Fmin(x) = 1 - (1-F1(x))(1-F2(x))...(1-Fn(x))
 E(X) = r/(r + s)
 
 
+#### Conditional expectation
+
+E(X+Y|A) = E(X|A) + E(Y|A)
+
+![image](https://user-images.githubusercontent.com/76275089/128298547-2afd61df-69f8-4472-a43c-aefe45a9371c.png)
+
+E(Y) = E[E(Y|X)]
+
+![image](https://user-images.githubusercontent.com/76275089/128299255-3cdd4a50-b8bd-4173-84d0-f8859ac5bc76.png)
+
+![image](https://user-images.githubusercontent.com/76275089/128299376-cf96d63f-768c-4b97-8d69-c4ddc928684a.png)
+
 
 
 
