@@ -135,7 +135,7 @@ COUNT(*): include null values
 
 COUNT([column]): ignore null values
 
-COUNT(DISTINCT [column]): distinct values not assumed
+COUNT(DISTINCT [column]): count distinct values
 
 MAX, MIN, SUM, AVG: ignore null values
 
