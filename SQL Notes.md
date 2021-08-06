@@ -29,6 +29,10 @@ OFFSET: skip number of rows before return
 
 LIMIT: return number of rows
 
+#### IFNULL([column], 0)
+
+IFNULL: turn Null values in the column into 0
+
 
 ## Delete
 
