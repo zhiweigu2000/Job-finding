@@ -55,6 +55,19 @@ E(X) = (a + b)/2
 Var(X) = (b - a) ^ 2/12
 
 
+## Normal distribution
+
+![image](https://user-images.githubusercontent.com/76275089/128602229-c803e9dc-767f-43bf-9d38-59c7f0bf7daf.png)
+
+![image](https://user-images.githubusercontent.com/76275089/128602237-29791981-c108-4210-acff-4897183bd84b.png)
+
+![image](https://user-images.githubusercontent.com/76275089/128602993-f0847112-6f6c-4b51-98a3-dffc8a0b456f.png)
+
+Mean: miu
+
+Variance: sigma ^ 2
+
+
 ## Binomial distribution 
 
 ![image](https://user-images.githubusercontent.com/76275089/126997510-55c19c86-02a2-402f-9c8e-26b5a9e9ec78.png)
@@ -77,16 +90,26 @@ Binomial distribution when p is nearly 0, n closes to infinite
 
 ## Geometric distribution
 
+X times to reach one success, X - 1 failures before success
 
+![image](https://user-images.githubusercontent.com/76275089/128601381-9ac9afa0-4faf-4e0c-8683-42f82c268424.png)
+
+![image](https://user-images.githubusercontent.com/76275089/128601430-4a0eaeab-f4a1-44a1-9f39-d5dc0a52dbb9.png)
+
+Distribution of waiting times
 
 
 ## Exponential distribution
+
+Distribution for decay
 
 ![image](https://user-images.githubusercontent.com/76275089/127177889-2952802b-1f3d-42af-8eb5-a12e9ff2316e.png)
 
 Memoryless property: given survival to time t, the chance of surviving a further time s is the same as the chance of surviving to time s in the first place
 
 ![image](https://user-images.githubusercontent.com/76275089/127178761-a9e503a7-eb64-45c1-9118-f7c9c2c8c2cc.png)
+
+Exponential distribution is a continuous analog to geometric distribution
 
 
 ## Gamma distribution
@@ -100,10 +123,15 @@ Memoryless property: given survival to time t, the chance of surviving a further
 
 E(X) = r/(r + s)
 
+The kth order statistics of n independent uniform (0, 1) random variables has beta(k, n - k + 1) distribution
+
 
 ## Change of variable
 
 ![image](https://user-images.githubusercontent.com/76275089/127179828-32e5c51c-2086-4d81-82cd-bd10ff42be57.png)
+
+![image](https://user-images.githubusercontent.com/76275089/128604763-c70e1e67-5e0f-4d7a-9c33-5c9b3cb635f3.png)
+
 
 
 ## Cumulative distribution function
@@ -113,6 +141,11 @@ A probability distribution over the line is completely determined by its cdf
 Fmax(x) = F1(x)F2(x)...Fn(x)
 
 Fmin(x) = 1 - (1-F1(x))(1-F2(x))...(1-Fn(x))
+
+
+## Kth order statistics
+
+![image](https://user-images.githubusercontent.com/76275089/128604686-2ff06475-01bf-46f8-97d3-0e414df65c9b.png)
 
 
 ## Conditional expectation
