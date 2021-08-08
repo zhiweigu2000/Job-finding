@@ -13,7 +13,6 @@ Addition rule: E(X+Y) = E(X) + E(Y)
 
 Indicator: E(I) = P(A), E(X) = P(A1) + P(A2) + ...
 
-
 Tail sum formula
 
 ![image](https://user-images.githubusercontent.com/76275089/127009830-f8db9c88-f0eb-44ef-b4f5-0df95597198b.png)
@@ -67,6 +66,8 @@ Mean: miu
 
 Variance: sigma ^ 2
 
+![image](https://user-images.githubusercontent.com/76275089/128638321-e0c36eb6-5a03-4278-8ea0-fe11e9e73c2b.png)
+
 
 ## Binomial distribution 
 
@@ -116,6 +117,8 @@ Exponential distribution is a continuous analog to geometric distribution
 
 ![image](https://user-images.githubusercontent.com/76275089/127178807-2493408f-2c06-4b22-aa67-94a1958ff468.png)
 
+Rn^2 = Z1^2 + Z2^2 + ... + Zn^2 is gamma(n/2, 1/2)
+
 
 ## Beta distribution
 
@@ -126,12 +129,16 @@ E(X) = r/(r + s)
 The kth order statistics of n independent uniform (0, 1) random variables has beta(k, n - k + 1) distribution
 
 
+## Rayleigh distribution
+
+![image](https://user-images.githubusercontent.com/76275089/128637772-de825949-5e83-4d9f-82c1-6911ef5aebe0.png)
+
+
 ## Change of variable
 
 ![image](https://user-images.githubusercontent.com/76275089/127179828-32e5c51c-2086-4d81-82cd-bd10ff42be57.png)
 
 ![image](https://user-images.githubusercontent.com/76275089/128604763-c70e1e67-5e0f-4d7a-9c33-5c9b3cb635f3.png)
-
 
 
 ## Cumulative distribution function
@@ -146,6 +153,17 @@ Fmin(x) = 1 - (1-F1(x))(1-F2(x))...(1-Fn(x))
 ## Kth order statistics
 
 ![image](https://user-images.githubusercontent.com/76275089/128604686-2ff06475-01bf-46f8-97d3-0e414df65c9b.png)
+
+
+## Joint distribution
+
+![image](https://user-images.githubusercontent.com/76275089/128637235-396964d3-5f9b-4034-be55-1264db42c413.png)
+
+Margins 
+
+![image](https://user-images.githubusercontent.com/76275089/128637168-fa06b671-d912-4651-a837-2d9210bc77ba.png)
+
+Independence: f(x, y) = fx(x)fy(y)  
 
 
 ## Conditional expectation
