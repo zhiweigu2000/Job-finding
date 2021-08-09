@@ -2,7 +2,7 @@
 
 Conditional probability: P(A|B) = P(AB) / P(B)
 
-Independent events: P(AB) = P(A)* P(B)
+Independence: P(AB) = P(A)* P(B)
 
 
 ## Expectation
@@ -40,7 +40,7 @@ P(X <= b) = P(X* <= (b-E(X))/SD(X))
 
 ![image](https://user-images.githubusercontent.com/76275089/127167393-3e9c296f-fce8-43f9-a7ed-25db105f23a5.png)
 
-If X and Y are independent, Var(X) + Var(Y) = Var(X + Y)
+Independence: Var(X) + Var(Y) = Var(X + Y)
 
 ![image](https://user-images.githubusercontent.com/76275089/127168250-8ced2ac7-ff94-4662-9a0f-a08f0b356d04.png)
 
@@ -134,6 +134,13 @@ The kth order statistics of n independent uniform (0, 1) random variables has be
 ![image](https://user-images.githubusercontent.com/76275089/128637772-de825949-5e83-4d9f-82c1-6911ef5aebe0.png)
 
 
+## Bivariate normal distribution
+
+![image](https://user-images.githubusercontent.com/76275089/128687341-18c2bc1d-91f2-43aa-aa12-3f29dd2fac3f.png)
+
+![image](https://user-images.githubusercontent.com/76275089/128687484-215d24ef-87de-4aa2-aee9-194ffa9095c0.png)
+
+
 ## Change of variable
 
 ![image](https://user-images.githubusercontent.com/76275089/127179828-32e5c51c-2086-4d81-82cd-bd10ff42be57.png)
@@ -177,6 +184,28 @@ E(Y) = E[E(Y|X)]
 ![image](https://user-images.githubusercontent.com/76275089/128299255-3cdd4a50-b8bd-4173-84d0-f8859ac5bc76.png)
 
 ![image](https://user-images.githubusercontent.com/76275089/128299376-cf96d63f-768c-4b97-8d69-c4ddc928684a.png)
+
+
+## Covariance and correlation
+
+![image](https://user-images.githubusercontent.com/76275089/128685973-2224920d-92c2-46cd-8e83-e3547ff410f9.png)
+
+Cov(X, X) = Var(X)
+
+Independence: Cov(X, X) = Var(X)
+
+![image](https://user-images.githubusercontent.com/76275089/128686650-f5ff8964-3483-42f4-a5eb-d0b49a1b9d4e.png)
+
+![image](https://user-images.githubusercontent.com/76275089/128686676-f1010b7a-e534-475d-94e1-9160d11b90b0.png)
+
+Uncorrelated: Corr(X, Y) = 0, Cov(X, Y) = 0, E(XY) = E(X)E(Y)
+
+-1 <= Corr(X, Y) <= 1
+
+Independent variables are uncorrelated, uncorrelated variables are not necessarily independent
+
+![image](https://user-images.githubusercontent.com/76275089/128687234-0344cb3e-fe5d-42db-854a-ab3fcae3ada4.png)
+
 
 
 
