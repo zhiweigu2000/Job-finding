@@ -61,6 +61,9 @@ Roger's adoption curve
 Market = conversion rate * market size * market share
 
 
+# Problem Solving Cases
+
+![image](https://user-images.githubusercontent.com/76275089/129484181-72d53457-ef23-4216-8fe3-65d28de56c73.png)
 
 
 
