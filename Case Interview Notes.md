@@ -66,4 +66,14 @@ Market = conversion rate * market size * market share
 ![image](https://user-images.githubusercontent.com/76275089/129484181-72d53457-ef23-4216-8fe3-65d28de56c73.png)
 
 
+# Product / Feature Assessment Cases
+
+![image](https://user-images.githubusercontent.com/76275089/129537887-befbbc74-4baf-423e-984f-1409de4d7e42.png)
+
+
+# Market / Opportunity Sizing Cases
+
+![image](https://user-images.githubusercontent.com/76275089/129538087-7cc9fd68-0a7e-4a7d-a4f1-4edcf860a8d4.png)
+
+
 
