@@ -143,6 +143,10 @@ COUNT(DISTINCT [column]): count distinct values
 
 MAX, MIN, SUM, AVG: ignore null values
 
+MAX(column)
+
+GREATEST(multiple arguments)
+
 
 ## Group by
 
