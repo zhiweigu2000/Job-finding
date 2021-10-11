@@ -33,6 +33,10 @@ LIMIT: return number of rows
 
 IFNULL: turn Null values in the column into 0
 
+#### GROUP_CONCAT([column])
+
+GROUP_CONCAT: return strings from this column
+
 
 ## Delete
 
