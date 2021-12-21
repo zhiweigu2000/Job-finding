@@ -1,6 +1,6 @@
 # ML Notes
 
-#### Bias-variance trade-off
+### Bias-variance trade-off
 
 <img src="https://user-images.githubusercontent.com/76275089/125311252-d9c99180-e365-11eb-9d45-7e33aa98670f.png" width = 500>
 
@@ -15,14 +15,14 @@ High model complexiy, low bias, high variance, overfitting
 Model error = bias^2 + variance + random error
 
 
-#### Cross-validation
+### Cross-validation
 
 Avoid over-fitting
 
 Model use k-1 fold for training, validate on remaining fold, select the best parameter
 
 
-#### Coefficients
+### Coefficients
 
 Correlation coefficient (r): average of the product of x and y, both in standard units
 
@@ -47,7 +47,7 @@ Increase as number of features increase
 
 ## Supervised learning
 
-#### Parametric model
+### Parametric model
 
 Parametric model: number of paramaters is fixed
 
@@ -58,7 +58,7 @@ Non-parametric model: number of parameters can grow
 e.g. KNN, SVM, Decision Tree
 
 
-#### Linear Regression
+### Linear Regression
 
 Linear regression: least square y = ax + b
 
@@ -91,7 +91,7 @@ Least square estimate for theta
 <img src="https://user-images.githubusercontent.com/76275089/146850524-685d0ffa-bf4a-4f1d-a860-ca663288b9bb.png" width = 200>
 
 
-#### Logistic Regression
+### Logistic Regression
 
 For classification problem b0 + b1x1 + b2x2 = ln(p)
 
@@ -103,7 +103,7 @@ Regularion: prevent overfitting, add a extra term into the cost function
 ![image](https://user-images.githubusercontent.com/76275089/126343104-20a3b405-53aa-43d8-830a-35a0fc425e7c.png)
 
 
-#### SVM
+### SVM
 
 Support Vector Machine: find out a plane that differentiate two categories, maximize margin
 
@@ -112,14 +112,42 @@ Transform data into linear
 Supporting vector: the closet training example, important for determining the plane
 
 
-#### Decision tree
+### Decision tree
 
 Decision tree: divide based on different properties
 
-Deal with non-linear cases
+Classification or regression
+
+All data starts in the root node
+
+Pick the best feature and best split value
+
+Split data into two nodes
+
+Repeat until every node is pure or unsplittable (has duplicate data that could not be split)
+
+Entropy:
+
+<img src="https://user-images.githubusercontent.com/76275089/146880065-42e91b83-63b9-4e03-8458-a4f854063bbe.png" width = 150>
+
+Low entropy means more predictable
+
+Loss of split:
+
+<img src="https://user-images.githubusercontent.com/76275089/146880264-12ddab88-0269-4243-b700-cd6ade7dba8d.png" width = 200>
+
+Smaller loss, better split
+
+Avoid overfitting: don't allow fully grown tree
+
+Set more specific rules to prevent growth
+
+Cut off less useful branches
+
+Random forest: build many decision trees by bootstrap, use a sample of features at each split, each node is most common predictions from each model
 
 
-#### KNN
+### KNN
 
 K-Nearest Neighbor: calculate distance between query example and current example, pick first K entries, return mode of labels/average
 
@@ -130,7 +158,7 @@ Disadvanatge: slower when number of examples and variables increases
 
 ## Unsupervised learning
 
-#### PCA
+### PCA
 
 Principal Component Analysis: reduce number of variables
 
@@ -143,7 +171,7 @@ Orthogonal: most distinct, cover more information
 Recast data along principle component
 
 
-#### K-means clustering
+### K-means clustering
 
 K-means clustering:  minimize the distance of the points in a cluster with their centroid
 
