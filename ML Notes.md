@@ -2,7 +2,7 @@
 
 ### Bias-variance trade-off
 
-<img src="https://user-images.githubusercontent.com/76275089/125311252-d9c99180-e365-11eb-9d45-7e33aa98670f.png" width = 500>
+<img src="https://user-images.githubusercontent.com/76275089/147712553-7d7fce85-2a18-46ea-94f6-d4e353bab39f.png" width = 500>
 
 Bias: error between average model prediction and ground truth
 
@@ -12,14 +12,9 @@ Low model complexity, high bias, low variance, underfitting
 
 High model complexiy, low bias, high variance, overfitting
 
-Model error = bias^2 + variance + random error
+Model error = bias^2 + model variance + random error (observation variance)
 
-
-### Cross-validation
-
-Avoid over-fitting
-
-Model use k-1 fold for training, validate on remaining fold, select the best parameter
+<img src="https://user-images.githubusercontent.com/76275089/147712539-0b5d4dd2-e315-41e3-85b6-b83e2d8c16af.png" width = 600>
 
 
 ### Coefficients
@@ -43,6 +38,60 @@ Increase as number of features increase
 <img src="https://user-images.githubusercontent.com/76275089/146849906-30d2fce1-86be-40a6-86f1-cbdc31c6c68a.png" width = 150>
 
 <img src="https://user-images.githubusercontent.com/76275089/146849909-75dc93b9-05b5-4eb2-a58d-07ca33db84bc.png" width = 300>
+
+
+### Feature engineering
+
+Transform raw features into more informative features for modeling
+
+Encode non-numeric features
+
+
+### Cross-validation
+
+Avoid over-fitting
+
+Model use k-1 fold for training, validate on remaining fold, select the best parameter
+
+<img src="https://user-images.githubusercontent.com/76275089/147712755-319487e1-0da2-464a-8e41-606341926a2f.png" width = 500>
+
+
+### Regularization
+
+Prevent overfitting, add a extra term into the cost function
+
+<img src="https://user-images.githubusercontent.com/76275089/147713522-703517f0-1b7b-4de4-af87-c2a71a20012b.png" width = 500>
+
+<img src="https://user-images.githubusercontent.com/76275089/147713540-f01286fa-9801-48d3-86ac-d5982b8f17c3.png" width = 400>
+
+L2 (Ridge) regularization:
+
+<img src="https://user-images.githubusercontent.com/76275089/147713569-2dfaa3da-d0bf-4d56-b497-2e1ef537eac1.png" width = 400>
+
+Always exist unique optimal parameter
+
+<img src="https://user-images.githubusercontent.com/76275089/147713580-d18db155-1010-434f-bb46-71b379423724.png" width = 300>
+
+L1 (LASSO) regularization:
+
+<img src="https://user-images.githubusercontent.com/76275089/147713624-79ccb5ae-f211-4239-a72e-d7991b12fca8.png" width = 400>
+
+
+### Gradient descent
+
+<img src="https://user-images.githubusercontent.com/76275089/147714298-bd9d1783-7753-4900-9c37-0eef4a6ae3e1.png" width = 300>
+
+alpha: learning rate, too large fails to converge, too small takes too long to converge
+
+L: loss function
+
+Stochastic Gradient Descent: draw a simple random sample of data indices, compute gradient estimate
+
+<img src="https://user-images.githubusercontent.com/76275089/147714719-7bbf8e69-2dc8-4a87-9722-71046724b309.png" width = 400>
+
+<img src="https://user-images.githubusercontent.com/76275089/147715065-7dd48c99-9819-4722-b64d-67853dbbca77.png" width = 500>
+
+<img src="https://user-images.githubusercontent.com/76275089/147715069-7e8dfb72-5cf7-4aac-8297-148f942c7fe3.png" width = 500>
 
 
 ## Supervised learning
@@ -99,18 +148,6 @@ Deal with high dimensions, strong correlation
 
 Minimize cost function: gradient descent
 
-Regularion: prevent overfitting, add a extra term into the cost function
-![image](https://user-images.githubusercontent.com/76275089/126343104-20a3b405-53aa-43d8-830a-35a0fc425e7c.png)
-
-
-### SVM
-
-Support Vector Machine: find out a plane that differentiate two categories, maximize margin
-
-Transform data into linear
-
-Supporting vector: the closet training example, important for determining the plane
-
 
 ### Decision tree
 
@@ -147,6 +184,15 @@ Cut off less useful branches
 Random forest: build many decision trees by bootstrap, use a sample of features at each split, each node is most common predictions from each model
 
 
+### SVM
+
+Support Vector Machine: find out a plane that differentiate two categories, maximize margin
+
+Transform data into linear
+
+Supporting vector: the closet training example, important for determining the plane
+
+
 ### KNN
 
 K-Nearest Neighbor: calculate distance between query example and current example, pick first K entries, return mode of labels/average
@@ -162,9 +208,9 @@ Disadvanatge: slower when number of examples and variables increases
 
 Principal Component Analysis: reduce number of variables
 
-Standardization z = (value - mean) / sd
+Simple value decomposition: X = UΣ * V^T
 
-Covariance matrix calculation, calculate first several eiginvalues and euginvectors, find major components that are orthogonal
+Principal component: UΣ column
 
 Orthogonal: most distinct, cover more information
 
