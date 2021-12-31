@@ -142,11 +142,41 @@ Least square estimate for theta
 
 ### Logistic Regression
 
-For classification problem b0 + b1x1 + b2x2 = ln(p)
-
-Deal with high dimensions, strong correlation
+<img src="https://user-images.githubusercontent.com/76275089/147809854-4139a2e3-9f91-4fc5-af53-72e64c641e4a.png" width = 300>
 
 Minimize cost function: gradient descent
+
+Squared loss: loss surface not convex, does not penalize wrong answers strongly
+
+Cross-entropy loss: not get stuck, no local minimum
+
+<img src="https://user-images.githubusercontent.com/76275089/147810255-22889ab9-092a-4dfe-8558-edd931ffca8d.png" width = 350>
+
+<img src="https://user-images.githubusercontent.com/76275089/147810315-29ded49b-1965-435c-9a65-f2343799bac6.png" width = 500>
+
+<img src="https://user-images.githubusercontent.com/76275089/147810818-becf29cf-f804-4395-ba21-6d7b34c8b1c5.png" width = 400>
+
+<img src="https://user-images.githubusercontent.com/76275089/147810863-4e90b23c-b26a-4364-a812-983efedf08d2.png" width = 800>
+
+Higher threshold, fewer false positive, higher precision
+
+Lower threshold, fewer false negative, higher recall
+
+Precision recall curve
+
+<img src="https://user-images.githubusercontent.com/76275089/147811489-11b478fd-9d27-489c-b175-316e722f9d66.png" width = 500>
+
+Optimal curve: area under curve (AUC) = 1
+
+ROC curve
+
+<img src="https://user-images.githubusercontent.com/76275089/147811644-214ae1ec-d6e9-42d3-93a2-1eb15f7c7a44.png" width = 500>
+
+Optimal curve: area under curve (AUC) = 1
+
+Linear separability: a set of d-dimentional points is linearly separable if we can draw a degree d-1 hyperplane that separates the points perfectly
+
+L2 regularization
 
 
 ### Decision tree
