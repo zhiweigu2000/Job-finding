@@ -10,7 +10,7 @@ Shared responsibility model: AWS responsible for security of the cloud (hardware
 
 Amazon machine images: AMI launch EC2 instances, EC2 instances can launch AMI
 
-EC2: combination of virtual processors (vCPUs), memory, network, instance staorage and image processing units (GPHs)
+Electric Compute Cloud (EC2): combination of virtual processors (vCPUs), memory, network, instance staorage and image processing units (GPHs)
 
 EC2 lifecycle:
 
@@ -28,6 +28,29 @@ Difference between containers and VMs
 
 Virtual machines: maintain a copy of an operating system -- cost waste, offer full strength of an operating system and offer more resources
 
-Elastic Container Service (ECS): end-to-end container orchestration service, quickly spin up new containers and manage them across a cluster of EC2 instances
+Elastic Container Service (ECS): create new containers and manage across EC2 instances
 
-Elastic Kubernetes Service (EKS): platform for managing containerized workloads and services
+Elastic Kubernetes Service (EKS): platform for managing containerized workloads and services, run of Kubernetes
+
+ECS and EKS can run on two modes: EC2, AWS Fargate
+
+AWS Fargate: manage the infrastructure, developers focus on application development
+
+AWS Lambda: manage EC2 instances and containers, developers upload code into AWS Lambda, code runs in a isolated environment
+
+Function name: lambda_handler
+
+File name: lambda_function.py
+
+Networking: connect computers and communicate
+
+IP address: 32-bit address
+
+IPv4 address: decimal format, separated by period
+
+CIDR address: IPv4 address/n, n represents how many bits are fixed
+
+VPC: isolated network in AWS Cloud, include name, region (multiple AZ within the region), IP range
+
+Subnet: smaller network inside base network, include VPC, AZ, IP address (subset of VPC), two subnet in two AZ
+
