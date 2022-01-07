@@ -54,3 +54,13 @@ VPC: isolated network in AWS Cloud, include name, region (multiple AZ within the
 
 Subnet: smaller network inside base network, include VPC, AZ, IP address (subset of VPC), two subnet in two AZ
 
+Main route table: a set of routes that are used to determine where network traffic is directed
+
+Security group: block all inbound traffic, allow all outbound traffic
+
+Put resources into different groups, create security groups for each control network communication between them
+
+
+
+
+
