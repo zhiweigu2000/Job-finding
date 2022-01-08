@@ -60,6 +60,16 @@ Security group: block all inbound traffic, allow all outbound traffic
 
 Put resources into different groups, create security groups for each control network communication between them
 
+Block storage: split files into fixed-size chunk of data, each file has own address
+
+Object storage: store in flat structure, each file has a unique identifier, changing one character needs to update the whole file
+
+EC2 instance storage: temporary block storage
+
+Elastic block storage (EBS): block storage device, can only be used in same AZ
+
+EBS snapshots: backup
+
 
 
 
