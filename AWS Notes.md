@@ -66,10 +66,31 @@ Object storage: store in flat structure, each file has a unique identifier, chan
 
 EC2 instance storage: temporary block storage
 
-Elastic block storage (EBS): block storage device, can only be used in same AZ
+Elastic block storage (EBS): block storage device, can only be used in same AZ, data that changes frequently
 
 EBS snapshots: backup
 
+Standalone Storage Solution (S3): not tied to compute, object storage type, storage based on buckets, data that does not change often
+
+Transition action: transition objects to another storage class
+
+Expiration action: define when onjects expire and should be permanently deleted
+
+Unmanaged database on AWS: AWS takes care of physical infrastructure, hardware, operating system
+
+![image](https://user-images.githubusercontent.com/76275089/148852710-2d2ec2a9-2dea-491d-b3c8-48045ccd8994.png)
+
+Managed database on AWS: AWS also takes care of scaling, availability, backups
+
+![image](https://user-images.githubusercontent.com/76275089/148852774-e5ef0e53-9b22-4b7d-8407-bf7dd4e3b499.png)
+
+Relational Database Service (RDS)
+
+Backup: automatic backups, manual snapshots
+
+Database: Amazon DynamoDB (non-relational database), Amazon DocumentDB with MongoDB compatibility, Amazon Neptune (graph database), Amazon QLDB (ledger database)
+
+Amazon DynamoDB: tables (store data in tables), items (each table contains zero or more items), attributes(each item composed of zero or more attributes)
 
 
 
