@@ -92,6 +92,10 @@ Database: Amazon DynamoDB (non-relational database), Amazon DocumentDB with Mong
 
 Amazon DynamoDB: tables (store data in tables), items (each table contains zero or more items), attributes(each item composed of zero or more attributes)
 
+Benefit of monitoring: respond to operational issues, improve the performance and reliability, recognize security threats and events, make data-driven decisions, create more cost-efficient solutions
+
+Amazon CloudWatch: centralized place for all matrics
+
 
 
 
