@@ -96,6 +96,24 @@ Benefit of monitoring: respond to operational issues, improve the performance an
 
 Amazon CloudWatch: centralized place for all matrics
 
+Type of availability:
 
+Active-passive: only one of the two instances is available at a time, customers are always sent to the same server
 
+Active-active: better scalability, second server take some load, information may be unavailable for both servers, better for stateless applications
 
+Load balancing: the process of distributing tasks across a set of resources, enable load balancer to take all the traffic and then redirect to backend servers
+
+Elastic Load Balancr (ELB): distribute traffic across EC2 instances, etc
+
+![image](https://user-images.githubusercontent.com/76275089/149414324-7f5052f7-8736-44cc-8941-a5cea254e9f9.png)
+
+Listeners: the client connects to the listener
+
+Target groups: backend servers
+
+![image](https://user-images.githubusercontent.com/76275089/149414638-781ba650-f775-41e9-b69d-cc948faa1dfc.png)
+
+Vertical scaling: used in active-passive type, increase the size of the server (stop the passive instance -- change instance type -- start instance, turn it active -- stop, change, start the other instance)
+
+Horizontal scaling: used in active-active type, stateless, create / remove instances, EC2 Auto Scaling could create / remove instances
