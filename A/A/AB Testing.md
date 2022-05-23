@@ -1,4 +1,4 @@
-## Can and can't do with AB testing
+## Can and can't do with A/B testing
 
 Need clear control and experiment group
 
@@ -53,4 +53,22 @@ Practical significant: lower, like 2%
 Statistical power: how many are needed to give a significant result
 
 Power and size tradeoff: smaller change to detect, larger experiment
+
+Whole confidence interval above practical significant: launch
+
+Whole confidence interval below practical significant: do not launch
+
+Some part of confidence interval above practical significant: additional test
+
+## Ethics
+
+Risk: whether the risk exceeds the minimum risk
+
+Benefit: how might the result help
+
+Choice: what other choice do participants have, fewer alternative, more coercion
+
+Privacy: what data is being collected, and what is the expectation of privacy and confidentiality
+
+
 
