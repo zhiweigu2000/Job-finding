@@ -70,5 +70,57 @@ Choice: what other choice do participants have, fewer alternative, more coercion
 
 Privacy: what data is being collected, and what is the expectation of privacy and confidentiality
 
+## Metric
+
+### Invariant checking
+
+Are the population the same?
+
+### Evaluation
+
+High level business metric: revenue, market share
+
+Detailed metric: user experience, may to difficult to evaluate
+
+### Define matric
+
+High level concepts
+
+Business objective
+
+Single or multiple: composite metric, look into multiple metric
+
+Customer funnel
+
+Difficult metric: don't have access to data, take too long
+
+Generate metric:
+
+- External data: companies that collect granular data, companies that run survey, academic research
+
+- Observational analysis: show correlation not causation
+
+- Discuss with others, company culture
+
+- User Experience Research (UER): good for brainstorming, can use special equipment, need to validate result
+
+- Focus group: bring users together, risk of group think
+
+- Surveys: useful for metric that cannot collect directly, can not directly compare to other results
+
+<img width="353" alt="image" src="https://user-images.githubusercontent.com/76275089/170893575-db95315e-e070-41b4-8d90-5ae0e68018be.png">
+
+High level metric: click through probability = # users who click / # users who visit
+
+Def 1: for each time interval, # cookies that click / # cookies
+
+Def 2: # pageviews with click within time interval / # pageviews
+
+Def 3: # clicks / # pageviews
+
+
+
+
+
 
 
