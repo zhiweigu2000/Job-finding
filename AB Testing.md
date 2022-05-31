@@ -118,9 +118,40 @@ Def 2: # pageviews with click within time interval / # pageviews
 
 Def 3: # clicks / # pageviews
 
+## Filter
 
+External: clicking on everything, people come to see the new feature -- identity spam and fraud
 
+Internal: only impact a subset
 
+Week over week / year over year plot: smooth out regular changes
 
+## Type of metrics
+
+- Sums and counts
+
+- Distribution: mean, median, percentile
+
+- Probability and rate
+
+- Ratios
+
+## Sensitivity and robustness
+
+Sensitive to changes, not be affected by some observations
+
+Simple experiment and check the metric
+
+A versus A experiment, compare people who see the same thing
+
+Log and history
+
+## Variability
+
+Start with absolute difference
+
+Calculate percentage change
+
+<img width="759" alt="image" src="https://user-images.githubusercontent.com/76275089/171098404-4eb9ca7c-8d71-470c-9ffa-3986f43dc2ae.png">
 
 
