@@ -154,4 +154,23 @@ Calculate percentage change
 
 <img width="759" alt="image" src="https://user-images.githubusercontent.com/76275089/171098404-4eb9ca7c-8d71-470c-9ffa-3986f43dc2ae.png">
 
+## Nonparametric method
+
+Model without make assumptions
+
+Sign test: collect data positive or negative, use binomial
+
+## Empirical variability
+
+Perform AA tests: 
+
+- Compare results to what you expect
+
+- Estimate variance and calculate confidence
+
+- Directly estimate confidence interval
+
+Directly estimate confidence interval: select middle 95%, remove first and last 2.5%
+
+Bootstrap: run one AA test, random sample from each side, use as a simulated experiment, repeat to get many experiments
 
