@@ -174,3 +174,35 @@ Directly estimate confidence interval: select middle 95%, remove first and last 
 
 Bootstrap: run one AA test, random sample from each side, use as a simulated experiment, repeat to get many experiments
 
+## Design A/B testing
+
+Unit of diversion
+
+- User id(account): stable, unchanging, personally identifiable
+
+- Anoymous(cookie): specific to browser and device, users can clear cookie
+
+- Event: no consistent experience, only for ones that are not visible user experience
+
+- Device id: for mobile device
+
+- IP address
+
+Consideration
+
+- Consistency: user visibility, measurement
+
+- Ethical considerations: can data identify user, user consent
+
+- Variability: when unit of analysis = unit of diversion, variability tends to be lower and closer to analytical estimate
+
+Unit of analysis: the denominator of the proability
+
+
+
+
+
+
+
+
+
