@@ -266,13 +266,39 @@ Simpson's paradox: click through rate is higher for experiment for both groups, 
 
 There are different number of users from each group
 
+## Multiple metric
 
+Probability of any false positive increases as you increase number of metrics
 
+Need to use higher confidence level for each metric
 
+Method 1: assume independence
 
+overall = 1 - (1 - individual)^n
 
+Method 2: Bonderroni correction
 
+Garanteed to give overall at least as small as specified
 
+individual = overall / n
+
+Different strategies
+
+- Control probability that any metric shows a false positive -- familywise error rate (FWER)
+
+- Control false discovery rate (FDR) FDR = E[# false positives / # rejections]
+
+Launch or not
+
+- Do I have statistical significant and pratical significant result to launch the change?
+
+- Do I understand what does this change do to user experience?
+
+- Is this change worth it?
+
+Changes over time: seasonality changes
+
+Solution: hold back a small group of people, compare the result
 
 
 
