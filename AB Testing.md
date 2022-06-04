@@ -198,8 +198,43 @@ Consideration
 
 Unit of analysis: the denominator of the proability
 
+## Population vs Cohort
 
+Cohort: people who enter the experiment at the same time
 
+- Look for learning effects
+
+- Examining user retention
+
+- Want to increase user activity
+
+- Anything requiring users to be established
+
+## Size
+
+Reduce size
+
+- Increase dmin, alpha, beta
+
+- Change unit of diversion to be the same as unit of analysis
+
+- Target experiment to specific traffic
+
+Don't know the fraction: run a pilot experiment or observe the data for first several days
+
+## Duration vs Exposure
+
+Account for variability: long to account for changes between weekday and weekend
+
+Risky or not
+
+Learning effect: whether user adopt to the change, need time
+
+Choose unit of diversion correctly
+
+Dosage, use cohort instead of population
+
+Pre-period and post-period AA test: difference is learning effect
 
 
 
