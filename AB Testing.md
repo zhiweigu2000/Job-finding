@@ -46,7 +46,7 @@ p-value = P(P(exp) - P(cont) | H0) < 0.05, reject null hypothesis
 
 Pooled standard error
 
-<img width="1308" alt="image" src="https://user-images.githubusercontent.com/76275089/169208187-4c3d7b16-0d49-40d9-983f-04d8c28076df.png">
+<img width="799" alt="image" src="https://user-images.githubusercontent.com/76275089/172026197-fef21c87-36b8-4f6f-9385-da829126ab9b.png">
 
 Practical significant: lower, like 2%
 
@@ -235,6 +235,42 @@ Choose unit of diversion correctly
 Dosage, use cohort instead of population
 
 Pre-period and post-period AA test: difference is learning effect
+
+## Sanity checks
+
+- Population sizing method: check experiment population and control population are comparable
+
+- Invariance check: some matrics should not change during the experiment, e.g. population sizing (# events, ccokies, users)
+
+<img width="1914" alt="image" src="https://user-images.githubusercontent.com/76275089/172026159-1a61263c-2999-40ee-9ec9-e43c4f935d74.png">
+
+Look into day by day data
+
+Do not move forward if does not pass sanity check
+
+Common reason: data capture
+
+## Single metric
+
+<img width="1850" alt="image" src="https://user-images.githubusercontent.com/76275089/172026948-428ca511-7bb1-4407-9276-e07d022a91d1.png">
+
+Mistake: 0.0020 should be 0.0220
+
+[Sign test](https://www.graphpad.com/quickcalcs/binomial1.cfm): count number of success, check p-value
+
+Sign test has lower power
+
+Separate weekday and weekend
+
+Simpson's paradox: click through rate is higher for experiment for both groups, but the overall click through rate is lower for experiment
+
+There are different number of users from each group
+
+
+
+
+
+
 
 
 
