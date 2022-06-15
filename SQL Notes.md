@@ -151,6 +151,8 @@ MAX(column)
 
 GREATEST(multiple arguments)
 
+GROUP_CONCAT([column]): group by and list all values
+
 
 ## Group by
 
