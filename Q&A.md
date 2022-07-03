@@ -1,8 +1,8 @@
-1. What is overfitting?  / Please briefly describe what is bias vs. variance.
+1. What is overfitting? / Please briefly describe what is bias vs. variance.
 
+Overfitting means that the model fits the sample dataset so well that it fails to generalize. Overfitting model cannot perform well with unseen datasets. When the model is trained on sample dataset for too long, or the model is too complex, it is likely to cause overfitting. Overfitting model has low bias and high variance as it gets very sensitive to small changes. Therefore, it is common to separate datasets into training and testing sets. If the model has low error rate on training set, but high error rate on testing set, it is likely to be overfitted. A common method used to detect overfitting is k-fold cross-validation. Training with more data, selecting features, applying regularization could help prevent overfitting.
 
-
-
+References: https://www.ibm.com/cloud/learn/overfitting
 
 
 
