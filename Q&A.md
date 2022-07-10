@@ -26,12 +26,27 @@ What is 'Dimension Curse'? How to prevent?
 High dimension data is hard to visualize and interpret. When dimension increases, the space gets larger so the data is sparser. This makes grouping data more difficult. With fixed number of data, as the dimension increases, the predictive power of a model first increases, then decreases. 
 
 
+3. Please briefly describe the Random Forest classifier. How did it work? Any pros and cons in practical implementation?
 
-9. Please briefly describe the Random Forest classifier. How did it work? Any pros and cons in practical implementation?
-10. Please describe the difference between GBM tree model and Random Forest.
-11. What is SVM? what parameters you will need to tune during model training? How is different kernel changing the classification result?
-12. Briefly rephrase PCA in your own way. How does it work? And tell some goods and bads about it.
-13. Why doesn't logistic regression use R^2?
-14. When will you use L1 regularization compared to L2?
-15. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F1 score, ROC curve, recall, etc…)
-16. What would you do if you have > 30% missing value in an important field before building the model?
+Random forest classifier is based on decision tree. For classification tasks, the output is the class selected by most decision trees. Random forest could fix the errors of decision trees, such as overfit. For each decision tree, it is trained on a slightly different dataset. The dataset could be generated through bootstrap with replacement or selecting different features for each model. Since decision trees are sensitive to the data, the results are different for each tree. 
+Pros of random forest is that offers to a way to balance bias and variance because decision trees are easy to overfit and the random forest helps solve this problem. It is less likely to be affected by outliers. It also works well with large number of features. Cons of random forest is that it requires lots of calculation and it is hard to interpret the result. 
+
+Reference: https://towardsdatascience.com/understanding-random-forest-58381e0602d2
+https://medium.datadriveninvestor.com/random-forest-pros-and-cons-c1c42fb64f04
+
+
+4. Please describe the difference between GBM tree model and Random Forest.
+
+GBM is gradient boosting machines. After evaluting the first model, increase the weight for observations that are hard to predit and reduce the weight for observations that are easy to predict. So the overall model is now model 1 + model 2, and then buid the next model based on the error of the this overall model.
+The main difference is that for GBM tree model, each model is built based on the previous one, while in random forests, all models are built at the same time. In gradient boosting model, each tree tries to improve the deficiencies of the previous tree, such as fitting the residue of the previous model. Gradient boosting model could get a more accurate result, but also more likely to overfit.
+
+Reference: https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab
+https://www.baeldung.com/cs/gradient-boosting-trees-vs-random-forests
+
+
+12. What is SVM? what parameters you will need to tune during model training? How is different kernel changing the classification result?
+13. Briefly rephrase PCA in your own way. How does it work? And tell some goods and bads about it.
+14. Why doesn't logistic regression use R^2?
+15. When will you use L1 regularization compared to L2?
+16. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F1 score, ROC curve, recall, etc…)
+17. What would you do if you have > 30% missing value in an important field before building the model?
