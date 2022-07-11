@@ -44,7 +44,20 @@ Reference: https://towardsdatascience.com/understanding-gradient-boosting-machin
 https://www.baeldung.com/cs/gradient-boosting-trees-vs-random-forests
 
 
-12. What is SVM? what parameters you will need to tune during model training? How is different kernel changing the classification result?
+5. What is SVM? what parameters you will need to tune during model training? 
+
+SVM is support vector machine. The objective is to find a hyperplane in the space that distincyly classifies the data and maximize the margin between the data from both classes. We use a loss function to make sure the actual values and the predicted values have the same sign. 
+
+Reference: https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47
+
+How is different kernel changing the classification result?
+
+
+
+
+
+
+
 13. Briefly rephrase PCA in your own way. How does it work? And tell some goods and bads about it.
 14. Why doesn't logistic regression use R^2?
 15. When will you use L1 regularization compared to L2?
