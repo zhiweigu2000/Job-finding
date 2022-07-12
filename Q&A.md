@@ -46,16 +46,21 @@ https://www.baeldung.com/cs/gradient-boosting-trees-vs-random-forests
 
 5. What is SVM? what parameters you will need to tune during model training? 
 
-SVM is support vector machine. The objective is to find a hyperplane in the space that distincyly classifies the data and maximize the margin between the data from both classes. We use a loss function to make sure the actual values and the predicted values have the same sign. 
+SVM is support vector machine. The objective is to find a hyperplane in the space that distincyly classifies the data and maximize the margin between the data from both classes. In order to do this, a kernal function is used to help transform a lower dimension space to a better dimension. We use a loss function to make sure the actual values and the predicted values have the same sign. 
 
 Reference: https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47
 
 How is different kernel changing the classification result?
 
+Kernal transform data into desirable format.
 
+- Linear kernal: best kernel when there are lots of features, faster, used for text classification
+- Polynomial kernal
+- Gaussian Radial Basis Function: non-linear data
+- Sigmoid Kernel: used for neural network
+- Gaussian Kernel
 
-
-
+Reference: https://dataaspirant.com/svm-kernels/#t-1608054630720
 
 
 13. Briefly rephrase PCA in your own way. How does it work? And tell some goods and bads about it.
@@ -63,3 +68,6 @@ How is different kernel changing the classification result?
 15. When will you use L1 regularization compared to L2?
 16. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F1 score, ROC curve, recall, etc…)
 17. What would you do if you have > 30% missing value in an important field before building the model?
+18. Best model for small set of data
+19. Common models: Naive Bayes, neural network,...
+20. 
