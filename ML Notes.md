@@ -218,9 +218,15 @@ Random forest: build many decision trees by bootstrap, use a sample of features 
 
 Support Vector Machine: find out a plane that differentiate two categories, maximize margin
 
-Transform data into linear
-
 Supporting vector: the closet training example, important for determining the plane
+
+Kernal: transformation of data 
+
+Parameters: kernal, regularization parameter, gamma, margin
+
+Gamma: high gamma, only near points are considered
+
+Margin: separation of line to the closest class data points, good margin needs to be as far as possible for both sides
 
 
 ### KNN
@@ -230,6 +236,31 @@ K-Nearest Neighbor: calculate distance between query example and current example
 Larger K, more stable, end when there are more errors
 
 Disadvanatge: slower when number of examples and variables increases
+
+
+### Navie Bayes
+
+Bayes theorem: P(A|B) = P(B|A)P(A) / P(B)
+
+Calculate the probability for every factor, select the outcome with the highest probability
+
+E: event
+
+x1, x2, ...: test actors
+
+Calculate P(x1|E), P(x2|E), ..., find maximum probability
+
+Use when there is a small dataset and few features
+
+Requires features to be independent
+
+Suitable for categorical variables
+
+e.g text analysis, spam
+
+References: https://medium.com/machine-learning-101/chapter-1-supervised-learning-and-naive-bayes-classification-part-1-theory-8b9e361897d5
+
+
 
 
 ## Unsupervised learning
