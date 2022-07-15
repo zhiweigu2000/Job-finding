@@ -70,4 +70,5 @@ Reference: https://dataaspirant.com/svm-kernels/#t-1608054630720
 17. What would you do if you have > 30% missing value in an important field before building the model?
 18. Best model for small set of data
 19. Common models: Naive Bayes, neural network,...
-20. 
+
+
