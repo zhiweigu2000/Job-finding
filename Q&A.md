@@ -63,12 +63,21 @@ Kernal transform data into desirable format.
 Reference: https://dataaspirant.com/svm-kernels/#t-1608054630720
 
 
-13. Briefly rephrase PCA in your own way. How does it work? And tell some goods and bads about it.
+6. Briefly rephrase PCA in your own way. How does it work? And tell some goods and bads about it.
+
+PCA is principal component analysis. It is a method used when there are a lot of variables, it helps reduce the dimension of feature space. First standardized the data. Using simple value decomposition, we could find out the principal components. They are actually combination of features. Principal components are orthogonal to each other so they can capture more variance.  
+
+PCA helps reduce correlated features and prevent overfitting. The disadvantage of PCA is that it makes the data harder to interpret because it is the linear combination of multiple variables. 
+
+Reference: https://programmathically.com/principal-components-analysis-explained-for-dummies/
+https://www.i2tutorials.com/what-are-the-pros-and-cons-of-the-pca/
+
+
 14. Why doesn't logistic regression use R^2?
 15. When will you use L1 regularization compared to L2?
 16. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F1 score, ROC curve, recall, etc…)
 17. What would you do if you have > 30% missing value in an important field before building the model?
 18. Best model for small set of data
-19. Common models: Naive Bayes, neural network,...
+
 
 
