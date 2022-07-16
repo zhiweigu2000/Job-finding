@@ -96,6 +96,8 @@ Stochastic Gradient Descent: draw a simple random sample of data indices, comput
 
 ## Supervised learning
 
+References: https://medium.com/machine-learning-101
+
 ### Parametric model
 
 Parametric model: number of paramaters is fixed
@@ -258,9 +260,18 @@ Suitable for categorical variables
 
 e.g text analysis, spam
 
-References: https://medium.com/machine-learning-101/chapter-1-supervised-learning-and-naive-bayes-classification-part-1-theory-8b9e361897d5
 
+### Adaboost classifier 
 
+Combine weak classifier algorithm to form strong classifier e.g. based on many decision stumps (trees with one node and two leaves)
+
+After training a classifier at any level, ada-boost assigns weight to each training item, misclassified items are assigned high weight
+
+Update the weight after the classifier the trained
+
+For each stump, amount of say <img src="https://user-images.githubusercontent.com/76275089/179338753-0458918c-4cc3-48b7-bbd5-1a69225ddfe9.png" width = 200>
+
+New weight = old weight * e^(-amount of say), normalizate
 
 
 ## Unsupervised learning
@@ -283,4 +294,7 @@ Recast data along principle component
 K-means clustering:  minimize the distance of the points in a cluster with their centroid
 
 Select k centroids, assign points to cloest centroids, calculate new centroids until converge
+
+
+
 
