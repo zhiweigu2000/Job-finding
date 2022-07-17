@@ -73,7 +73,14 @@ Reference: https://programmathically.com/principal-components-analysis-explained
 https://www.i2tutorials.com/what-are-the-pros-and-cons-of-the-pca/
 
 
-14. Why doesn't logistic regression use R^2?
+7. Why doesn't logistic regression use R^2?
+
+R^2 equals to 1 minus the explained variance divided by the total variance. It has the assumption that total variance equals to the variance explained by the model plus the error variance. This assumption no longer holds in logistics regression.
+
+Reference: https://statisticsbyjim.com/regression/r-squared-invalid-nonlinear-regression/
+
+
+
 15. When will you use L1 regularization compared to L2?
 16. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F1 score, ROC curve, recall, etc…)
 17. What would you do if you have > 30% missing value in an important field before building the model?
