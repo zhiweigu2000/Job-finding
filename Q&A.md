@@ -75,13 +75,21 @@ https://www.i2tutorials.com/what-are-the-pros-and-cons-of-the-pca/
 
 7. Why doesn't logistic regression use R^2?
 
-R^2 equals to 1 minus the explained variance divided by the total variance. It has the assumption that total variance equals to the variance explained by the model plus the error variance. This assumption no longer holds in logistics regression.
+R^2 equals to 1 minus the error squared divided by the total variance, which equals to the variance explained by the model divided by total variance. It has the assumption that total variance equals to the variance explained by the model plus the error variance (from the ordinary least square). This assumption no longer holds in logistics regression.
 
 Reference: https://statisticsbyjim.com/regression/r-squared-invalid-nonlinear-regression/
+https://en.wikipedia.org/wiki/Coefficient_of_determination
+
+
+8. When will you use L1 regularization compared to L2?
+
+For L1 regularization, we assign a feature with a 0 weight to remove this feature. L1 model will use only a subset of features and remove features that are highly correlated. L2 regularization would make the weight of some features small, but do not equal to 0. L2 has a closed form of solution, but L1 does not. L1 regularization is more robust and create sparser output, so I would use L1 regularization when there are lots of features. 
+
+
+Reference: https://neptune.ai/blog/fighting-overfitting-with-l1-or-l2-regularization#:~:text=The%20differences%20between%20L1%20and,of%20squares%20of%20the%20weights
 
 
 
-15. When will you use L1 regularization compared to L2?
 16. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F1 score, ROC curve, recall, etc…)
 17. What would you do if you have > 30% missing value in an important field before building the model?
 18. Best model for small set of data
