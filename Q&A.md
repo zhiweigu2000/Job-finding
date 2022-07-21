@@ -89,8 +89,25 @@ For L1 regularization, we assign a feature with a 0 weight to remove this featur
 Reference: https://neptune.ai/blog/fighting-overfitting-with-l1-or-l2-regularization#:~:text=The%20differences%20between%20L1%20and,of%20squares%20of%20the%20weights
 
 
+9. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F score, ROC curve, recall, etc…)
 
-16. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F1 score, ROC curve, recall, etc…)
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/76275089/180141538-d7556b89-9408-44b4-9991-b79f254ddc15.png">
+
+Accuracy: number of correct predictions / total number of predictions
+
+Precision: TP / TP + FP
+
+Recall: TP / TP + FN
+
+F1 score: harmonic mean between precision and recall, high F1 score if both precision and recall are high
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/76275089/180140424-7fde800e-b0d9-4e94-aed4-736cdf89a3c2.png">
+
+Reference: https://towardsdatascience.com/the-f1-score-bec2bbc38aa6
+
+
+
+
 17. What would you do if you have > 30% missing value in an important field before building the model?
 18. Best model for small set of data
 
