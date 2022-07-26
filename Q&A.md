@@ -1,4 +1,25 @@
-1. What is overfitting? 
+1. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F score, ROC curve, recall, etc…)
+
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/76275089/180141538-d7556b89-9408-44b4-9991-b79f254ddc15.png">
+
+Type I error: False positive, null hypothesis is true but rejected
+
+Type II error: False negative, null hypothesis is false but fails to be rejected
+
+Accuracy: number of correct predictions / total number of predictions
+
+Precision: TP / TP + FP
+
+Recall: TP / TP + FN
+
+F1 score: harmonic mean between precision and recall, high F1 score if both precision and recall are high
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/76275089/180140424-7fde800e-b0d9-4e94-aed4-736cdf89a3c2.png">
+
+Reference: https://towardsdatascience.com/the-f1-score-bec2bbc38aa6
+
+
+2. What is overfitting? 
 
 Overfitting means that the model fits the sample dataset so well that it fails to generalize. Overfitting model cannot perform well with unseen datasets. When the model is trained on sample dataset for too long, or the model is too complex, it is likely to cause overfitting. Overfitting model has low bias and high variance as it gets very sensitive to small changes. Therefore, it is common to separate datasets into training and testing sets. If the model has low error rate on training set, but high error rate on testing set, it is likely to be overfitted. A common method used to detect overfitting is k-fold cross-validation. Training with more data, selecting features, applying regularization could help prevent overfitting.
 
@@ -11,22 +32,46 @@ Bias represents the distance between predicted values and the actual values. Var
 
 Reference: https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229
 
+Low bias machine learning algorithms: Decision Trees, k-NN, SVM
 
-2. How do you overcome overfitting? Please list 3-5 practical experience.   
+High bias machine learning algorithms: Linear Regression, Logistic Regression
+
+How do you overcome overfitting? Please list 3-5 practical experience.   
 
 - Cross-validation: separate data into several fold, such as 5 folds. Use 4 folds to train data and test on the remaining fold. 
 - Data augmentation: if cannot increase size of dataset, transform data 
 - Feature selection: only select the most important features by testing out different set of features
+- Add noise
 - L1 / L2 regularization: add a penalty term to push some coefficients to 0
+- Perform early stopping
 
 Reference: https://towardsdatascience.com/8-simple-techniques-to-prevent-overfitting-4d443da2ef7d
 
-What is 'Dimension Curse'? How to prevent?
+Overcome underfitting
+
+- Add features
+- Increase time of training
+
+3. What is 'Dimension Curse'? How to prevent?
 
 High dimension data is hard to visualize and interpret. When dimension increases, the space gets larger so the data is sparser. This makes grouping data more difficult. With fixed number of data, as the dimension increases, the predictive power of a model first increases, then decreases. 
 
 
-3. Please briefly describe the Random Forest classifier. How did it work? Any pros and cons in practical implementation?
+4. Confounding variables
+
+A variable that influence both the dependent variable and the independent variable
+
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/76275089/180937210-fea572cc-f948-43ee-bb5c-d7a1d99c7cce.png">
+
+
+Collider
+
+A variable that are influenced by both the dependent variable and the independent variable
+
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/76275089/180937489-46051435-b5cf-4e99-85e3-51c13c06a016.png">
+
+
+4. Please briefly describe the Random Forest classifier. How did it work? Any pros and cons in practical implementation?
 
 Random forest classifier is based on decision tree. For classification tasks, the output is the class selected by most decision trees. Random forest could fix the errors of decision trees, such as overfit. For each decision tree, it is trained on a slightly different dataset. The dataset could be generated through bootstrap with replacement or selecting different features for each model. Since decision trees are sensitive to the data, the results are different for each tree. 
 Pros of random forest is that offers to a way to balance bias and variance because decision trees are easy to overfit and the random forest helps solve this problem. It is less likely to be affected by outliers. It also works well with large number of features. Cons of random forest is that it requires lots of calculation and it is hard to interpret the result. 
@@ -35,7 +80,7 @@ Reference: https://towardsdatascience.com/understanding-random-forest-58381e0602
 https://medium.datadriveninvestor.com/random-forest-pros-and-cons-c1c42fb64f04
 
 
-4. Please describe the difference between GBM tree model and Random Forest.
+5. Please describe the difference between GBM tree model and Random Forest.
 
 GBM is gradient boosting machines. After evaluting the first model, increase the weight for observations that are hard to predit and reduce the weight for observations that are easy to predict. So the overall model is now model 1 + model 2, and then buid the next model based on the error of the this overall model.
 The main difference is that for GBM tree model, each model is built based on the previous one, while in random forests, all models are built at the same time. In gradient boosting model, each tree tries to improve the deficiencies of the previous tree, such as fitting the residue of the previous model. Gradient boosting model could get a more accurate result, but also more likely to overfit.
@@ -44,7 +89,7 @@ Reference: https://towardsdatascience.com/understanding-gradient-boosting-machin
 https://www.baeldung.com/cs/gradient-boosting-trees-vs-random-forests
 
 
-5. What is SVM? what parameters you will need to tune during model training? 
+6. What is SVM? what parameters you will need to tune during model training? 
 
 SVM is support vector machine. The objective is to find a hyperplane in the space that distincyly classifies the data and maximize the margin between the data from both classes. In order to do this, a kernal function is used to help transform a lower dimension space to a better dimension. We use a loss function to make sure the actual values and the predicted values have the same sign. 
 
@@ -63,7 +108,7 @@ Kernal transform data into desirable format.
 Reference: https://dataaspirant.com/svm-kernels/#t-1608054630720
 
 
-6. Briefly rephrase PCA in your own way. How does it work? And tell some goods and bads about it.
+7. Briefly rephrase PCA in your own way. How does it work? And tell some goods and bads about it.
 
 PCA is principal component analysis. It is a method used when there are a lot of variables, it helps reduce the dimension of feature space. First standardized the data. Using simple value decomposition, we could find out the principal components. They are actually combination of features. Principal components are orthogonal to each other so they can capture more variance.  
 
@@ -73,7 +118,7 @@ Reference: https://programmathically.com/principal-components-analysis-explained
 https://www.i2tutorials.com/what-are-the-pros-and-cons-of-the-pca/
 
 
-7. Why doesn't logistic regression use R^2?
+8. Why doesn't logistic regression use R^2?
 
 R^2 equals to 1 minus the error squared divided by the total variance, which equals to the variance explained by the model divided by total variance. It has the assumption that total variance equals to the variance explained by the model plus the error variance (from the ordinary least square). This assumption no longer holds in logistics regression.
 
@@ -81,35 +126,17 @@ Reference: https://statisticsbyjim.com/regression/r-squared-invalid-nonlinear-re
 https://en.wikipedia.org/wiki/Coefficient_of_determination
 
 
-8. When will you use L1 regularization compared to L2?
+9. When will you use L1 regularization compared to L2?
 
 For L1 regularization, we assign a feature with a 0 weight to remove this feature. L1 model will use only a subset of features and remove features that are highly correlated. L2 regularization would make the weight of some features small, but do not equal to 0. L2 has a closed form of solution, but L1 does not. L1 regularization is more robust and create sparser output, so I would use L1 regularization when there are lots of features. 
-
 
 Reference: https://neptune.ai/blog/fighting-overfitting-with-l1-or-l2-regularization#:~:text=The%20differences%20between%20L1%20and,of%20squares%20of%20the%20weights
 
 
-9. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F score, ROC curve, recall, etc…)
-
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/76275089/180141538-d7556b89-9408-44b4-9991-b79f254ddc15.png">
-
-Accuracy: number of correct predictions / total number of predictions
-
-Precision: TP / TP + FP
-
-Recall: TP / TP + FN
-
-F1 score: harmonic mean between precision and recall, high F1 score if both precision and recall are high
-
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/76275089/180140424-7fde800e-b0d9-4e94-aed4-736cdf89a3c2.png">
-
-Reference: https://towardsdatascience.com/the-f1-score-bec2bbc38aa6
+10. What would you do if you have > 30% missing value in an important field before building the model?
 
 
 
-
-17. What would you do if you have > 30% missing value in an important field before building the model?
-18. Best model for small set of data
 
 
 
