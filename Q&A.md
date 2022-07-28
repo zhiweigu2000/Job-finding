@@ -6,11 +6,13 @@ Type I error: False positive, null hypothesis is true but rejected
 
 Type II error: False negative, null hypothesis is false but fails to be rejected
 
-Accuracy: number of correct predictions / total number of predictions
+Accuracy = TP + TN / total = number of correct predictions / total number of predictions
 
-Precision: TP / TP + FP
+Precision = TP / TP + FP
 
-Recall: TP / TP + FN
+Recall / Sensitivity / True positive rate = TP / TP + FN
+
+Specificity / True negative rate = TN / TN + FP
 
 F1 score: harmonic mean between precision and recall, high F1 score if both precision and recall are high
 
@@ -19,7 +21,21 @@ F1 score: harmonic mean between precision and recall, high F1 score if both prec
 Reference: https://towardsdatascience.com/the-f1-score-bec2bbc38aa6
 
 
-2. What is overfitting? 
+2. Correlation and covariance
+
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/76275089/181431850-830a3df1-5045-4102-803a-bef88d433f71.png">
+
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/76275089/181432034-06e72e65-5b31-448a-8672-9d006cba0eba.png">
+
+
+3. p-value
+
+Measure the probability of obtaining the observed results, assuming that the null hypothesis is true
+
+Minimum significance level at which you can reject the null hypothesis
+
+
+4. What is overfitting? 
 
 Overfitting means that the model fits the sample dataset so well that it fails to generalize. Overfitting model cannot perform well with unseen datasets. When the model is trained on sample dataset for too long, or the model is too complex, it is likely to cause overfitting. Overfitting model has low bias and high variance as it gets very sensitive to small changes. Therefore, it is common to separate datasets into training and testing sets. If the model has low error rate on training set, but high error rate on testing set, it is likely to be overfitted. A common method used to detect overfitting is k-fold cross-validation. Training with more data, selecting features, applying regularization could help prevent overfitting.
 
@@ -52,12 +68,13 @@ Overcome underfitting
 - Add features
 - Increase time of training
 
-3. What is 'Dimension Curse'? How to prevent?
+
+5. What is 'Dimension Curse'? How to prevent?
 
 High dimension data is hard to visualize and interpret. When dimension increases, the space gets larger so the data is sparser. This makes grouping data more difficult. With fixed number of data, as the dimension increases, the predictive power of a model first increases, then decreases. 
 
 
-4. Confounding variables
+6. Confounding variables
 
 A variable that influence both the dependent variable and the independent variable
 
@@ -69,6 +86,13 @@ Collider
 A variable that are influenced by both the dependent variable and the independent variable
 
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/76275089/180937489-46051435-b5cf-4e99-85e3-51c13c06a016.png">
+
+
+7. ROC
+
+True positive rate and false positive rate at different threshold
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/76275089/181432793-ed4d63a7-eb1f-44c0-be33-18d1f4c4b0e3.png">
 
 
 4. Please briefly describe the Random Forest classifier. How did it work? Any pros and cons in practical implementation?
