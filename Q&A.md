@@ -1,10 +1,14 @@
-1. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F score, ROC curve, recall, etc…)
+## 1. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F score, ROC curve, recall, etc…)
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/76275089/180141538-d7556b89-9408-44b4-9991-b79f254ddc15.png">
 
 Type I error: False positive, null hypothesis is true but rejected
 
-Type II error: False negative, null hypothesis is false but fails to be rejected
+e.g. Consider someone as guilt when someone is actually not
+
+Type II error: False negative, null hypothesis is false but fails to be rejected 
+
+e.g. Covid negative result for someone who actually has Covid, cause the spread of disease
 
 Accuracy = TP + TN / total = number of correct predictions / total number of predictions
 
@@ -21,21 +25,21 @@ F1 score: harmonic mean between precision and recall, high F1 score if both prec
 Reference: https://towardsdatascience.com/the-f1-score-bec2bbc38aa6
 
 
-2. Correlation and covariance
+## 2. Correlation and covariance
 
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/76275089/181431850-830a3df1-5045-4102-803a-bef88d433f71.png">
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/76275089/181432034-06e72e65-5b31-448a-8672-9d006cba0eba.png">
 
 
-3. p-value
+## 3. p-value
 
 Measure the probability of obtaining the observed results, assuming that the null hypothesis is true
 
 Minimum significance level at which you can reject the null hypothesis
 
 
-4. What is overfitting? 
+## 4. What is overfitting? 
 
 Overfitting means that the model fits the sample dataset so well that it fails to generalize. Overfitting model cannot perform well with unseen datasets. When the model is trained on sample dataset for too long, or the model is too complex, it is likely to cause overfitting. Overfitting model has low bias and high variance as it gets very sensitive to small changes. Therefore, it is common to separate datasets into training and testing sets. If the model has low error rate on training set, but high error rate on testing set, it is likely to be overfitted. A common method used to detect overfitting is k-fold cross-validation. Training with more data, selecting features, applying regularization could help prevent overfitting.
 
@@ -54,7 +58,7 @@ High bias machine learning algorithms: Linear Regression, Logistic Regression
 
 How do you overcome overfitting? Please list 3-5 practical experience.   
 
-- Cross-validation: separate data into several fold, such as 5 folds. Use 4 folds to train data and test on the remaining fold. 
+- Cross-validation: shuffle data randomly, separate data into several fold, such as 5 folds. Use 4 folds to train data and test on the remaining fold to retain the evaluation score
 - Data augmentation: if cannot increase size of dataset, transform data 
 - Feature selection: only select the most important features by testing out different set of features
 - Add noise
@@ -69,30 +73,38 @@ Overcome underfitting
 - Increase time of training
 
 
-5. What is 'Dimension Curse'? How to prevent?
+## 5. What is 'Dimension Curse'? How to prevent?
 
 High dimension data is hard to visualize and interpret. When dimension increases, the space gets larger so the data is sparser. This makes grouping data more difficult. With fixed number of data, as the dimension increases, the predictive power of a model first increases, then decreases. 
 
 
-6. Confounding variables
+## 6. Confounding variables
 
-A variable that influence both the dependent variable and the independent variable
+Confounding variable: variable that influence both the dependent variable and the independent variable
 
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/76275089/180937210-fea572cc-f948-43ee-bb5c-d7a1d99c7cce.png">
 
-
-Collider
-
-A variable that are influenced by both the dependent variable and the independent variable
+Collider: variable that are influenced by both the dependent variable and the independent variable
 
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/76275089/180937489-46051435-b5cf-4e99-85e3-51c13c06a016.png">
 
 
-7. ROC
+## 7. ROC
 
 True positive rate and false positive rate at different threshold
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/76275089/181432793-ed4d63a7-eb1f-44c0-be33-18d1f4c4b0e3.png">
+
+
+## 8. Supervised learning
+
+Supervised learning: use of labeled dataset
+
+e.g regression, decision tree, kNN, SVM, naive bayes, neural network (in most cases)
+
+Unsupervised learning: use of unlabeled dataset
+
+e.g. clustering
 
 
 4. Please briefly describe the Random Forest classifier. How did it work? Any pros and cons in practical implementation?
