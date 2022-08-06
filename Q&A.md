@@ -1,4 +1,4 @@
-## 1. List out at least 4 metrics you will use to evaluate model performance and tell the advantage for each of them. (F score, ROC curve, recall, etc…)
+## 1. Metrics you will use to evaluate model performance and tell the advantage for each of them. (F score, ROC curve, recall, etc…)
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/76275089/180141538-d7556b89-9408-44b4-9991-b79f254ddc15.png">
 
