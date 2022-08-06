@@ -160,7 +160,11 @@ Reference: https://towardsdatascience.com/understanding-gradient-boosting-machin
 https://www.baeldung.com/cs/gradient-boosting-trees-vs-random-forests
 
 
-## 13. Gini coefficient
+## 13. Clustering
+
+Objective: entities within a group are similar, but groups are different from each other
+
+Homogeneity within cluster: sum of squares
 
 Gini impurity metric: measure the homogeneity of a set of items, from 0 to 1
 
@@ -192,9 +196,17 @@ For L1 regularization, we assign a feature with a 0 weight to remove this featur
 Reference: https://neptune.ai/blog/fighting-overfitting-with-l1-or-l2-regularization#:~:text=The%20differences%20between%20L1%20and,of%20squares%20of%20the%20weights
 
 
-## 17. What would you do if you have > 30% missing value in an important field before building the model?
+## 17. Missing values
 
 If there is no pattern in missing values, missing values can be substituted with mean or median values, or ignored, or set as default value. If there is a high percentage of values missing, we could probably igore this missing value. 
+
+
+## 18. Outliers
+
+- Change it with a mean or median
+- Standardize the feature, smooth the outliers
+- Log transform
+- Drop the values
 
 
 
