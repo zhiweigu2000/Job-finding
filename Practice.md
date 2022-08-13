@@ -29,3 +29,11 @@ def stem(roots, setence):
     return new_sentence
 ```
 
+![image](https://user-images.githubusercontent.com/76275089/184458214-a379453f-8df7-48af-a770-e60aff4e9d72.png)
+
+```SQL
+SELECT round(count(friend_accept.acceptor_id) / count(friend_request.requester_id), 4)
+FROM friend_request
+JOIN friend_accept
+ON friend_request.requester_id = friend_accept.requester_id AND friend_request.requested_id = friend_accept.acceptor_id
+```
