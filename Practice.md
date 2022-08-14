@@ -37,3 +37,35 @@ FROM friend_request
 JOIN friend_accept
 ON friend_request.requester_id = friend_accept.requester_id AND friend_request.requested_id = friend_accept.acceptor_id
 ```
+
+![image](https://user-images.githubusercontent.com/76275089/184553413-2016f095-211d-4846-8dc3-11a156a59c17.png)
+
+6 * 0.3^5 * 0.7 = 0.0102
+
+
+![image](https://user-images.githubusercontent.com/76275089/184553578-d916b5ff-26cd-471d-a763-a6c86dcabcfc.png)
+
+```SQL
+WITH temp1 as
+(
+  SELECT count(*) as change
+  FROM account_status a
+  JOIN account_status b
+  ON a.account_id = b.account_id
+  WHERE a.date = "2020-01-01" and a.status = "closed" and b.date = "2019-12-31" and b.status = "open"
+),
+temp2 as
+(
+  SELECT count(distinct account_id) as total
+  FROM account_status a
+  WHERE a.date = "2019-12-31" and a.status = "open"
+)
+
+SELECT round(temp1.change / temp2.total, 2) as percentage_closed
+FROM temp1, temp2
+```
+
+
+
+
+
