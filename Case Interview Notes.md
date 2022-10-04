@@ -76,4 +76,15 @@ Market = conversion rate * market size * market share
 ![image](https://user-images.githubusercontent.com/76275089/129538087-7cc9fd68-0a7e-4a7d-a4f1-4edcf860a8d4.png)
 
 
+# A/B testing
+
+- Problem clarification, understand context and goal
+
+- Define metrics, generate hypothesis
+
+- Identify the right data to look at and how to calculate metrics
+
+- Design the experiment
+
+- Decision making and next steps
 
