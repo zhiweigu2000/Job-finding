@@ -198,7 +198,7 @@ Reference: https://neptune.ai/blog/fighting-overfitting-with-l1-or-l2-regulariza
 
 ## 17. Missing values
 
-If there is no pattern in missing values, missing values can be substituted with mean or median values, or ignored, or set as default value. If there is a high percentage of values missing, we could probably igore this missing value. 
+If there is no pattern in missing values, missing values can be substituted with mean or median values, or ignored, or set as default value. If there is a high percentage of values missing, we could probably ignore this missing value. 
 
 
 ## 18. Outliers
