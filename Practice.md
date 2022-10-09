@@ -66,6 +66,9 @@ FROM temp1, temp2
 ```
 
 
+![image](https://user-images.githubusercontent.com/76275089/194732556-3f22e7bc-901b-4fdc-9a2a-da58861a7134.png)
 
+1. 0.5 * 0.5 = 0.25
+2. Binomial distribution (n, q), E = nq
 
 
