@@ -209,6 +209,36 @@ If there is no pattern in missing values, missing values can be substituted with
 - Drop the values
 
 
+## 19. MANOVA Assumptions
+
+- Independent Random Sampling: observations are independent of one another, no pattern for the selection of the sample, sample is completely random
+- Absence of multicollinearity: dependent variables cannot be too correlated to each other
+- Normality: multivariate normality is present in the data
+- Homogeneity of Variance: variance between groups is equal
+
+
+## 20. Paired t-test
+
+Null hypothesis: the difference between the paired population means is equal to 0
+
+- The variables are independent of one another.
+- The difference should be approximately normally distributed
+
+1. Standard error = sd / sqrt(sample size)
+2. t = average difference / standard error
+3. df = sample size - 1, find t-value
+4. t smaller than t-value, cannot reject
+
+
+
+
+
+
+
+
+
+
+
 
 
 
