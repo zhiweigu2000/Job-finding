@@ -93,3 +93,11 @@ FROM temp1, temp2
 
 1/0.3125 = 3.2
 
+
+<img src="https://user-images.githubusercontent.com/76275089/194957869-0d8eef86-cc8a-4369-a67c-e3d12ad047f9.png" width=800>
+
+1/2 * (1/2 * 1/2 * 2 + 3/4 * 3/4 + 1/4 * 1/4) = 1/2 * (1/2 + 10/16) = 9/16
+
+
+
+
