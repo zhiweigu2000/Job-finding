@@ -230,6 +230,25 @@ Null hypothesis: the difference between the paired population means is equal to 
 4. t smaller than t-value, cannot reject
 
 
+## 21. F-test
+
+Null hypothesis: two populations have the same variance
+
+- Data is normal
+- Variance of each treatment group is the same
+- All observations are independent
+
+F = between group / within group
+
+
+## 22. Chi-square test
+
+Goodness of fit: decide whether a variable comes from certain distrbution
+
+Test of independence: decide whether two variables are independent
+
+
+
 
 
 
