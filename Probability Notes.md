@@ -1,29 +1,43 @@
 # Probability Notes
 
-Conditional probability: P(A|B) = P(AB) / P(B)
+Conditional probability: $P(A|B) = \frac{P(AB)}{P(B)}$
 
-Independence: P(AB) = P(A)* P(B)
+Independent: $P(AB) = P(A)* P(B)$
 
 
 ## Expectation
 
-![image](https://user-images.githubusercontent.com/76275089/127007620-90ba7d1c-a7d6-4ec1-a75f-751472f4cceb.png)
+Expectation: 
 
-Addition rule: E(X+Y) = E(X) + E(Y)
+Average of all possible values of X, weighted by their probabilities 
 
-Indicator: E(I) = P(A), E(X) = P(A1) + P(A2) + ...
+$E(X) = \displaystyle\sum_{all x} xP(X=x)$
 
-Tail sum formula
+$E[g(x)] = \displaystyle\sum_{all x} g(x)P(X=x)$
 
-![image](https://user-images.githubusercontent.com/76275089/127009830-f8db9c88-f0eb-44ef-b4f5-0df95597198b.png)
+$E(aX+b) = aE(X) + b$
 
-Markov's inequality
+$E(X+Y) = E(X) + E(Y)$
 
-If X > 0, then P(X >= a) <= E(X)/a for every a > 0
+When X, Y independent, $E(XY) = E(X) * E(Y)$
 
-![image](https://user-images.githubusercontent.com/76275089/127011327-bba6de29-3073-4fd6-9899-7d66cf623e4a.png)
+Indicator: 
 
-E(aX+b) = aE(X) + b
+$E(I_A) = P(A)$, $E(X) = P(I_1) + P(I_2) + ...$
+
+Tail sum formula: 
+
+For X with possible values {0, 1, ..., n}, $E(X) = \displaystyle\sum_{j=1}^{n} P(X \geq j)$
+
+e.g. Four dices are rolled. Let M be the minimum number rolled, find E(M)
+
+$E(M) = P(M \geq 1) + P(M \geq 2) + P(M \geq 3) + P(M \geq 4) + P(M \geq 5) + P(M \geq 6)$
+
+$=\left(\frac{6}{6}\right)^4 + \left(\frac{5}{6}\right)^4 + \left(\frac{4}{6}\right)^4 + \left(\frac{3}{6}\right)^4 + \left(\frac{2}{6}\right)^4 + \left(\frac{1}{6}\right)^4$
+
+Markov's inequality:
+
+If X > 0, then $P(X \geq a) \leq \frac{E(X)}{a}$ for every a > 0
 
 
 ## Standard deviation
