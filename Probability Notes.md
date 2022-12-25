@@ -19,7 +19,7 @@ $E(aX+b) = aE(X) + b$
 
 $E(X+Y) = E(X) + E(Y)$
 
-When X, Y independent, $E(XY) = E(X) * E(Y)$
+When X, Y independent, $E(XY) = E(X) * E(Y)$, $Var(X+Y) = Var(X) + Var(Y)$
 
 Indicator: 
 
@@ -42,30 +42,46 @@ If X > 0, then $P(X \geq a) \leq \frac{E(X)}{a}$ for every a > 0
 
 ## Standard deviation
 
-![image](https://user-images.githubusercontent.com/76275089/127164059-36491ba7-de67-4d06-983d-bf59fcc4785c.png)
+Variance:
 
-Var(X) = E(X^2) - (E(X))^2
+Mean squared deviation of X from its expected value 
 
-SD(aX+ b) = |a|SD(X)
+$Var(X) = E[(X-\mu)^2]$
 
-Standardization: X* = (X - E(X))/SD(X), E(X*) = 0, SD(X*) = 1
+$SD(X) = \sqrt{Var(X)}$
 
-P(X <= b) = P(X* <= (b-E(X))/SD(X))
+$Var(X) = E(X^2) - (E(X))^2$
 
-![image](https://user-images.githubusercontent.com/76275089/127167393-3e9c296f-fce8-43f9-a7ed-25db105f23a5.png)
+$Var(aX+b) = a^2Var(X)$
 
-Independence: Var(X) + Var(Y) = Var(X + Y)
+Standardization: 
 
-![image](https://user-images.githubusercontent.com/76275089/127168250-8ced2ac7-ff94-4662-9a0f-a08f0b356d04.png)
+$X' = \frac{X - E(X)}{SD(X)}$, $E(X') = 0$, $SD(X') = 1$
+
+$P(X <= b) = P(X' <= \frac{b-E(X)}{SD(X)})$
+
+Chebychev's inequality:
+
+$P[|X-E(X)| \geq kSD(X)] \leq \frac{1}{k^2}$
+
+The probability that a random variable differs from its expected value by more than k sd is at most $1/k^2$
+
+Central Limit Theorem:
+
+$S_n = X_1 + .. + X_n$
+
+For large n, the distribution of $S_n$ is approximately normal, with mean $E(S_n) = n\mu$ and standard deviation $SD(S_n) = \sigma\sqrt{n}$
+
+$P(a \leq \frac{S_n - n\mu}{\sigma\sqrt{n}} \leq b) \approx \Phi(b) - \Phi(a)$, $\Phi$ is cdf
 
 
 ## Uniform distribution
 
-f(x) = 1/(b - a) for a < x < b
+$f(x) = \frac{1}{b - a}$ for $a < x < b$
 
-E(X) = (a + b)/2
+$E(X) = \frac{a + b}{2}$
 
-Var(X) = (b - a) ^ 2/12
+$Var(X) = \frac{(b - a) ^ 2}{12}$
 
 
 ## Normal distribution
