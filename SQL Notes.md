@@ -304,5 +304,10 @@ conn.rollback()
 
 conn.close()
 
+Insert into table values (%s), (content,): clean content to avoid error, never use % or +
+
+Update table set column = value where content like %awful%
+
+Delect from table where restriction
 
 
