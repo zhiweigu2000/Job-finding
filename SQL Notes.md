@@ -286,4 +286,23 @@ LAG([column], [number]) / LEAD([column], [number]): lag returns one row later, l
 #### WINDOW [function] AS (PARTITION BY [column] ORDER BY [column]) 
 
 
+## Python DB-API
+
+conn = sqlite3.connect("Cookies")
+
+cursor = conn.cursor()
+
+cursor.execute(query)
+
+cursor.fetchall()
+
+cursor.fetchone()
+
+conn.commit()
+
+conn.rollback()
+
+conn.close()
+
+
 
