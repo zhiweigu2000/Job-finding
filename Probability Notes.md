@@ -84,30 +84,44 @@ $E(X) = \frac{a + b}{2}$
 $Var(X) = \frac{(b - a) ^ 2}{12}$
 
 
-## Normal distribution
-
-![image](https://user-images.githubusercontent.com/76275089/128602229-c803e9dc-767f-43bf-9d38-59c7f0bf7daf.png)
-
-![image](https://user-images.githubusercontent.com/76275089/128602237-29791981-c108-4210-acff-4897183bd84b.png)
-
-![image](https://user-images.githubusercontent.com/76275089/128602993-f0847112-6f6c-4b51-98a3-dffc8a0b456f.png)
-
-Mean: miu
-
-Variance: sigma ^ 2
-
-![image](https://user-images.githubusercontent.com/76275089/128638321-e0c36eb6-5a03-4278-8ea0-fe11e9e73c2b.png)
-
-
 ## Binomial distribution 
 
-![image](https://user-images.githubusercontent.com/76275089/126997510-55c19c86-02a2-402f-9c8e-26b5a9e9ec78.png)
+k successes in n trails: $\binom{n}{k} p^k q^{n-k}$
 
-![image](https://user-images.githubusercontent.com/76275089/126998892-aab62834-2b3c-42ba-92ae-2882d43985a9.png)
+$\binom{n}{k} = \frac{n!}{k!(n-k)!}$
 
-E(X) = np
+$E(X) = np$
 
-Var(X) = np(1 - p)
+$Var(X) = np(1 - p)$
+
+
+## Normal distribution
+
+$y = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(x-\mu)^2 / \sigma^2}$
+
+Normal approximation to binomial distribution:
+
+For n independent trails with success probability p
+
+$P(a \leq X \leq b) = P(a - \frac{1}{2} < X < b + \frac{1}{2}) \approx \Phi(\frac{b + \frac{1}{2} - \mu}{\sigma}) - \Phi(\frac{a - \frac{1}{2} - \mu}{\sigma})$
+
+Confidence interval: $\hat{p} \pm 2/\sqrt{n}$
+
+Sum of independent normal variables: 
+
+If $X$ and $Y$ are independent with normal $(\lambda, \sigma^2)$ and normal $(\mu, \tau^2)$ distributions, then $X+Y$ has normal $(\lambda+\mu, \sigma^2+\tau^2)$ distirbution. 
+
+$\Phi(-z) = 1 - \Phi(z)$
+
+$\Phi(-z, z) = 2\Phi(z)-1$
+
+$\Phi(-1, 1) = 68%$
+
+$\Phi(-2, 2) = 95%$
+
+$\Phi(-3, 3) = 99.7%$
+
+$P(c < X < d) = P(a < Z < b) = \Phi(b) - \Phi(a)$ where $a = (c-\mu)/\sigma$, $Z = (X-\mu)/\sigma$, $d = (b-\mu)/\sigma$
 
 
 ## Possion distribution
