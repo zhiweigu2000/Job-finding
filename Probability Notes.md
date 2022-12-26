@@ -128,9 +128,11 @@ $P(c < X < d) = P(a < Z < b) = \Phi(b) - \Phi(a)$ where $a = (c-\mu)/\sigma$, $Z
 
 Binomial distribution when p is nearly 0, n closes to infinite
 
-![image](https://user-images.githubusercontent.com/76275089/127008287-01ab230b-589e-4add-af2e-2eaa0e6803c0.png)
+$P(k) = e^{-\mu}\frac{\mu^k}{k!}$
 
-![image](https://user-images.githubusercontent.com/76275089/127169902-a1c024bb-8690-4c2b-b278-51bc629ef48f.png)
+$E(X) = \mu$
+
+$Var(X) = \mu$
 
 
 ## Geometric distribution
