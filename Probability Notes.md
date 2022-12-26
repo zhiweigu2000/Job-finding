@@ -134,14 +134,18 @@ $E(X) = \mu$
 
 $Var(X) = \mu$
 
+If $N_1, ..., N_j$ are independent Poisson random variables with parameter $\mu_1, ..., \mu_j$, then  $N_1 + ... + N_j$ is a independent Poisson random variable with parameter $\mu_1 + ... + \mu_j$
+
 
 ## Geometric distribution
 
 X times to reach one success, X - 1 failures before success
 
-![image](https://user-images.githubusercontent.com/76275089/128601381-9ac9afa0-4faf-4e0c-8683-42f82c268424.png)
+$P(n) = P(T=n) = (1-p)^{n-1}p$
 
-![image](https://user-images.githubusercontent.com/76275089/128601430-4a0eaeab-f4a1-44a1-9f39-d5dc0a52dbb9.png)
+$E(T) = 1/p$
+
+$SD(T) = \sqrt{1-p} / p$
 
 Distribution of waiting times
 
@@ -221,11 +225,13 @@ Independence: f(x, y) = fx(x)fy(y)
 
 ## Conditional expectation
 
-E(X+Y|A) = E(X|A) + E(Y|A)
+$P(X=x, Y=y) = P(X=x)P(Y=y|X=x)$
+
+$E(X+Y|A) = E(X|A) + E(Y|A)$
 
 ![image](https://user-images.githubusercontent.com/76275089/128298547-2afd61df-69f8-4472-a43c-aefe45a9371c.png)
 
-E(Y) = E[E(Y|X)]
+$E(Y) = E[E(Y|X)]$
 
 ![image](https://user-images.githubusercontent.com/76275089/128299255-3cdd4a50-b8bd-4173-84d0-f8859ac5bc76.png)
 
