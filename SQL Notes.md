@@ -1,6 +1,10 @@
 # SQL Notes
 
-From SQL for Data Science on Coursera by UC Davis and other online sources
+Source: 
+
+SQL for Data Science https://www.coursera.org/learn/sql-for-data-science
+
+Introduction to Relational Database https://www.udacity.com/course/intro-to-relational-databases--ud197
 
 SQL: read, write, update data
 
@@ -37,6 +41,31 @@ IFNULL: turn Null values in the column into 0
 
 GROUP_CONCAT: return strings from this column
 
+#### SELECT [calculation] AS [column]
+
+Addition, subtraction, multiplication, division
+
+
+## Aggregate functions
+
+#### SELECT [function ([column])] AS [column name]
+
+AVG(), COUNT(), MIN(), MAX(), SUM()
+
+COUNT(*): include null values
+
+COUNT([column]): ignore null values
+
+COUNT(DISTINCT [column]): count distinct values
+
+MAX, MIN, SUM, AVG: ignore null values
+
+MAX(column)
+
+GREATEST(multiple arguments)
+
+GROUP_CONCAT([column]): group by and list all values
+
 
 ## Delete
 
@@ -54,19 +83,17 @@ GROUP_CONCAT: return strings from this column
 
 ## Create
 
-#### CREATE TABLE [table name]
+#### CREATE TABLE [table]
 
-#### ([column]);
+#### ([column] [type] references [table (column)], primary key ([column]));
 
 Primary keys must have a value
 
-#### INSERT INTO [table name]
+#### INSERT INTO [table] ([column])
 
-#### ([column])
+#### VALUES (%s) ([values],);
 
-#### VALUES
-
-#### ([values]);
+Clean content when inserting to avoid error, never use % or +
 
 
 ## Comment
@@ -126,34 +153,6 @@ DESC: descending order, only for column it directly precedes
 ASC: ascending order, only for column it directly precedes
 
 
-## Math calculation
-
-#### SELECT [calculation] AS [column name]
-
-Addition, subtraction, multiplication, division
-
-
-## Aggregate functions
-
-#### SELECT [function ([column])] AS [column name]
-
-AVG(), COUNT(), MIN(), MAX(), SUM()
-
-COUNT(*): include null values
-
-COUNT([column]): ignore null values
-
-COUNT(DISTINCT [column]): count distinct values
-
-MAX, MIN, SUM, AVG: ignore null values
-
-MAX(column)
-
-GREATEST(multiple arguments)
-
-GROUP_CONCAT([column]): group by and list all values
-
-
 ## Group by
 
 #### GROUP BY [column] HAVING [condition] 
@@ -167,9 +166,9 @@ HAVING for groups, HAVING after GROUP BY
 
 ## Subquery
 
-#### WHERE [column] IN 
+#### WHERE [column] IN (SELECT [column] FROM [table] where [condition])
 
-####     (SELECT [column] FROM [table] where [condition])
+#### FROM (SELECT [column] FROM [table] where [condition])
 
 Always perform innermost SELECT first
 
@@ -220,19 +219,15 @@ Full union: do not remove duplicates
 
 ## Text strings
 
-Concatenate: join two strings
-
 #### SELECT [string1] || [string2]
 
-Substring
+Concatenate: join two strings
 
 #### SELECT SUBSTR ([string], [starting position], [length of string])
 
-Trim
+Substring
 
 #### SELECT TRIM ([string])
-
-Upper/lower
 
 #### SELECT UPPER/LOWER ([column name]) FROM [table]
 
@@ -304,10 +299,12 @@ conn.rollback()
 
 conn.close()
 
-Insert into table values (%s), (content,): clean content to avoid error, never use % or +
 
-Update table set column = value where content like %awful%
+## Normalization
 
-Delect from table where restriction
-
+Rules:
+1. Every row has the same number of columns
+2. There is a unique key, and everything in a row say something about the key
+3. Facts that do not related to the key belong in different tables
+4. Tables should not imply relationships that do not exist
 
