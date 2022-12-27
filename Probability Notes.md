@@ -154,20 +154,30 @@ Distribution of waiting times
 
 Distribution for decay
 
-![image](https://user-images.githubusercontent.com/76275089/127177889-2952802b-1f3d-42af-8eb5-a12e9ff2316e.png)
+Exponential distribution is a continuous analog to geometric distribution
+
+$f(t) = \lambda e^{-\lambda t}$
+
+$P(a < T \leq b) = \int_a^b \lambda e^{-\lambda t} dt = e^{-\lambda a} - e^{-\lambda b}$
+
+Exponential function survival function: 
+
+$P(T>t) =  e^{-\lambda t}$
+
+$E(T) = SD(T) = \frac{1}{\lambda}$
 
 Memoryless property: given survival to time t, the chance of surviving a further time s is the same as the chance of surviving to time s in the first place
 
-![image](https://user-images.githubusercontent.com/76275089/127178761-a9e503a7-eb64-45c1-9118-f7c9c2c8c2cc.png)
+$P(T > t+s | T>t) = P(T>s)$
 
-Exponential distribution is a continuous analog to geometric distribution
+![image](https://user-images.githubusercontent.com/76275089/127178761-a9e503a7-eb64-45c1-9118-f7c9c2c8c2cc.png)
 
 
 ## Gamma distribution
 
 ![image](https://user-images.githubusercontent.com/76275089/127178807-2493408f-2c06-4b22-aa67-94a1958ff468.png)
 
-Rn^2 = Z1^2 + Z2^2 + ... + Zn^2 is gamma(n/2, 1/2)
+$R_n^2 = Z_1^2 + Z_2^2 + ... + Z_n^2$ is $gamma(n/2, 1/2)$
 
 
 ## Beta distribution
@@ -193,7 +203,9 @@ The kth order statistics of n independent uniform (0, 1) random variables has be
 
 ## Change of variable
 
-![image](https://user-images.githubusercontent.com/76275089/127179828-32e5c51c-2086-4d81-82cd-bd10ff42be57.png)
+One-to-one change of variable for densities:
+
+$f_Y(y) = f_X(x) / |\frac{dy}{dx}|$ where $y = g(x)$
 
 ![image](https://user-images.githubusercontent.com/76275089/128604763-c70e1e67-5e0f-4d7a-9c33-5c9b3cb635f3.png)
 
