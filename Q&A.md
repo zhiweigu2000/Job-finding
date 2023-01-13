@@ -109,7 +109,7 @@ e.g. clustering
 
 ## 9. What is SVM? what parameters you will need to tune during model training? 
 
-SVM is support vector machine. The objective is to find a hyperplane in the space that distincyly classifies the data and maximize the margin between the data from both classes. In order to do this, a kernal function is used to help transform a lower dimension space to a better dimension. We use a loss function to make sure the actual values and the predicted values have the same sign. 
+SVM is support vector machine. The objective is to find a hyperplane in the space that distinctly classifies the data and maximize the margin between the data from both classes. In order to do this, a kernal function is used to help transform a lower dimension space to a better dimension. We use a loss function to make sure the actual values and the predicted values have the same sign. 
 
 Reference: https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47
 
