@@ -9,7 +9,8 @@ Independent: $P(AB) = P(A)* P(B)$
 
 Expectation: 
 
-Average of all possible values of X, weighted by their probabilities 
+Average of 
+possible values of X, weighted by their probabilities 
 
 $E(X) = \displaystyle\sum_{all x} xP(X=x)$
 
@@ -150,6 +151,36 @@ $SD(T) = \sqrt{1-p} / p$
 Distribution of waiting times
 
 
+## Conditional expectation
+
+$P(X=x, Y=y) = P(X=x)P(Y=y|X=x)$
+
+$E(X+Y|A) = E(X|A) + E(Y|A)$
+
+Rule of average conditional expectation $E(Y) = \displaystyle\sum_{all x} E(Y|X=x)P(X=x)$
+
+$E(Y) = E[E(Y|X)]$
+
+
+## Covariance and correlation
+
+$Cov(X, Y) = E[(X-E(X))(Y-E(Y))] = E(XY) - E(X)E(Y)$
+
+$Var(X+Y) = Var(X) + Var(Y) + 2Cov(X, Y)$
+
+$Cov(X, X) = Var(X)$
+
+$Corr(X, Y) = \frac{Cov(X, Y)}{SD(X)SD(Y)}$
+
+$-1\leq Corr(X, Y)\leq1$
+
+Uncorrelated: $Corr(X, Y) = 0$, $Cov(X, Y) = 0$
+
+Independent variables are uncorrelated, uncorrelated variables are not necessarily independent
+
+----
+
+
 ## Exponential distribution
 
 Distribution for decay
@@ -234,41 +265,6 @@ Margins
 
 Independence: f(x, y) = fx(x)fy(y)  
 
-
-## Conditional expectation
-
-$P(X=x, Y=y) = P(X=x)P(Y=y|X=x)$
-
-$E(X+Y|A) = E(X|A) + E(Y|A)$
-
-![image](https://user-images.githubusercontent.com/76275089/128298547-2afd61df-69f8-4472-a43c-aefe45a9371c.png)
-
-$E(Y) = E[E(Y|X)]$
-
-![image](https://user-images.githubusercontent.com/76275089/128299255-3cdd4a50-b8bd-4173-84d0-f8859ac5bc76.png)
-
-![image](https://user-images.githubusercontent.com/76275089/128299376-cf96d63f-768c-4b97-8d69-c4ddc928684a.png)
-
-
-## Covariance and correlation
-
-![image](https://user-images.githubusercontent.com/76275089/128685973-2224920d-92c2-46cd-8e83-e3547ff410f9.png)
-
-Cov(X, X) = Var(X)
-
-Independence: Cov(X, X) = Var(X)
-
-![image](https://user-images.githubusercontent.com/76275089/128686650-f5ff8964-3483-42f4-a5eb-d0b49a1b9d4e.png)
-
-![image](https://user-images.githubusercontent.com/76275089/128686676-f1010b7a-e534-475d-94e1-9160d11b90b0.png)
-
-Uncorrelated: Corr(X, Y) = 0, Cov(X, Y) = 0, E(XY) = E(X)E(Y)
-
--1 <= Corr(X, Y) <= 1
-
-Independent variables are uncorrelated, uncorrelated variables are not necessarily independent
-
-![image](https://user-images.githubusercontent.com/76275089/128687234-0344cb3e-fe5d-42db-854a-ab3fcae3ada4.png)
 
 
 
