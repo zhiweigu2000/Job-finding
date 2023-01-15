@@ -248,6 +248,16 @@ Goodness of fit: decide whether a variable comes from certain distrbution
 Test of independence: decide whether two variables are independent
 
 
+## 23. Hierarchical model
+
+A hierarchical model is a type of statistical model that is organized into a hierarchy of different levels or layers. Each level of the hierarchy represents a different aspect or component of the data being modeled, and the levels are connected to one another in a way that allows information to flow from one level to another.
+
+An example of a hierarchical model is a hierarchical linear model, which is used to model data with multiple levels of grouping or nesting. For example, you might use a hierarchical linear model to analyze test scores for students in different schools, where the schools are the highest level of the hierarchy, and the students are the lowest level. The model would allow you to estimate the average test scores for each school, while also taking into account the variation in scores between students within each school.
+
+
+
+
+
 
 
 
