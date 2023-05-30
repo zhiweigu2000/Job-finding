@@ -12,3 +12,22 @@ SHA: an ID number for each commi
 
 Branch: when a new line of development is created that diverges from the main line of development. This alternative line of development can continue without altering the main line
 
+---
+
+git init
+
+git clone
+
+git status: display the current status of the repository
+
+git log: display all of the commits of a repository, show SHA, author, date, message, use q to exit
+
+git log --oneline: list one commit per line, show the first 7 characters of the SHA and message
+
+git log --stat: display the files that have been modified, number of lines that have been added/removed, a summary line
+
+git log -p: display the files that have been modified, location of the lines, actual changes that have been made
+
+git show SHA: show only one commit, default with -p
+
+
