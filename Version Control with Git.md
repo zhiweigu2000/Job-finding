@@ -30,4 +30,11 @@ git log -p: display the files that have been modified, location of the lines, ac
 
 git show SHA: show only one commit, default with -p
 
+git add: move files from the Working Directory to the Staging, use .gitignore for files that do not want to be added
+
+git commit: take files from the Staging Index and saves them in the repository
+
+git diff: see changes that have been made but haven't been committed
+
+
 
