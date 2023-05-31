@@ -1,8 +1,66 @@
+## Success Metrics and Goals
+
+https://www.youtube.com/watch?v=yHJYtNLh4Vo
+
+What goal would you set for X product?
+
+How would you define success for X product?
+
+How would you measure whether X product is success or not?
+
+**What goal would you set for Airbnb**
+
+### Product, users, value
+
+Marketplace: guests and hosts
+
+Successful when they make booking
+
+Guests: place to stay
+
+Hosts: earn money from lenting
+
+Platform: earn commission from booking cost
+
+### Northstar metric
+
+Total number of nights booked
+
+### Breakdown northstar
+
+Total number of nights booked: total number of active guests * number of nights booked per guest
+
+Number of nights booked per guest: number of active listings, views of listsing, confirmed bookings - cancelled bookings
+
+Number of active listsings: number of active hosts * listings per hosts
+
+Number of active listsings: new + exitsing + resurrected - left
+
+Healthy ecosystem: 
+
+- Supply > demand by X:Y ratio
+
+- Quality of supply
+
+- Demand growth via word of mouth
+
+### Tradeoff, countermetric
+
+Tradeoff: hosts with 1 or few listsing vs commercial hosts with multiple listsings
+
+Countermetric:
+
+- number of listings with <4 stars, maintain high quality
+
+- number of listsing reported
+
+---
+
 ## Root cause analysis
 
 https://www.youtube.com/watch?v=CHXXW1mnAio
 
-Uber cancellations have gone up, what happened?
+**Uber cancellations have gone up, what happened?**
 
 ### Clarify questions: share thinking behind questions
 
