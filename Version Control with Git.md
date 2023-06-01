@@ -35,6 +35,8 @@ git show <SHA>: show only one commit, default with -p
 git add: move files from the Working Directory to the Staging, use .gitignore for files that do not want to be added
 
 git commit: take files from the Staging Index and saves them in the repository
+  
+git commit --amend: alter the most-recent commit
 
 git diff: see changes that have been made but haven't been committed
 
@@ -52,3 +54,15 @@ git checkout -b <name>: create a new branch
 
 git merge <other branch>: combine branches
 
+git revert <SHA>: undo the changes that were made by the commit, create a new commit to record the change
+  
+git reset <reference-to-commit>: erase commit, move the HEAD and current branch pointer to the referenced commit, HEAD^ = HEAD~1 = parent commit
+  
+git reset --mixed <reference-to-commit>: default, move to working directory
+  
+git reset --soft <reference-to-commit>: move to staging
+
+git reset --hard <reference-to-commit>: move to trash
+  
+  
+  
