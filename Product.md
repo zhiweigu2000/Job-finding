@@ -56,6 +56,80 @@ Countermetric:
 
 ---
 
+## Tradeoff Questions
+
+https://www.youtube.com/watch?v=5lqIdfBJqZw
+
+**Youtube adds in the beginning or middle?**
+
+### Product & value
+
+Creators: share content with people, monetize if more than 1000 subscribers
+
+Watchers: diverse content, easy to search, personalized
+
+### Key metrics
+
+Total watch time per day
+
+Number of videos watched per day
+
+Average percentage of videos watched
+
+Number of ad impression
+
+Ad clicks
+
+### Hypothesis
+
+Beginning: 
+
+- Get more ad impression 
+
+- Do not watch the video (annoyed, ad leads people to another page)
+
+- Less watch rate, discourage creators, less profit for platform
+
+- People not engage with ad
+
+Middle:
+
+- Decrease ad impression
+
+- Higher ad engagement
+
+- Increase total watch time
+
+### A/B test
+
+First group: beginning
+
+Second group: middle
+
+Third group: before most people left (somewhere before middle)
+
+Hold everything else the same
+
+Metrics: 
+
+- Ad impressions
+
+- Ad clicks
+
+- Percentage of ad watched 
+
+- Total watch time
+
+- Total number of videos watched
+
+### Data driven decision
+
+Total volumn of ad clicks go up
+
+Total watch time
+
+---
+
 ## Root cause analysis
 
 https://www.youtube.com/watch?v=CHXXW1mnAio
