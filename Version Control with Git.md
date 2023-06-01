@@ -28,7 +28,9 @@ git log --stat: display the files that have been modified, number of lines that 
 
 git log -p: display the files that have been modified, location of the lines, actual changes that have been made
 
-git show SHA: show only one commit, default with -p
+git log --oneline --decorate --graph: add the bullets and lines to the leftmost part of the output
+
+git show <SHA>: show only one commit, default with -p
 
 git add: move files from the Working Directory to the Staging, use .gitignore for files that do not want to be added
 
@@ -36,5 +38,17 @@ git commit: take files from the Staging Index and saves them in the repository
 
 git diff: see changes that have been made but haven't been committed
 
+git tag -a TAG SHA: add a marker on a specific commit
 
+git branch: list out the branches in a repository
+
+git branch <name> <SHA>: create a new branch NAME at SHA, does not switch to the new branch
+
+git branch -d <name>: delete branch, cannot delete a branch currently on
+
+git checkout <name>: switch branch
+
+git checkout -b <name>: create a new branch
+
+git merge <other branch>: combine branches
 
