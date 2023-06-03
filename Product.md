@@ -1,14 +1,12 @@
 ## Success Metrics and Goals
 
-https://www.youtube.com/watch?v=yHJYtNLh4Vo
-
 What goal would you set for X product?
 
 How would you define success for X product?
 
 How would you measure whether X product is success or not?
 
-**What goal would you set for Airbnb**
+[**What goal would you set for Airbnb**](https://www.youtube.com/watch?v=yHJYtNLh4Vo) 
 
 ### Product, users, value
 
@@ -58,9 +56,7 @@ Countermetric:
 
 ## Tradeoff Questions
 
-https://www.youtube.com/watch?v=5lqIdfBJqZw
-
-**Youtube adds in the beginning or middle?**
+[**Youtube adds in the beginning or middle?**](https://www.youtube.com/watch?v=5lqIdfBJqZw)
 
 ### Product & value
 
@@ -128,13 +124,81 @@ Total volumn of ad clicks go up
 
 Total watch time
 
+[**FB reactions are up 20% but comments are down 10%**](https://www.youtube.com/watch?v=pUaFTrQi_OA)
+
+### Product, users, value
+
+Reaction is an emoji, comments are when people respond to posts
+
+Users and value: 
+
+Creators create content and get value from people engaging with their content
+
+Views get value from consuming relevant content and engage by reactions and comments
+
+### Hypothesis
+
+1. People go for easier option with is reactions
+
+2. Users with engage with more posts since reactions make it easier to engage
+
+3. More people will be active and engaged since reactions is easier
+
+### Metrics
+
+Viewers:
+
+- Social interactions per day increase
+
+- Number of interactions per day increases
+
+- Number of people interacting with posts per day increases
+
+Creators:
+
+- Number of posts created per day increases / decreases
+
+- Average number of posts per person per day increases / decreases
+
+- Number of posters per day increases
+
+FB:
+
+- Time spent on FB decreases
+
+- Number of sessions per day decreases
+
+- Daily active users increase / decrease
+
+### Ship, no ship
+
+Ship: 
+
+- Social interactions per day increase
+
+- Number of interactions per day increases
+
+- Number of people interacting with posts per day increases
+
+- Number of posts created per day increases
+
+- Time spent on FB increases / decreases
+
+- Number of sessions per day increases / decreases
+
+No ship:
+
+- Social interactions per day decrease
+
+- Number of posts created per day decreases
+
+- Daily active users decrease
+
 ---
 
 ## Root cause analysis
 
-https://www.youtube.com/watch?v=CHXXW1mnAio
-
-**Uber cancellations have gone up, what happened?**
+[**Uber cancellations have gone up, what happened?**](https://www.youtube.com/watch?v=CHXXW1mnAio)
 
 ### Clarify questions: share thinking behind questions
 
