@@ -6,33 +6,33 @@ How would you define success for X product?
 
 How would you measure whether X product is success or not?
 
-[**What goal would you set for Airbnb**](https://www.youtube.com/watch?v=yHJYtNLh4Vo) 
+### [What goal would you set for Airbnb？](https://www.youtube.com/watch?v=yHJYtNLh4Vo) 
 
-### Product, users, value
+**Product, users, value**
 
-Marketplace: guests and hosts
+Successful when people make booking
 
-Successful when they make booking
-
-Guests: place to stay
+Guests: have a place to stay
 
 Hosts: earn money from lenting
 
 Platform: earn commission from booking cost
 
-### Northstar metric
+**Northstar metric**
+
+Northstar metric: the one metric that captures the core value that your product delivers to customers
 
 Total number of nights booked
 
-### Breakdown northstar
+**Breakdown northstar**
 
 Total number of nights booked: total number of active guests * number of nights booked per guest
 
 Number of nights booked per guest: number of active listings, views of listsing, confirmed bookings - cancelled bookings
 
-Number of active listsings: number of active hosts * listings per hosts
+Number of active listings: number of active hosts * listings per hosts
 
-Number of active listsings: new + exitsing + resurrected - left
+Number of active hosts: new + exitsing + return - left
 
 Healthy ecosystem: 
 
@@ -42,13 +42,13 @@ Healthy ecosystem:
 
 - Demand growth via word of mouth
 
-### Tradeoff, countermetric
+**Tradeoff, countermetric**
 
 Tradeoff: hosts with 1 or few listsing vs commercial hosts with multiple listsings
 
-Countermetric:
+Countermetrics: 
 
-- number of listings with <4 stars, maintain high quality
+- number of listings with <4 stars --> to maintain high quality
 
 - number of listsing reported
 
@@ -56,15 +56,15 @@ Countermetric:
 
 ## Tradeoff Questions
 
-[**Youtube adds in the beginning or middle?**](https://www.youtube.com/watch?v=5lqIdfBJqZw)
+### [Youtube adds in the beginning or middle?](https://www.youtube.com/watch?v=5lqIdfBJqZw)
 
-### Product & value
+**Product & value**
 
 Creators: share content with people, monetize if more than 1000 subscribers
 
 Watchers: diverse content, easy to search, personalized
 
-### Key metrics
+**Key metrics**
 
 Total watch time per day
 
@@ -72,11 +72,11 @@ Number of videos watched per day
 
 Average percentage of videos watched
 
-Number of ad impression
+Number of ad impression: counted whenever an ad is displayed within an app
 
 Ad clicks
 
-### Hypothesis
+**Hypothesis**
 
 Beginning: 
 
@@ -96,7 +96,7 @@ Middle:
 
 - Increase total watch time
 
-### A/B test
+**A/B test**
 
 First group: beginning
 
@@ -118,17 +118,17 @@ Metrics:
 
 - Total number of videos watched
 
-### Data driven decision
+**Data driven decision**
 
 Total volumn of ad clicks go up
 
 Total watch time
 
-[**FB reactions are up 20% but comments are down 10%**](https://www.youtube.com/watch?v=pUaFTrQi_OA)
+### [FB reactions are up 20% but comments are down 10%](https://www.youtube.com/watch?v=pUaFTrQi_OA)
 
-### Product, users, value
+**Product, users, value**
 
-Reaction is an emoji, comments are when people respond to posts
+Product: reaction is an emoji, comments are when people respond to posts
 
 Users and value: 
 
@@ -136,15 +136,15 @@ Creators create content and get value from people engaging with their content
 
 Views get value from consuming relevant content and engage by reactions and comments
 
-### Hypothesis
+**Hypothesis**
 
-1. People go for easier option with is reactions
+- People go for easier option which is reactions
 
-2. Users with engage with more posts since reactions make it easier to engage
+- Users with engage with more posts since reactions make it easier to engage
 
-3. More people will be active and engaged since reactions is easier
+- More people will be active and engaged since reactions is easier
 
-### Metrics
+**Metrics**
 
 Viewers:
 
@@ -170,7 +170,7 @@ FB:
 
 - Daily active users increase / decrease
 
-### Ship, no ship
+**Ship, no ship**
 
 Ship: 
 
@@ -198,39 +198,39 @@ No ship:
 
 ## Root cause analysis
 
-[**Uber cancellations have gone up, what happened?**](https://www.youtube.com/watch?v=CHXXW1mnAio)
+### [Uber cancellations have gone up, what happened?](https://www.youtube.com/watch?v=CHXXW1mnAio)
 
-### Clarify questions: share thinking behind questions
+**Clarify questions: share thinking behind questions**
 
 1. Define metric 
 
-Driver vs **rider** cancellation
+Driver vs *rider* cancellation
 
-Number of cancellation vs **cancellation %**
+Number of cancellation vs *cancellation %*
 
 2. Time period
 
 Steady decline
 
-**Sudden decline: over last 2 weeks**
+*Sudden decline: over last 2 weeks*
 
 Similar pattern before
 
 3. Change % vs benchmark
 
-What % of change have gone up by? **5% doubled to 10%**
+What % of change have gone up by? *5% doubled to 10%*
 
-4. Specific issue vs **explore**
+4. Specific issue vs *explore*
 
-### Identify levers: summarize info so far that help you hypothesize
+**Identify levers: summarize info so far that help you hypothesize**
 
 1. Users 
 
 2. User flow
 
-3. Segmentation: region, days **no segmentation**
+3. Segmentation: region, days *no segmentation*
 
-### Hypothesize and validate: make hypothesis specific to question
+**Hypothesize and validate: make hypothesis specific to question**
 
 1. Destination error
 
@@ -252,7 +252,7 @@ Check number of active drivers and number of active orders
 
 4. Eta too long
 
-### Prioritize
+**Prioritize**
 
 Criteria: 
 
@@ -260,9 +260,9 @@ Criteria:
 
 - Easy to validate / invalidate
 
-**Pricing, wait time**
+*Pricing, wait time*
 
-### Fix
+**Fix
 
 1. Cheaper pricing and emphasize better features
 
