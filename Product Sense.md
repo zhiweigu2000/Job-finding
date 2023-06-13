@@ -72,21 +72,21 @@ Meaning conversation from listing
 
 Supply:
 
-- # of active listings per day (seller growth) = # of active sellers, average # of items per active seller
+- number of active listings per day (seller growth) = number of active sellers, average number of items per active seller
 
 - Average CTR on listings (relevancy)
 
-- # of listings with at least one view (relevancy)
+- number of listings with at least one view (relevancy)
 
 - Total GMV of all listings (value)
 
 Demand:
 
-- # of active buyers per day
+- number of active buyers per day
 
-- # of active messages started from buyers
+- number of active messages started from buyers
 
-- # of conversations
+- number of conversations
 
 **Tradeoff, countermetric**
 
@@ -96,9 +96,9 @@ Downstream:
 
 Countermetric:
 
-- # of reported listings
+- number of reported listings
 
-- # of returned items or unmarked sold, # of no replies to buyers
+- number of returned items or unmarked sold, number of no replies to buyers
 
 ---
 
