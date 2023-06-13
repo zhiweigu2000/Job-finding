@@ -52,6 +52,54 @@ Countermetrics:
 
 - number of listsing reported
 
+### [What goal would you set for Facebook marketplace？](https://www.youtube.com/watch?v=8ufVs-Tu27g) 
+
+**Product, users, value**
+
+Product: connected buyers and sellers
+
+Sellers: get value when successfully sell items
+
+Buyers: get value when they find something they want and successfully buy
+
+Facebook: get value when buyers and sellers connect via messaging
+
+**Northstar metric**
+
+Meaning conversation from listing
+
+**Breakdown northstar**
+
+Supply:
+
+- # of active listings per day (seller growth) = # of active sellers, average # of items per active seller
+
+- Average CTR on listings (relevancy)
+
+- # of listings with at least one view (relevancy)
+
+- Total GMV of all listings (value)
+
+Demand:
+
+- # of active buyers per day
+
+- # of active messages started from buyers
+
+- # of conversations
+
+**Tradeoff, countermetric**
+
+Downstream:
+
+- Interactions in buy & sell groups (decrease)
+
+Countermetric:
+
+- # of reported listings
+
+- # of returned items or unmarked sold, # of no replies to buyers
+
 ---
 
 ## Tradeoff Questions
