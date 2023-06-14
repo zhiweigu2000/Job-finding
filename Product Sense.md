@@ -172,6 +172,82 @@ Total volumn of ad clicks go up
 
 Total watch time
 
+### [Instagram stories for 24 hours or 48 hours?](https://www.youtube.com/watch?v=6euI1ixWbjw)
+
+**Mission, goal, hypothesis**
+
+Ins mission: capture and share moments
+
+Stories' goal: lower the barrier for sharing because Stories are live on the feed for a short period of time, so people feel less pressure to post high fidelity content
+
+Hypothesis: shift to 48 hours help creators to reach more views and more engagement
+
+More engagement -> spend more time and post more
+
+**Metrics**
+
+Topline metrics:
+
+- Number of stories with >1 engagement per week: represent a connection happening and a balance between creator & customer participation
+
+- Average time spent on Stories per weekly active user: if people are spending more time with the change
+
+Creators:
+
+- Number of active creators per week: maintain healthy supply
+
+- Average number of stories posted per creator per week: expect an increase if Story gets more engaging
+
+Consumers:
+
+- Number of stories impression: expect more stories available
+
+- Number of stories clicked: expect more click if more stories are available
+
+- Number of stories watches: expect more watch if more stories are clicked
+
+- Number of stories with >1 engagement (reaction, message) per week: expect more engagement if more stories are watches
+
+- Average time spent of Stories: expect more time
+
+IG ecosystem:
+
+- Average time spent on IG: expect more time
+
+- Weekly active users: expect more active users
+
+**Hypothesized impact on key metrics**
+
+Key metric:
+
+- Number of stories with >1 engagement per week: increase, more content for people to engage
+
+- Average time spent on Stories per weekly active user: increase
+
+- Average time spent on IG: ?, inrease due to more time spent on Stories, but there might be cannibalization
+
+- Weekly active users: increase, more content for people to engage
+
+**Variations**
+
+- Creators choose 24 hrs or 48 hrs but default to one of the choice
+
+**A/B test**
+
+Control: live for 24 hrs
+
+Option 1: live for 48 hrs
+
+Option 2: live defaults to 48 hrs with option to choose 24 hrs
+
+**Ship, no ship, retest**
+
+Ship: improve on the key metric with no major regression
+
+No ship: if any of the key matric negatively impacted, or major regression
+
+Retest: no statistically significant result
+
 ### [FB reactions are up 20% but comments are down 10%](https://www.youtube.com/watch?v=pUaFTrQi_OA)
 
 **Product, users, value**
@@ -241,6 +317,7 @@ No ship:
 - Number of posts created per day decreases
 
 - Daily active users decrease
+
 
 ---
 
