@@ -260,6 +260,46 @@ Suitable for categorical variables
 
 e.g text analysis, spam
 
+1. What Are the Basic Assumption?
+
+Features Are Independent
+
+2. Advantages
+
+- Work Very well with many number of features
+
+- Works Well with Large training Dataset
+
+- It converges faster when we are training the model
+
+- It also performs well with categorical features
+
+3. Disadvantages
+
+Correlated features affects performance
+
+4. Whether Feature Scaling is required?
+
+No
+
+5. Impact of Missing Values?
+
+Naive Bayes can handle missing data. Attributes are handled separately by the algorithm at both model construction time and prediction time. As such, if a data instance has a missing value for an attribute, it can be ignored while preparing the model, and ignored when a probability is calculated for a class value tutorial :https://www.youtube.com/watch?v=EqjyLfpv5oA
+
+6. Impact of outliers?
+
+It is usually robust to outliers
+
+7. Different Problem statement you can solve using Naive Baye's
+
+- Sentiment Analysis
+
+- Spam classification
+
+- Twitter sentiment analysis
+
+- Document categorization
+
 
 ### Adaboost classifier 
 
