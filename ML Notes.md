@@ -262,7 +262,7 @@ Calculate each scenario, normalize, select the result with maximum probability
 
 e.g text analysis
 
-Classify sentences as good or bad: remove stop words, stemming, bag of words / TFIDF
+Classify sentences as good or bad: remove stop words, stemming, bag of words / TFIDF, calculate the probability to classify
 
 1. What Are the Basic Assumption?
 
