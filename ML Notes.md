@@ -270,11 +270,11 @@ Features Are Independent
 
 2. Advantages
 
-- Work very well with many number of features
+- Work very well with many number of features: treat features as independent, curse-of-dimensionality problems do not apply
 
-- Works well with Large training Dataset
+- Works well with large training dataset
 
-- It converges faster when we are training the model
+- It converges faster when we are training the model: based on probability
 
 - It also performs well with categorical features
 
@@ -288,7 +288,7 @@ No
 
 5. Impact of Missing Values?
 
-Naive Bayes can handle missing data. Attributes are handled separately by the algorithm at both model construction time and prediction time. As such, if a data instance has a missing value for an attribute, it can be ignored while preparing the model, and ignored when a probability is calculated for a class value tutorial :https://www.youtube.com/watch?v=EqjyLfpv5oA
+Naive Bayes can handle missing data. Attributes are handled separately by the algorithm at both model construction time and prediction time. As such, if a data instance has a missing value for an attribute, it can be ignored while preparing the model, and ignored when a probability is calculated for a class value.
 
 6. Impact of outliers?
 
