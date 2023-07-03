@@ -242,23 +242,27 @@ Disadvanatge: slower when number of examples and variables increases
 
 ### Navie Bayes
 
-Bayes theorem: P(A|B) = P(B|A)P(A) / P(B)
+Bayes theorem: $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
 
 Calculate the probability for every factor, select the outcome with the highest probability
 
-E: event
+y: event
 
-x1, x2, ...: test actors
+$x_1$, $x_2$, ...: test actors, given
 
-Calculate P(x1|E), P(x2|E), ..., find maximum probability
+$P(y|x_1, x_2, .., x_n) = \frac{P(x_1|y) P(x_2|y)  ... P(y)}{P(x_1) P(x_2) ... P(x_n)}$
 
-Use when there is a small dataset and few features
+$= \frac{P(y)\prod_{i=1}^{n}{P(x_i|y)}}{P(x_1) P(x_2) ... P(x_n)}$
 
-Requires features to be independent
+$P(y|x_1, x_2, .., x_n) \propto P(y)\prod_{i=1}^{n}{P(x_i|y)}$
 
-Suitable for categorical variables
+$y = P(y)\prod_{i=1}^{n}{P(x_i|y)}$ 
 
-e.g text analysis, spam
+Calculate each scenario, normalize, select the result with maximum probability
+
+e.g text analysis
+
+Classify sentences as good or bad: remove stop words, stemming, bag of words / TFIDF
 
 1. What Are the Basic Assumption?
 
@@ -266,9 +270,9 @@ Features Are Independent
 
 2. Advantages
 
-- Work Very well with many number of features
+- Work very well with many number of features
 
-- Works Well with Large training Dataset
+- Works well with Large training Dataset
 
 - It converges faster when we are training the model
 
