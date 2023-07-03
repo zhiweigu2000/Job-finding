@@ -252,13 +252,11 @@ $x_1$, $x_2$, ...: test actors, given
 
 $P(y|x_1, x_2, .., x_n) = \frac{P(x_1|y) P(x_2|y)  ... P(y)}{P(x_1) P(x_2) ... P(x_n)}$
 
-$= \frac{P(y)\prod_{i=1}^{n}{P(x_i|y)}}{P(x_1) P(x_2) ... P(x_n)}$
+$= \frac{P(y)\displaystyle\prod_{i=1}^{n}{P(x_i|y)}}{P(x_1) P(x_2) ... P(x_n)}$
 
-$P(y|x_1, x_2, .., x_n) \propto P(y)\prod_{i=1}^{n}{P(x_i|y)}$
+$P(y|x_1, x_2, .., x_n) \propto P(y)\displaystyle\prod_{i=1}^{n}{P(x_i|y)}$
 
-$y = P(y)\prod_{i=1}^{n}{P(x_i|y)}$ 
-
-Calculate each scenario, normalize, select the result with maximum probability
+Normalize, select the result with maximum probability
 
 e.g text analysis
 
@@ -266,13 +264,13 @@ Classify sentences as good or bad: remove stop words, stemming, bag of words / T
 
 1. What Are the Basic Assumption?
 
-Features Are Independent
+Features are independent
 
 2. Advantages
 
 - Work very well with many number of features: treat features as independent, curse-of-dimensionality problems do not apply
 
-- Works well with large training dataset
+- Works well with large training dataset, or when dataset is small compared to number of features
 
 - It converges faster when we are training the model: based on probability
 
