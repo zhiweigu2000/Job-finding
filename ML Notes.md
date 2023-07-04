@@ -113,7 +113,7 @@ e.g. KNN, SVM, Decision Tree
 
 Linear regression: y = ax + b
 
-Minimize \displaystyle\sum{(y_i - \hat{y_i})^2}$ with gradient descent
+Minimize $\displaystyle\sum{(y_i - \hat{y_i})^2}$ with gradient descent
 
 Convergence theorem: $y = y - \frac{dy}{dx} * \alpha$
 
