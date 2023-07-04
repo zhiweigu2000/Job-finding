@@ -111,35 +111,82 @@ e.g. KNN, SVM, Decision Tree
 
 ### Linear Regression
 
-Linear regression: least square y = ax + b
+Linear regression: y = ax + b
 
-<img src="https://user-images.githubusercontent.com/76275089/146848745-ccb0a104-4c3c-4df0-ac54-4b8fbe34603c.png" width = 300>
+Minimize \displaystyle\sum{(y_i - \hat{y_i})^2}$ with gradient descent
 
-<img src="https://user-images.githubusercontent.com/76275089/146848769-4d390f4b-e9f1-4aaa-901e-43f5ea0cdb73.png" width = 300>
+Convergence theorem: $y = y - \frac{dy}{dx} * \alpha$
 
-Find minimum: take partial derivative with respect parameters
+Root Mean Squared Error(RMSE): how far apart the predicted values are from the observed values in a dataset
 
-Root Mean Squared Error(RMSE): average loss
+The lower the RMSE, the better a model fits a dataset
 
-Decrease as number of features decrease
+$RMSE = \sqrt{\frac{1}{n} \displaystyle\sum_{i=1}^{n}{(y_i- \hat{y_i})^2}}$
 
-<img src="https://user-images.githubusercontent.com/76275089/146849740-f84c0f5d-1f77-4fb3-ae49-b63ae173b1df.png" width = 300>
+$R^2$: the proportion of the variance in the response variable of a regression model that can be explained by the predictor variables
 
-Multiple R^2: square of the correlation between true y and predicted y
+The higher the R2 value, the better a model fits a dataset
 
-Increase as number of features increase
+$TSS = \displaystyle\sum{(y_i - \bar{y})^2}$
 
-<img src="https://user-images.githubusercontent.com/76275089/146849906-30d2fce1-86be-40a6-86f1-cbdc31c6c68a.png" width = 150>
+$RSS = \displaystyle\sum{(y_i - \hat{y_i})^2}$
 
-<img src="https://user-images.githubusercontent.com/76275089/146849909-75dc93b9-05b5-4eb2-a58d-07ca33db84bc.png" width = 300>
+$RegSS = TSS-RSS = \displaystyle\sum{(\bar{y} - \hat{y_i})^2}$
 
-Residuals are orthogonal to the span of X
+$R^2 = 1 - \frac{RSS}{TSS} = \frac{RegSS}{TSS}$
 
-<img src="https://user-images.githubusercontent.com/76275089/146850439-cb51f47b-7755-4b04-afeb-4a3f4583dfd5.png" width = 150>
+Residual: $e_i = y_i - \hat{y_i}$
 
 Least square estimate for theta
 
-<img src="https://user-images.githubusercontent.com/76275089/146850524-685d0ffa-bf4a-4f1d-a860-ca663288b9bb.png" width = 200>
+$\hat{\theta} = (X^{T}X)^{-1}X^{T}Y$
+
+1. What Are the Basic Assumption?(favourite)
+
+There are four assumptions associated with a linear regression model:
+
+- Linearity: The relationship between X and the mean of Y is linear.
+
+- Homoscedasticity: The variance of residual is the same for any value of X.
+
+- Independence: Observations are independent of each other.
+
+- Normality: For any fixed value of X, Y is normally distributed, if data is not normal, apply transformation
+
+2. Advantages
+
+- Linear regression performs exceptionally well for linearly separable data
+
+- Easy to implement and train the model
+
+- It can handle overfitting using dimensionlity reduction techniques and cross validation and regularization
+
+3. Disadvantages
+
+- Sometimes lot of feature engineering is required
+
+- If the independent features are correlated it may affect performance
+
+- It is often quite prone to noise and overfitting
+
+4. Whether Feature Scaling is required?
+
+Yes, to reach the minimum quickly
+
+5. Impact of Missing Values?
+
+It is sensitive to missing values
+
+6. Impact of outliers?
+
+Linear regression needs the relationship between the independent and dependent variables to be linear. It is also important to check for outliers since linear regression is sensitive to outlier effects.
+
+7. Types of Problems it can solve
+
+- House Price Prediction
+  
+- Flight Price Prediction
+
 
 
 ### Logistic Regression
