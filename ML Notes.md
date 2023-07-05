@@ -267,15 +267,75 @@ Random forest: build many decision trees by bootstrap, use a sample of features 
 
 Support Vector Machine: find out a plane that differentiate two categories, maximize margin
 
+<img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/6005375d-a7fb-4876-a618-1c3381c5ad93" width = 400>
+
 Supporting vector: the closet training example, important for determining the plane
 
-Kernal: transformation of data 
-
-Parameters: kernal, regularization parameter, gamma, margin
-
-Gamma: high gamma, only near points are considered
-
 Margin: separation of line to the closest class data points, good margin needs to be as far as possible for both sides
+
+$y = w^Tx + b$
+
+$w^Tx_1 + b = 1$
+
+$w^Tx_2 + b = -1$
+
+$w^T(x_2 - x_1)= 2$
+
+$\frac{w^T}{||w||}(x_2 - x_1)= \frac{2}{||w||}$
+
+Optimize function $(max \frac{2}{||w||}$ to find two marginal plane that have the maximum distance
+
+$min \frac{||w||}{2} + c_i \sum{n}{i=1}{e_i}$ to include some errors
+
+1. What Are the Basic Assumption?
+
+There are no such assumptions
+
+2. Advantages
+   
+- SVM is more effective in high dimensional spaces.
+
+- SVM is relatively memory efficient.
+
+- SVM’s are very good when we have no idea on the data.
+
+- Works well with even unstructured and semi structured data like text, Images and trees.
+
+- The kernel trick is real strength of SVM. With an appropriate kernel function, we can solve any complex problem.
+
+- SVM models have generalization in practice, the risk of over-fitting is less in SVM.
+
+3. Disadvantages
+
+- More training time is required for larger dataset
+
+- It is difficult to choose a good kernel function
+
+- The SVM hyper parameters are Cost -C and gamma. It is not that easy to fine-tune these hyper-parameters. It is hard to visualize their impact
+
+4. Whether Feature Scaling is required?
+
+Yes
+
+5. Impact of Missing Values?
+
+Although SVMs are an attractive option when constructing a classifier, SVMs do not easily accommodate missing covariate information. Similar to other prediction and classification methods, in-attention to missing data when constructing an SVM can impact the accuracy and utility of the resulting classifier.
+
+6. Types of Problems it can solve(Supervised)
+
+- Classification
+
+- Regression
+
+7. Overfitting And Underfitting
+
+In SVM, to avoid overfitting, we choose a Soft Margin, instead of a Hard one i.e. we let some data points enter our margin intentionally (but we still penalize it) so that our classifier don't overfit on our training sample
+
+8. Performance Metrics
+
+Classification: confusion Matrix, precision, recall, F1 score
+
+Regression: R2, Adjusted R2, MSE, RMSE, MAE
 
 
 ### KNN
