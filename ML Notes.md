@@ -188,7 +188,6 @@ Linear regression needs the relationship between the independent and dependent v
 - Flight Price Prediction
 
 
-
 ### Logistic Regression
 
 <img src="https://user-images.githubusercontent.com/76275089/147809854-4139a2e3-9f91-4fc5-af53-72e64c641e4a.png" width = 300>
@@ -242,17 +241,33 @@ Split data into two nodes
 
 Repeat until every node is pure or unsplittable (has duplicate data that could not be split)
 
+Purity: entropy, Gini impurity
+
 Entropy:
 
-<img src="https://user-images.githubusercontent.com/76275089/146880065-42e91b83-63b9-4e03-8458-a4f854063bbe.png" width = 150>
+$H(s) = -p_+ log_2 (p_+) - p_- log_2 (p_-)$
 
-Low entropy means more predictable
+$p_+$: probability of yes
 
-Loss of split:
+Between 0 to 1, when entropy = 0, the node is pure split
 
-<img src="https://user-images.githubusercontent.com/76275089/146880264-12ddab88-0269-4243-b700-cd6ade7dba8d.png" width = 200>
+Gini impurity:
 
-Smaller loss, better split
+$GI = 1 - \displaystyle\sum_{i=1}^{n}{p^2}$
+
+$= 1-\[(p_+)^2 + (p_-)^2 \]$
+
+Which feature to split: information gain
+
+$Gain(s, f_1) = H(s) - \displaystyle\sum_{v} \frac{|s_v|}{|s|}H(s_v)$
+
+Compare the gain the two features, choose the feature with higher gain
+
+Decision square regressor: MSE
+
+$MSE = \frac{1}{2m} \displaystyle\sum_{i=1}^{n}{(y_i- \hat{y_i})^2}$
+
+Hyperparameters: max_depth, max_leaf
 
 Avoid overfitting: don't allow fully grown tree
 
@@ -261,6 +276,54 @@ Set more specific rules to prevent growth
 Cut off less useful branches
 
 Random forest: build many decision trees by bootstrap, use a sample of features at each split, each node is most common predictions from each model
+
+1. What Are the Basic Assumption?
+
+There are no such assumptions
+
+2. Advantages
+
+- Clear visualization: The algorithm is simple to understand, interpret and visualize as the idea is mostly used in our daily lives. 
+
+- Simple and easy to understand: Decision Tree looks like simple if-else statements which are very easy to understand.
+
+- Decision Tree can be used for both classification and regression problems.
+
+- Decision Tree can handle both continuous and categorical variables.
+
+- No feature scaling required: No feature scaling (standardization and normalization) required in case of Decision Tree as it uses rule based approach instead of distance calculation.
+
+- Handles non-linear parameters efficiently: Non linear parameters don't affect the performance of a Decision Tree unlike curve based algorithms. So, if there is high non-linearity between the independent variables, Decision Trees may outperform as compared to other curve based algorithms.
+
+- Decision Tree can automatically handle missing values.
+
+- Decision Tree is usually robust to outliers and can handle them automatically.
+
+- Less Training Period: Training period is less as compared to Random Forest because it generates only one tree unlike forest of trees in the Random Forest
+
+3. Disadvantages
+
+- Overfitting: This is the main problem of the Decision Tree. It generally leads to overfitting of the data which ultimately leads to wrong predictions. In order to fit the data (even noisy data), it keeps generating new nodes and ultimately the tree becomes too complex to interpret. In this way, it loses its generalization capabilities. It performs very well on the trained data but starts making a lot of mistakes on the unseen data.
+
+- High variance: Decision Tree generally leads to the overfitting of data. Due to the overfitting, there are very high chances of high variance in the output which leads to many errors in the final estimation and shows high inaccuracy in the results. In order to achieve zero bias (overfitting), it leads to high variance.
+
+- Unstable: Adding a new data point can lead to re-generation of the overall tree and all nodes need to be recalculated and recreated.
+
+- Not suitable for large datasets: If data size is large, then one single tree may grow complex and lead to overfitting. So in this case, we should use Random Forest instead of a single Decision Tree.
+
+4. Whether Feature Scaling is required?
+
+No
+
+5. Impact of outliers?
+
+It is not sensitive to outliers. Since, extreme values or outliers, never cause much reduction in RSS, they are never involved in split. Hence, tree based methods are insensitive to outliers.
+
+6. Types of Problems it can solve
+
+- Classification
+
+- Regression
 
 
 ### SVM
