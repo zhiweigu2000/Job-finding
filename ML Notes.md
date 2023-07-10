@@ -1,6 +1,6 @@
 # ML Notes
 
-### Bias-variance trade-off
+## Bias-variance trade-off
 
 <img src="https://user-images.githubusercontent.com/76275089/147712553-7d7fce85-2a18-46ea-94f6-d4e353bab39f.png" width = 500>
 
@@ -17,7 +17,7 @@ Model error = bias^2 + model variance + random error (observation variance)
 <img src="https://user-images.githubusercontent.com/76275089/147712539-0b5d4dd2-e315-41e3-85b6-b83e2d8c16af.png" width = 600>
 
 
-### Coefficients
+## Coefficients
 
 Correlation coefficient (r): average of the product of x and y, both in standard units
 
@@ -40,14 +40,14 @@ Increase as number of features increase
 <img src="https://user-images.githubusercontent.com/76275089/146849909-75dc93b9-05b5-4eb2-a58d-07ca33db84bc.png" width = 300>
 
 
-### Feature engineering
+## Feature engineering
 
 Transform raw features into more informative features for modeling
 
 Encode non-numeric features
 
 
-### Cross-validation
+## Cross-validation
 
 Avoid over-fitting
 
@@ -56,7 +56,7 @@ Model use k-1 fold for training, validate on remaining fold, select the best par
 <img src="https://user-images.githubusercontent.com/76275089/147712755-319487e1-0da2-464a-8e41-606341926a2f.png" width = 500>
 
 
-### Regularization
+## Regularization
 
 Prevent overfitting, add a extra term into the cost function
 
@@ -77,7 +77,7 @@ L1 (LASSO) regularization:
 <img src="https://user-images.githubusercontent.com/76275089/147713624-79ccb5ae-f211-4239-a72e-d7991b12fca8.png" width = 400>
 
 
-### Gradient descent
+## Gradient descent
 
 <img src="https://user-images.githubusercontent.com/76275089/147714298-bd9d1783-7753-4900-9c37-0eef4a6ae3e1.png" width = 300>
 
@@ -275,8 +275,6 @@ Set more specific rules to prevent growth
 
 Cut off less useful branches
 
-Random forest: build many decision trees by bootstrap, use a sample of features at each split, each node is most common predictions from each model
-
 1. What Are the Basic Assumption?
 
 There are no such assumptions
@@ -320,6 +318,55 @@ No
 It is not sensitive to outliers. Since, extreme values or outliers, never cause much reduction in RSS, they are never involved in split. Hence, tree based methods are insensitive to outliers.
 
 6. Types of Problems it can solve
+
+- Classification
+
+- Regression
+
+
+### Random Forest
+
+Use a sample of data and features at each split to build decision tree
+
+ach node is most common predictions from each model
+
+A kind of bagging
+
+Prevent overfitting of decision tree
+
+Reduce high variance to low variance: with majority voting
+
+1. What Are the Basic Assumption?
+
+There are no such assumptions
+
+2. Advantages
+
+- Doesn't Overfit
+
+- Less parameter tuning required
+
+- Decision Tree can handle both continuous and categorical variables.
+
+- No feature scaling required: uses Decision Tree internally
+
+- Suitable for any kind of ML problems
+
+3. Disadvantages
+
+- Biased With features having many categories
+
+- Biased in multiclass classification problems towards more frequent classes.
+
+4. Whether Feature Scaling is required?
+
+No
+
+5. Impact of outliers?
+
+Robust to outliers
+
+6. Types of Problems it can solve (Supervised)
 
 - Classification
 
@@ -473,17 +520,29 @@ It is usually robust to outliers
 - Document categorization
 
 
-### Adaboost classifier 
+### Adaboost 
 
-Combine weak classifier algorithm to form strong classifier e.g. based on many decision stumps (trees with one node and two leaves)
+Combine weak classifier algorithm to form strong classifier based on decision stumps (trees with one node and two leaves)
 
-After training a classifier at any level, ada-boost assigns weight to each training item, misclassified items are assigned high weight
+1. Assign equal weight to each training item
 
-Update the weight after the classifier the trained
+Sum of weight = 1
 
-For each stump, amount of say <img src="https://user-images.githubusercontent.com/76275089/179338753-0458918c-4cc3-48b7-bbd5-1a69225ddfe9.png" width = 200>
+2. Select feature for decision stump based on information gain / entropy / Gini
 
-New weight = old weight * e^(-amount of say), normalizate
+3. Total error = weight of error items
+
+Performance of stump = $\frac{1}{2} ln(\frac{1-TE}{TE})$
+
+4. Update the weight after the classifier the trained, reduce the weight of correct records
+
+Correct records: new weight = old weight * $e^{-performance}$
+
+Correct records: new weight = old weight * $e^{performance}$
+
+Normalize new weights
+
+5. Create random number between 0-1 to select records based on weights, create new dataset, repeat 1-4
 
 
 ## Unsupervised learning
@@ -507,6 +566,28 @@ K-means clustering:  minimize the distance of the points in a cluster with their
 
 Select k centroids, assign points to cloest centroids, calculate new centroids until converge
 
+
+## Ensemble Techniques
+
+Use multiple algorithms to solve a problem
+
+<img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/53e628e1-b387-4373-ad59-b7e7c3801ed7" width = 400>
+
+
+### Bagging 
+
+Row sampling: give different models different data
+
+Each model gives a prediction, select the majority voting
+
+e.g Random forest
+
+
+### Boosting
+
+Weak learner followed by another weak learner to form a strong learner
+
+e.g. Adaboost
 
 
 
