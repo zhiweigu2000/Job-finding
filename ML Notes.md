@@ -544,6 +544,81 @@ Normalize new weights
 
 5. Create random number between 0-1 to select records based on weights, create new dataset, repeat 1-4
 
+1. What Are the Basic Assumption?
+
+There are no such assumptions
+
+2. Advantages
+
+- Doesn't Overfit
+
+- It has few parameters to tune
+
+3. Whether Feature Scaling is required?
+
+No
+
+4. Missing Values
+
+Can handle mising values
+
+5. Impact of outliers?
+
+Sensitive to outliers
+
+6. Types of Problems it can solve(Supervised)
+
+- Classification
+
+- Regression
+
+
+### Xgboost 
+
+Extreme gradient boosting
+
+1. Create a binary decision tree using the feature based on the residual (baseline-actual)
+
+2. Calculate similarity weight = $\frac{\displaystyle\sum{residuals^2}}{\displaystyle\sum{p(1-p) +\lambda}}$ for each node
+
+3. Information gain = similarity weight of nodes - similarity weight of root to select feature
+  
+New record: $\sigma\[average + \alpha_1(DT_1) + \alpha_2(DT_2) + ... \]$
+
+1. What Are the Basic Assumption?
+
+There are no such assumptions
+
+2. Advantages
+
+- It has a great performance
+
+- It can solve complex non linear functions
+
+- It is better in solve any kind of ML usecases.
+
+3. Disadvantages
+
+- It requires some amount of parameter tuning
+
+4. Whether Feature Scaling is required?
+
+No
+
+5. Missing Values
+
+Cannot handle missing values
+
+6. Impact of outliers?
+
+Robust to Outliers
+
+7. Types of Problems it can solve(Supervised)
+
+- Classification
+
+- Regression
+
 
 ## Unsupervised learning
 
