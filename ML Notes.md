@@ -111,8 +111,6 @@ Stochastic Gradient Descent: draw a simple random sample of data indices, comput
 
 ## Supervised learning
 
-References: https://medium.com/machine-learning-101
-
 ### Parametric model
 
 Parametric model: number of paramaters is fixed
@@ -205,41 +203,93 @@ Linear regression needs the relationship between the independent and dependent v
 
 ### Logistic Regression
 
-<img src="https://user-images.githubusercontent.com/76275089/147809854-4139a2e3-9f91-4fc5-af53-72e64c641e4a.png" width = 300>
+$h_{\theta}(x) = \theta_0 + \theta_1x_1 + ... + \theta_nx_n = \theta^Tx = g(\theta_0 + \theta_1x_1 + ... + \theta_nx_n)$
 
-Minimize cost function: gradient descent
+Let $z = \theta_0 + \theta_1x_1 + ... + \theta_nx_n$
 
-Squared loss: loss surface not convex, does not penalize wrong answers strongly
+$h_{\theta}(x) = g(z) = \frac{1}{1 + e^{-z}}$
+
+Sigmoid: $h_{\theta}(x) = \frac{1}{1 + e^{-(\theta_0 + \theta_1x_1 + ... + \theta_nx_n)}}$
+
+Cost function from linear regression = $\frac{1}{2} (h_{\theta}(x^i) - y_i)^2$
+
+Squared loss: loss surface not convex (many local minimums), does not penalize wrong answers strongly
+
+Cost function for logistics = $-ylog(h_{\theta}(x^i)) - (1-y)log(1-h_{\theta}(x^i))$
 
 Cross-entropy loss: not get stuck, no local minimum
 
-<img src="https://user-images.githubusercontent.com/76275089/147810255-22889ab9-092a-4dfe-8558-edd931ffca8d.png" width = 350>
-
-<img src="https://user-images.githubusercontent.com/76275089/147810315-29ded49b-1965-435c-9a65-f2343799bac6.png" width = 500>
+Performance matrix
 
 <img src="https://user-images.githubusercontent.com/76275089/147810818-becf29cf-f804-4395-ba21-6d7b34c8b1c5.png" width = 400>
 
-<img src="https://user-images.githubusercontent.com/76275089/147810863-4e90b23c-b26a-4364-a812-983efedf08d2.png" width = 800>
+Accuracy = $\frac{TP+TN}{TP+FP+TN+FN}$
+
+Precision = $\frac{TP}{TP+FP}$
+
+Recall = $\frac{TP}{TP+FN}$
+
+F1 score = $\frac{2\*Precision\*Recall}{Precision+Recall}$
 
 Higher threshold, fewer false positive, higher precision
 
 Lower threshold, fewer false negative, higher recall
 
-Precision recall curve
-
-<img src="https://user-images.githubusercontent.com/76275089/147811489-11b478fd-9d27-489c-b175-316e722f9d66.png" width = 500>
-
 Optimal curve: area under curve (AUC) = 1
-
-ROC curve
 
 <img src="https://user-images.githubusercontent.com/76275089/147811644-214ae1ec-d6e9-42d3-93a2-1eb15f7c7a44.png" width = 500>
 
-Optimal curve: area under curve (AUC) = 1
-
 Linear separability: a set of d-dimentional points is linearly separable if we can draw a degree d-1 hyperplane that separates the points perfectly
 
-L2 regularization
+1. What Are the Basic Assumption?
+
+Linear Relation between independent features and the log odds
+
+2. Advantages
+
+- Logistic Regression Are very easy to understand
+
+- It requires less training
+
+- Good accuracy for many simple data sets and it performs well when the dataset is linearly separable.
+
+- It makes no assumptions about distributions of classes in feature space.
+
+- Logistic regression is less inclined to over-fitting but it can overfit in high dimensional datasets.One may consider Regularization (L1 and L2) techniques to avoid over-fittingin these scenarios.
+
+- Logistic regression is easier to implement, interpret, and very efficient to train.
+
+3. Disadvantages
+
+- Sometimes Lot of Feature Engineering Is required
+
+- If the independent features are correlated it may affect performance
+
+- It is often quite prone to noise and overfitting
+
+- If the number of observations is lesser than the number of features, Logistic Regression should not be used, otherwise, it may lead to overfitting.
+
+- Non-linear problems can’t be solved with logistic regression because it has a linear decision surface. Linearly separable data is rarely found in real-world scenarios.
+
+- It is tough to obtain complex relationships using logistic regression. More powerful and compact algorithms such as Neural Networks can easily outperform this algorithm.
+
+- In Linear Regression independent and dependent variables are related linearly. But Logistic Regression needs that independent variables are linearly related to the log odds (log(p/(1-p)).
+
+4. Whether Feature Scaling is required?
+
+Yes
+
+5. Missing Values
+
+Sensitive to missing values
+
+6. Impact of outliers?
+
+Sensitive to the unusual observations: outliers, high leverage, and influential observations
+
+7. Types of Problems it can solve (Supervised)
+
+Classification
 
 
 ### Decision tree
