@@ -292,152 +292,6 @@ Sensitive to the unusual observations: outliers, high leverage, and influential 
 Classification
 
 
-### Decision tree
-
-Decision tree: divide based on different properties
-
-Classification or regression
-
-All data starts in the root node
-
-Pick the best feature and best split value
-
-Split data into two nodes
-
-Repeat until every node is pure or unsplittable (has duplicate data that could not be split)
-
-Purity: entropy, Gini impurity
-
-Entropy:
-
-$H(s) = -p_+ log_2 (p_+) - p_- log_2 (p_-)$
-
-$p_+$: probability of yes
-
-Between 0 to 1, when entropy = 0, the node is pure split
-
-Gini impurity:
-
-$GI = 1 - \displaystyle\sum_{i=1}^{n}{p^2}$
-
-$= 1-\[(p_+)^2 + (p_-)^2 \]$
-
-Which feature to split: information gain
-
-$Gain(s, f_1) = H(s) - \displaystyle\sum_{v} \frac{|s_v|}{|s|}H(s_v)$
-
-Compare the gain the two features, choose the feature with higher gain
-
-Decision square regressor: MSE
-
-$MSE = \frac{1}{2m} \displaystyle\sum_{i=1}^{n}{(y_i- \hat{y_i})^2}$
-
-Hyperparameters: max_depth, max_leaf
-
-Avoid overfitting: don't allow fully grown tree
-
-Set more specific rules to prevent growth
-
-Cut off less useful branches
-
-1. What Are the Basic Assumption?
-
-There are no such assumptions
-
-2. Advantages
-
-- Clear visualization: The algorithm is simple to understand, interpret and visualize as the idea is mostly used in our daily lives. 
-
-- Simple and easy to understand: Decision Tree looks like simple if-else statements which are very easy to understand.
-
-- Decision Tree can be used for both classification and regression problems.
-
-- Decision Tree can handle both continuous and categorical variables.
-
-- No feature scaling required: No feature scaling (standardization and normalization) required in case of Decision Tree as it uses rule based approach instead of distance calculation.
-
-- Handles non-linear parameters efficiently: Non linear parameters don't affect the performance of a Decision Tree unlike curve based algorithms. So, if there is high non-linearity between the independent variables, Decision Trees may outperform as compared to other curve based algorithms.
-
-- Decision Tree can automatically handle missing values.
-
-- Decision Tree is usually robust to outliers and can handle them automatically.
-
-- Less Training Period: Training period is less as compared to Random Forest because it generates only one tree unlike forest of trees in the Random Forest
-
-3. Disadvantages
-
-- Overfitting: This is the main problem of the Decision Tree. It generally leads to overfitting of the data which ultimately leads to wrong predictions. In order to fit the data (even noisy data), it keeps generating new nodes and ultimately the tree becomes too complex to interpret. In this way, it loses its generalization capabilities. It performs very well on the trained data but starts making a lot of mistakes on the unseen data.
-
-- High variance: Decision Tree generally leads to the overfitting of data. Due to the overfitting, there are very high chances of high variance in the output which leads to many errors in the final estimation and shows high inaccuracy in the results. In order to achieve zero bias (overfitting), it leads to high variance.
-
-- Unstable: Adding a new data point can lead to re-generation of the overall tree and all nodes need to be recalculated and recreated.
-
-- Not suitable for large datasets: If data size is large, then one single tree may grow complex and lead to overfitting. So in this case, we should use Random Forest instead of a single Decision Tree.
-
-4. Whether Feature Scaling is required?
-
-No
-
-5. Impact of outliers?
-
-It is not sensitive to outliers. Since, extreme values or outliers, never cause much reduction in RSS, they are never involved in split. Hence, tree based methods are insensitive to outliers.
-
-6. Types of Problems it can solve
-
-- Classification
-
-- Regression
-
-
-### Random Forest
-
-Use a sample of data and features at each split to build decision tree
-
-ach node is most common predictions from each model
-
-A kind of bagging
-
-Prevent overfitting of decision tree
-
-Reduce high variance to low variance: with majority voting
-
-1. What Are the Basic Assumption?
-
-There are no such assumptions
-
-2. Advantages
-
-- Doesn't Overfit
-
-- Less parameter tuning required
-
-- Decision Tree can handle both continuous and categorical variables.
-
-- No feature scaling required: uses Decision Tree internally
-
-- Suitable for any kind of ML problems
-
-3. Disadvantages
-
-- Biased With features having many categories
-
-- Biased in multiclass classification problems towards more frequent classes.
-
-4. Whether Feature Scaling is required?
-
-No
-
-5. Impact of outliers?
-
-Robust to outliers
-
-6. Types of Problems it can solve (Supervised)
-
-- Classification
-
-- Regression
-
-
 ### SVM
 
 Support Vector Machine: find out a plane that differentiate two categories, maximize margin
@@ -585,6 +439,152 @@ It is usually robust to outliers
 - Document categorization
 
 
+### Decision tree
+
+Decision tree: divide based on different properties
+
+Classification or regression
+
+All data starts in the root node
+
+Pick the best feature and best split value
+
+Split data into two nodes
+
+Repeat until every node is pure or unsplittable (has duplicate data that could not be split)
+
+Purity: entropy, Gini impurity
+
+Entropy:
+
+$H(s) = -p_+ log_2 (p_+) - p_- log_2 (p_-)$
+
+$p_+$: probability of yes
+
+Between 0 to 1, when entropy = 0, the node is pure split
+
+Gini impurity:
+
+$GI = 1 - \displaystyle\sum_{i=1}^{n}{p^2}$
+
+$= 1-\[(p_+)^2 + (p_-)^2 \]$
+
+Which feature to split: information gain
+
+$Gain(s, f_1) = H(s) - \displaystyle\sum_{v} \frac{|s_v|}{|s|}H(s_v)$
+
+Compare the gain the two features, choose the feature with higher gain
+
+Decision square regressor: MSE
+
+$MSE = \frac{1}{2m} \displaystyle\sum_{i=1}^{n}{(y_i- \hat{y_i})^2}$
+
+Hyperparameters: max_depth, max_leaf
+
+Avoid overfitting: don't allow fully grown tree
+
+Set more specific rules to prevent growth
+
+Cut off less useful branches
+
+1. What Are the Basic Assumption?
+
+There are no such assumptions
+
+2. Advantages
+
+- Clear visualization: The algorithm is simple to understand, interpret and visualize as the idea is mostly used in our daily lives. 
+
+- Simple and easy to understand: Decision Tree looks like simple if-else statements which are very easy to understand.
+
+- Decision Tree can be used for both classification and regression problems.
+
+- Decision Tree can handle both continuous and categorical variables.
+
+- No feature scaling required: No feature scaling (standardization and normalization) required in case of Decision Tree as it uses rule based approach instead of distance calculation.
+
+- Handles non-linear parameters efficiently: Non linear parameters don't affect the performance of a Decision Tree unlike curve based algorithms. So, if there is high non-linearity between the independent variables, Decision Trees may outperform as compared to other curve based algorithms.
+
+- Decision Tree can automatically handle missing values.
+
+- Decision Tree is usually robust to outliers and can handle them automatically.
+
+- Less Training Period: Training period is less as compared to Random Forest because it generates only one tree unlike forest of trees in the Random Forest
+
+3. Disadvantages
+
+- Overfitting: This is the main problem of the Decision Tree. It generally leads to overfitting of the data which ultimately leads to wrong predictions. In order to fit the data (even noisy data), it keeps generating new nodes and ultimately the tree becomes too complex to interpret. In this way, it loses its generalization capabilities. It performs very well on the trained data but starts making a lot of mistakes on the unseen data.
+
+- High variance: Decision Tree generally leads to the overfitting of data. Due to the overfitting, there are very high chances of high variance in the output which leads to many errors in the final estimation and shows high inaccuracy in the results. In order to achieve zero bias (overfitting), it leads to high variance.
+
+- Unstable: Adding a new data point can lead to re-generation of the overall tree and all nodes need to be recalculated and recreated.
+
+- Not suitable for large datasets: If data size is large, then one single tree may grow complex and lead to overfitting. So in this case, we should use Random Forest instead of a single Decision Tree.
+
+4. Whether Feature Scaling is required?
+
+No
+
+5. Impact of outliers?
+
+It is not sensitive to outliers. Since, extreme values or outliers, never cause much reduction in RSS, they are never involved in split. Hence, tree based methods are insensitive to outliers.
+
+6. Types of Problems it can solve
+
+- Classification
+
+- Regression
+
+
+### Random Forest
+
+Use a sample of data and features at each split to build decision tree
+
+ach node is most common predictions from each model
+
+A kind of bagging
+
+Prevent overfitting of decision tree
+
+Reduce high variance to low variance: with majority voting
+
+1. What Are the Basic Assumption?
+
+There are no such assumptions
+
+2. Advantages
+
+- Doesn't Overfit
+
+- Less parameter tuning required
+
+- Decision Tree can handle both continuous and categorical variables.
+
+- No feature scaling required: uses Decision Tree internally
+
+- Suitable for any kind of ML problems
+
+3. Disadvantages
+
+- Biased With features having many categories
+
+- Biased in multiclass classification problems towards more frequent classes.
+
+4. Whether Feature Scaling is required?
+
+No
+
+5. Impact of outliers?
+
+Robust to outliers
+
+6. Types of Problems it can solve (Supervised)
+
+- Classification
+
+- Regression
+
+
 ### Adaboost 
 
 Combine weak classifier algorithm to form strong classifier based on decision stumps (trees with one node and two leaves)
@@ -685,28 +685,6 @@ Robust to Outliers
 - Regression
 
 
-## Unsupervised learning
-
-### PCA
-
-Principal Component Analysis: reduce number of variables
-
-Simple value decomposition: X = UΣ * V^T
-
-Principal component: UΣ column
-
-Orthogonal: most distinct, cover more information
-
-Recast data along principle component
-
-
-### K-means clustering
-
-K-means clustering:  minimize the distance of the points in a cluster with their centroid
-
-Select k centroids, assign points to cloest centroids, calculate new centroids until converge
-
-
 ## Ensemble Techniques
 
 Use multiple algorithms to solve a problem
@@ -728,6 +706,69 @@ e.g Random forest
 Weak learner followed by another weak learner to form a strong learner
 
 e.g. Adaboost
+
+
+## Unsupervised learning
+
+### PCA
+
+Principal Component Analysis: reduce number of variables
+
+Simple value decomposition: X = UΣ * V^T
+
+Principal component: UΣ column
+
+Orthogonal: most distinct, cover more information
+
+Recast data along principle component
+
+
+### K-means clustering
+
+K-means clustering:  minimize the distance of the points in a cluster with their centroid
+
+1. Initialize k centroids
+
+2. Assign points to cloest centroids
+
+3. Compute average of each group to update centroids
+
+4. Assign points again
+
+Elbow method: within cluster sum of square (WCSS)
+
+<img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/030d6186-19bf-49c4-8ca0-92ee26b484d0" width = 400>
+
+Validation: Silhouette 
+
+<img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/6488328e-d0c5-439a-a399-6746a2a388fb" width = 300>
+
+a(i): sum of distance to centroid within cluster
+
+b(i): average distance of points in one cluster to points in the other cluster
+
+Good clustering: b(i) >> a(i)
+
+
+### Hierarchical clustering
+
+Create Dendrogram
+
+<img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/c952e92b-2787-4876-ac02-23d2e9957341" width = 400>
+
+Find the longest horizontal line that has no vertical line passed through it
+
+Create a straight line across that line, number of intersections = number of clusters
+
+Large dataste: k-means
+
+Small dataset: hierarchical
+
+
+
+
+
+
 
 
 
