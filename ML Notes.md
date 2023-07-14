@@ -765,6 +765,14 @@ Large dataste: k-means
 Small dataset: hierarchical
 
 
+### DBScan clustering
+
+<img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/4ff68036-6443-43be-817a-02980fb41241" width = 400>
+
+Leave outliers (noise) out of clusters
+
+
+
 
 
 
