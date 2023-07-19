@@ -100,6 +100,59 @@ Countermetric:
 
 - number of returned items or unmarked sold, number of no replies to buyers
 
+### [What goal would you set for Facebook events？](https://www.youtube.com/watch?v=EJHWBHeKgoM) 
+
+**Product, users, value**
+
+Product: connect event hosts with people looking to attend events
+
+Values:
+
+Hosts: derive value when I get people to attend the event I create
+
+Attendees: derive value when I discover or get invited to the event, attend the event and have a good time
+
+Facebook: derive value when people are connecting, leading up to the event, during, and after
+
+**Northstar metric**
+
+Number of people who RSVP to at least 1 event in the last week
+
+**Breakdown northstar**
+
+Hosts (supply growth):
+
+- Number of active events supply per day
+
+- Number of hosts per day
+
+Attendees (denand growth):
+
+- Number of people who visit the events tab per week
+
+- Average CTR of event
+
+- Number of people who interact on at least one event
+
+- Average number of events RSVP per person per month
+
+**Downstream, countermetric**
+
+Downstream:
+
+- Number of incremental friend connections from events
+
+- Number of incremental conversations from events
+
+- Number of incremental posts from events
+
+Countermetric:
+
+- Events reported
+
+- Attendees blocked
+
+
 ---
 
 ## Tradeoff Questions
@@ -394,6 +447,13 @@ Criteria:
 2. Increase incentives to increase driver supply, notify inactive drivers to come back, relax algorithm
 
 
+___
+
+## Reference
+
+1. https://www.youtube.com/c/Diannayau
+
+2. Stellarpeers
 
 
 
