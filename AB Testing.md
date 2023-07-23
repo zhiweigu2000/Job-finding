@@ -2,29 +2,37 @@
 
 Need clear control and experiment group
 
-Cannot take too long
+Cannot take too long e.g. cannot AB testing on website selling cars because it takes too long 
 
-Change aversion: old users may resist against the new version
+Change aversion: old users may resist against the new version e.g. cannot AB testing on updating brand because users require time to get used to it
 
 Novelty effect: old users may all go for the new experience, then the test set has everything
 
-Other techniques: user log, user experience research(qualitative data)
+Other techniques: user log, user experience research (qualitative data)
 
-## Example
+## Overview Example
 
-Customer funnel: visit -- explore site -- create account -- complete
+e.g. Online finance course website
+
+Customer funnel: visit homepage -- explore site -- create account -- complete
 
 Hypothesis: change button from orange to pink will increase how many students explore courses
 
 Metric: 
 
-Click through rate = number of clicks / number of page views, measure usability
+- Total number of course completed: no, take too much time
 
-Click through probability = unique visitors who click / unique visitors to page, measure total impact
+- Number of clicks: no, number vs proportion
+
+- Click through rate = number of clicks / number of page views, measure usability
+
+- Click through probability = unique visitors who click / unique visitors to page, measure total impact
+
+Updated hypothesis: change button from orange to pink will increase the click through probability of the button
 
 ## Significance
 
-Binomial distribution:
+**Binomial distribution**
 
 2 types of outcome
 
@@ -32,21 +40,51 @@ Independent events
 
 Identical distribution, same p for all
 
-Confidence interval:
+Mean = p
 
-<img width="148" alt="image" src="https://user-images.githubusercontent.com/76275089/169205373-240f3ad7-97b1-4aed-ba2f-bc5ea50781de.png">
+Std dev = $\sqrt{\frac{p(1-p)}{N}}$
 
-[z-score table](https://www2.math.upenn.edu/~chhays/zscoretable.pdf)
+**Confidence interval**
 
-Null hypothesis (H0): P(cont) - P(exp) = 0
+$\hat{p} = \frac{X}{N}$
 
-Alternative hypothesis (HA): P(cont) - P(exp) != 0
+X: number of users who clicked
 
-p-value = P(P(exp) - P(cont) | H0) < 0.05, reject null hypothesis
+N: number of users
 
-Pooled standard error
+To use normal: check $N*\hat{p} > 5$ and $N*(1-\hat{p}) > 5$
 
-<img width="799" alt="image" src="https://user-images.githubusercontent.com/76275089/172026197-fef21c87-36b8-4f6f-9385-da829126ab9b.png">
+$m = z * SE = z * \sqrt{\frac{\hat{p}(1-\hat{p})}{N}}$
+
+m: margin of error, add and minus mean to find the bound
+
+[z-score table](https://www2.math.upenn.edu/~chhays/zscoretable.pdf): use chart values (equals area below the curve) to find z-score
+
+**Hypothesis testing**
+
+Null hypothesis ($H_0$): $P(cont) - P(exp) = 0$
+
+Alternative hypothesis ($H_A$): $P(cont) - P(exp) \neq 0$
+
+Measure $\hat{P(cont)}$ and $\hat{P(exp)}$
+
+Calculate $p-value = P(\hat{P(exp)} - \hat{P(cont)} | H_0) < 0.05$, reject null hypothesis
+
+**Pooled standard error**
+
+$\hat{p_{pool}} = \frac{X_{cont} + X_{exp}}{N_{cont} + N_{exp}}$
+
+$SE_{pool} = \sqrt{\hat{p_{pool}} * (1-\hat{p_{pool}}) * (\frac{1}{N_{cont}} + \frac{1}{N_{exp}})}$
+
+$\hat{d} = \hat{p_{exp}} - \hat{p_{cont}}$
+
+$H_0: d = 0$
+
+$\hat{d} \sim N(0, SE_{pool})$
+
+If $\hat{d} > 1.96 * SE_{pool}$ or $\hat{d} < -1.96 * SE_{pool}$, reject null
+
+**Practical significant**
 
 Practical significant: lower, like 2%
 
