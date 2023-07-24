@@ -98,6 +98,22 @@ Whole confidence interval below practical significant: do not launch
 
 Some part of confidence interval above practical significant: additional test
 
+**Size**
+
+$\alpha$ = P(reject null | null true)
+
+$\beta$ = P(fail to reject | null false)
+
+$1-\beta$ = sensitivity, usually 80%
+
+Small sample: low $\alpha$, high $\beta$ 
+
+Larger sample: same $\alpha$, lower $\beta$ 
+
+[Sample size calculator](https://www.evanmiller.org/ab-testing/sample-size.html)
+
+
+
 ## Ethics
 
 Risk: whether the risk exceeds the minimum risk
