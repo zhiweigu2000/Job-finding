@@ -113,7 +113,6 @@ Larger sample: same $\alpha$, lower $\beta$
 [Sample size calculator](https://www.evanmiller.org/ab-testing/sample-size.html)
 
 
-
 ## Ethics
 
 Risk: whether the risk exceeds the minimum risk
@@ -124,7 +123,24 @@ Choice: what other choice do participants have, fewer alternative, more coercion
 
 Privacy: what data is being collected, and what is the expectation of privacy and confidentiality
 
+
 ## Metric
+
+**High level metrics**
+
+Homepage visit: # users who visit homepage
+
+Explore site: # users who view the course list, # users who view course details
+
+Create account: # users who create accounts, # users who enroll in a course, # users who sign up for coaching
+
+Complete: # users who enroll in a second course, # users who get jobs
+
+**Difficult metrics**
+
+- Don't have access to data
+
+- Take too long 
 
 ### Invariant checking
 
