@@ -140,31 +140,9 @@ Complete: # users who enroll in a second course, # users who get jobs
 
 - Don't have access to data
 
-- Take too long 
+- Take too long
 
-### Invariant checking
-
-Are the population the same?
-
-### Evaluation
-
-High level business metric: revenue, market share
-
-Detailed metric: user experience, may to difficult to evaluate
-
-### Define matric
-
-High level concepts
-
-Business objective
-
-Single or multiple: composite metric, look into multiple metric
-
-Customer funnel
-
-Difficult metric: don't have access to data, take too long
-
-Generate metric:
+**Gather additional data**
 
 - External data: companies that collect granular data, companies that run survey, academic research
 
@@ -178,7 +156,17 @@ Generate metric:
 
 - Surveys: useful for metric that cannot collect directly, can not directly compare to other results
 
-<img width="353" alt="image" src="https://user-images.githubusercontent.com/76275089/170893575-db95315e-e070-41b4-8d90-5ae0e68018be.png">
+<img width="400" src="https://user-images.githubusercontent.com/76275089/170893575-db95315e-e070-41b4-8d90-5ae0e68018be.png">
+
+e.g. 
+
+Homepage visits: compare with external data
+
+Course completion: UER to investigate low completion, compare with external data
+
+Jobs: surveys
+
+**Define metric**
 
 High level metric: click through probability = # users who click / # users who visit
 
@@ -188,23 +176,35 @@ Def 2: # pageviews with click within time interval / # pageviews
 
 Def 3: # clicks / # pageviews
 
-## Filter
+**Filter**
 
-External: clicking on everything, people come to see the new feature -- identity spam and fraud
+External: clicking on everything, people come to see the new feature, identity spam and fraud
 
-Internal: only impact a subset
+Internal: only impact a subset e.g. only on mobile app, only English
 
 Week over week / year over year plot: smooth out regular changes
 
-## Type of metrics
+**Summary metrics**
 
 - Sums and counts
 
-- Distribution: mean, median, percentile
+- Mean, median, percentile
 
 - Probability and rate
 
 - Ratios
+
+
+### Invariant checking
+
+Are the population the same?
+
+### Evaluation
+
+High level business metric: revenue, market share
+
+Detailed metric: user experience, may to difficult to evaluate
+
 
 ## Sensitivity and robustness
 
