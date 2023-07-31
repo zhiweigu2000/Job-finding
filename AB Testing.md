@@ -194,29 +194,17 @@ Week over week / year over year plot: smooth out regular changes
 
 - Ratios
 
-
-### Invariant checking
-
-Are the population the same?
-
-### Evaluation
-
-High level business metric: revenue, market share
-
-Detailed metric: user experience, may to difficult to evaluate
-
-
-## Sensitivity and robustness
+**Sensitivity and robustness**
 
 Sensitive to changes, not be affected by some observations
 
-Simple experiment and check the metric
+Simple experiment (make a small change) and check the metric
 
 A versus A experiment, compare people who see the same thing
 
 Log and history
 
-## Variability
+**Variability**
 
 Start with absolute difference
 
@@ -224,7 +212,7 @@ Calculate percentage change
 
 <img width="759" alt="image" src="https://user-images.githubusercontent.com/76275089/171098404-4eb9ca7c-8d71-470c-9ffa-3986f43dc2ae.png">
 
-## Nonparametric method
+**Nonparametric method**
 
 Model without make assumptions
 
