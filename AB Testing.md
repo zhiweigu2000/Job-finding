@@ -218,19 +218,21 @@ Model without make assumptions
 
 Sign test: collect data positive or negative, use binomial
 
-## Empirical variability
+**Empirical variability**
 
 Perform AA tests: 
 
-- Compare results to what you expect
+- Compare results to what you expect (sanity check)
 
 - Estimate variance and calculate confidence
 
 - Directly estimate confidence interval
 
-Directly estimate confidence interval: select middle 95%, remove first and last 2.5%
-
 Bootstrap: run one AA test, random sample from each side, use as a simulated experiment, repeat to get many experiments
+
+Empirical confidence interval (directly estimate confidence interval) : select middle 95%, remove first and last 2.5%
+
+Analytical: calculate standard deviation, multiply z-score
 
 ## Design A/B testing
 
