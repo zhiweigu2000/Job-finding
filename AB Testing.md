@@ -236,7 +236,7 @@ Analytical: calculate standard deviation, multiply z-score
 
 ## Design A/B testing
 
-Unit of diversion
+**Unit of diversion**
 
 - User id(account): stable, unchanging, personally identifiable
 
@@ -248,17 +248,39 @@ Unit of diversion
 
 - IP address
 
-Consideration
+Consideration:
 
-- Consistency: user visibility, measurement
+- Consistency: user visibility (if a change is visible to user, use user id / cookie), measurement (when testing latency, IP address may be the only choice)
 
-- Ethical considerations: can data identify user, user consent
+- Ethical considerations: whether can data identify user, user consent (user id has lots of personal data, requires consent)
 
-- Variability: when unit of analysis = unit of diversion, variability tends to be lower and closer to analytical estimate
+- Variability: when unit of analysis = unit of diversion, empirical variability tends to be lower and closer to analytical estimate
 
 Unit of analysis: the denominator of the proability
 
-## Population vs Cohort
+**Inter- vs. Intra-User Experiments**
+
+If do event based diversion, there could be mix of users from both sides
+
+Intra-user experiment: expose the same user to a feature on and off over time, compare based on time windows
+
+- Need to be careful with time periods e.g. Christmas
+
+- Whether users get used to the feature
+
+Interleaved experiments: expose the same user to a feature on and off at the same time e.g. reordering a list
+
+**Target population**
+  
+- Limited amount to avoid press
+  
+- Avoid testing for multiple lanaguages
+  
+- Limit to certain kinds of browsers
+
+- Target certain group of users to avoid dilution
+
+**Population vs Cohort**
 
 Cohort: people who enter the experiment at the same time
 
@@ -269,6 +291,12 @@ Cohort: people who enter the experiment at the same time
 - Want to increase user activity
 
 - Anything requiring users to be established
+
+e.g. Having existing course and change structure of lesson
+
+Unit of division: user-id, cannot run on all users in the course
+
+Choose cohort based on the time of starting the course after the start of experiment
 
 ## Size
 
