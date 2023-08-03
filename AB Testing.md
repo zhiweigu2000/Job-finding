@@ -234,6 +234,7 @@ Empirical confidence interval (directly estimate confidence interval) : select m
 
 Analytical: calculate standard deviation, multiply z-score
 
+
 ## Design A/B testing
 
 **Unit of diversion**
@@ -298,7 +299,7 @@ Unit of division: user-id, cannot run on all users in the course
 
 Choose cohort based on the time of starting the course after the start of experiment
 
-## Size
+**Size**
 
 Reduce size
 
@@ -324,19 +325,52 @@ Dosage, use cohort instead of population
 
 Pre-period and post-period AA test: difference is learning effect
 
-## Sanity checks
+
+## Analyzing results
+
+**Sanity checks**
 
 - Population sizing method: check experiment population and control population are comparable
 
-- Invariance check: some matrics should not change during the experiment, e.g. population sizing (# events, ccokies, users)
+- Invariants check: some metrics should not change during the experiment
 
-<img width="1914" alt="image" src="https://user-images.githubusercontent.com/76275089/172026159-1a61263c-2999-40ee-9ec9-e43c4f935d74.png">
+**Choosing invariants**
 
-Look into day by day data
+If unit of metric is larger than unit of diversion, the matric should be invariant
+
+e.g. Run experiment for 2 weeks, unit of diversion: cookie
+
+Total control: 64454, total experiment: 61818, check whether the difference is within expectation
+
+Given the cookie is randomly assigned to control or experiment with probability of 0.5
+
+1. Compute the standard deviation of binomial with probability of 0.5, $SD = \sqrt{\frac{0.5*0.5}{64454+61818}} = 0.0014$
+
+2. Multiply the z-score to get margin of error, $m = 1.96*SD = 0.0027$
+
+3. Compute the confidence interval around 0.5, confidence interval is 0.4873 to 0.5027 
+
+4. Check whether the actual fraction is within the interval, the actual is 0.5104, so not within the interval
+
+Look into day by day data to find the reason
 
 Do not move forward if does not pass sanity check
 
-Common reason: data capture
+- Communicate with engineering
+  
+- Retrospective analysis
+  
+- Compare with pre-period data
+
+Common reason: 
+
+- Data capture: when capturing new experience, probably not captured correctly
+
+- Experiment setup: whether filters are setup correctly
+  
+- Infrastructures
+  
+- Learning effect: not much changes in the beginning, increasing over time
 
 ## Single metric
 
