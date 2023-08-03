@@ -310,13 +310,13 @@ Reduce size
 
 Don't know the fraction: run a pilot experiment or observe the data for first several days
 
-## Duration vs Exposure
+**Duration vs Exposure**
 
-Account for variability: long to account for changes between weekday and weekend
+- Account for variability: longer to account for changes between weekday and weekend, holiday or not
 
-Risky or not
+- Risky or not, limit exposure to avoid media
 
-Learning effect: whether user adopt to the change, need time
+- Learning effect: whether user adopt to the change, need time
 
 Choose unit of diversion correctly
 
