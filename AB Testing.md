@@ -372,23 +372,54 @@ Common reason:
   
 - Learning effect: not much changes in the beginning, increasing over time
 
-## Single metric
+**Single metric**
 
-<img width="1850" alt="image" src="https://user-images.githubusercontent.com/76275089/172026948-428ca511-7bb1-4407-9276-e07d022a91d1.png">
+e.g. Change color of start now button, metric: click-through-rate, unit of diversion: cookie
 
-Mistake: 0.0020 should be 0.0220
+$N_{cont}$: 7370, $X_{cont}$: 352, $N_{exp}$: 7270, $X_{exp}$: 565
 
-[Sign test](https://www.graphpad.com/quickcalcs/binomial1.cfm): count number of success, check p-value
+1. Sanity check: pass
+
+2. Emperical SE: given 0.0035 with 10000 pageviews per group
+
+   SE is proportional to $\sqrt{\frac{1}{N_1} + \frac{1}{N_2}}$
+
+   $\frac{0.0035}{\sqrt{\frac{1}{10000} + \frac{1}{10000}}} = \frac{SE}{\sqrt{\frac{1}{7370} + \frac{1}{7270}}}$
+
+   SE = 0.0041
+
+3. $\hat{d}$ = experiment CTR - control CTR = 0.03
+
+   m = 0.0041 * 1.96 = 0.008
+
+   Confidence interval: 0.022 to 0.038, does not include 0, so launch the feature
+
+[Sign test](https://www.graphpad.com/quickcalcs/binomial1.cfm)
 
 Sign test has lower power
 
-Separate weekday and weekend
+1. Count total number, number of success
+  
+2. If no difference, 50% chance of positive change on each day, cannot assume normal
+  
+3. Check two-tail p-value
+
+If confidence interval and sign test disagree, consider different subgroups
+
+e.g. Separate weekday and weekend, weekdays may have no effect, weekends have effect
 
 Simpson's paradox: click through rate is higher for experiment for both groups, but the overall click through rate is lower for experiment
 
 There are different number of users from each group
 
-## Multiple metric
+Reasons:
+
+- Something wrong with the set up
+
+- Change affects two groups differently
+
+
+**Multiple metric**
 
 Probability of any false positive increases as you increase number of metrics
 
