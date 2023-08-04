@@ -427,21 +427,27 @@ Need to use higher confidence level for each metric
 
 Method 1: assume independence
 
-overall = 1 - (1 - individual)^n
+$\alpha_{overall} = 1 - (1 - \alpha_{individual})^n
 
 Method 2: Bonderroni correction
 
-Garanteed to give overall at least as small as specified
+- Simple
 
-individual = overall / n
+- No assumption
 
-Different strategies
+- Garanteed to give $\alpha_{overall}$ at least as small as specified
+
+$\alpha_{individual} = \frac{\alpha_{overall}}{n}$
+
+Could be too conservative
+
+Different strategies:
 
 - Control probability that any metric shows a false positive -- familywise error rate (FWER)
 
 - Control false discovery rate (FDR) FDR = E[# false positives / # rejections]
 
-Launch or not
+Launch or not:
 
 - Do I have statistical significant and pratical significant result to launch the change?
 
@@ -449,9 +455,14 @@ Launch or not
 
 - Is this change worth it?
 
-Changes over time: seasonality changes
 
-Solution: hold back a small group of people, compare the result
+**Changes over time**
+
+Effect may disappear when launch the change
+
+Seasonality changes e.g. students, holidays
+
+Solution: hold back a small group of people, comtinue to compare the result
 
 
 
