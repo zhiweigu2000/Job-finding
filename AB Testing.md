@@ -532,3 +532,37 @@ Quantitative: data analysis
   Treatment: users cannot see the number of dislikes, but feedback is possible
 
   Metric: average number of dislike per viewer, idealy decrease for small creators
+
+**Randomization Unit**
+
+Randomization unit: unit of diversion
+
+What to assign to control and experiment group
+
+Impact user experience and metric
+
+Commonly user: 
+
+- User ID: stable across time and platform, require log in, need to be aware of confidentiality
+  
+- Cookie: specific to browser and device, identify users without log in
+
+- Event: finer than user ID, do not require log in, do not distinguish users, offer more units, may lead to inconsistent experience to users, should not be used if changes are visible to users
+
+- Session: continuous period of activities
+   
+- Devide ID: only more mobile device
+
+Randomization unit should be at least as coarse as unit of analysis
+
+
+
+
+
+
+
+
+
+
+
+
