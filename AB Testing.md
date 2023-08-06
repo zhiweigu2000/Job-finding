@@ -465,5 +465,70 @@ Seasonality changes e.g. students, holidays
 Solution: hold back a small group of people, comtinue to compare the result
 
 
+## AB Testing Interview Questions
 
+**Experiment design**
 
+Start with offering outline, which one should I dive into?
+
+Choosing the metric
+
+Selecting the randomization unit
+
+Calculating the sample size
+
+Determining the minimum detectable effect
+
+**Sample size estimation**
+
+$n=\frac{\sigma^2(z_{\alpha/2}+z_{\beta})^2}{\delta^2}$
+
+$\sigma^2$: estimation of variance, from historical data and tests, smaller variance, fewer samples
+
+$\delta$: difference between control and treatment, use minimum detectable effect, need more data to detect smaller changes, smaller delta, more samples
+
+When $\alpha = 0.05$, $\beta = 0.2$, $n=\frac{16\sigma^2}{\delta^2}$
+
+When $\alpha = 0.01$, $\beta = 0.2$, $n=\frac{19\sigma^2}{\delta^2}$
+
+When $\alpha = 0.05$, $\beta = 0.1$, $n=\frac{21\sigma^2}{\delta^2}$
+
+$\alpha$: smaller alpha, higher confidence interval, more samples
+
+$\beta$: smaller beta, greater power, more samples
+
+**Metrics selection**
+
+- Sensitive and timely e.g. CTR (immediately reflects performance), conversion rate
+
+- Measurable e.g. CTB (can be obtained in real time)
+
+- Attributable e.g. CTR (attribute higher CTR to design)
+
+How to select:
+
+Qualitative: user experience research, focus groups, surveys
+
+Quantitative: data analysis
+
+- Fully understand the goal of test e.g. growth, engagement, revenue
+
+  e.g. Youtube hide dislike counts
+
+  Goal: protect creators, especially small creators
+
+  What is expected: small creators become more active
+
+  Metrics: average time of Youtube per creator, average number of videos posted per creator
+
+- Analyze user experience: consider the steps each users need to take
+
+  e.g. Youtube hide dislike counts
+
+  Desired outcome: fewer dislike on videos from small channels
+
+  Control: users can see the number of dislikes
+
+  Treatment: users cannot see the number of dislikes, but feedback is possible
+
+  Metric: average number of dislike per viewer, idealy decrease for small creators
