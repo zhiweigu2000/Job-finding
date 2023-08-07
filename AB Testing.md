@@ -555,6 +555,65 @@ Commonly user:
 
 Randomization unit should be at least as coarse as unit of analysis
 
+**Multiple testing**
+
+Test multiple variants of a feature
+
+e.g. 10 tests running at the same time, 1 case won with p<0.05, should you make the change?
+
+No. Should not use the same significance level, probability of false discovery increases
+
+1. Use Bonferroni correction
+  
+   Significance level / number of tests = 0.05 / 10 = 0.005
+
+   Tend to be too conservative
+
+2. Control False Discovery Rate
+
+**Primary effect**
+
+Primary effect: people are reluctant to change
+
+Novelty effect: people welcome the changes and use more
+
+Effects will not last long
+
+Rule out the possibility: run tests only on first time users
+
+**Interference between variants**
+
+Typical design: split users randomly, users are independent
+
+Case: social network, two sided network
+
+e.g. Test a new feature to increase posts created per user, assign each user randomly, the test won by 1% in terms of posts. What would happen after new feature is launched? Assume no novelty effect
+
+Network effect: user behaviors are impacted by others
+
+The effect can spillover the control group
+
+The difference underestimates the treatment effect, so the difference will be more than 1%
+
+e.g. Treatment group attracts more drivers, less drivers in the control group
+
+Actual effect < treatment effect
+
+e.g. A new feature provides coupons to riders
+
+Goal: increase rides by decrease price
+
+Testing strategy: evaluate the effect of the new feature
+
+Two-sided markets: split by geolocations (NY vs SF), only works when treatment effect is in short time
+
+Social network: 
+
+- Network cluster: create network clusters, people interact mostly within the cluster
+
+- Ego-network randomization: a cluster is compoased of an ego and her alters, user either has the feature or not
+
+
 
 
 
