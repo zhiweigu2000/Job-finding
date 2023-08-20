@@ -152,6 +152,33 @@ Countermetric:
 
 - Attendees blocked
 
+### [Which channels would you use to increase top-of-the-funnel activities?](https://stellarpeers.com/cases/which-channels-would-you-use-to-increase-top-of-the-funnel-activities/)
+
+Top-of-the-funnel: awareness
+
+Customers and Context:
+
+- Students: learning second language
+
+- Professionals: travel abroad
+  
+- People who are moving to another country
+  
+- Hobbist
+
+Channels:
+
+- Students: search engine optimization (SEO), search ads, email teachers, partner with schools, partner with certifications
+  
+- Professionals: online travel site ads, highway ads, airport ads, partner with travel services, location-aware mobile ads
+
+- Referrals
+
+Prioritization: choose channels that are more likely to grab the user’s attention, are quick to implement and not too costly
+
+SEO, search ads, location-aware mobile ads
+
+Goals: compare with current SEO, only worth paying for if they outperform SEO
 
 ---
 
