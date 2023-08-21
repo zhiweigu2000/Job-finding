@@ -180,6 +180,16 @@ SEO, search ads, location-aware mobile ads
 
 Goals: compare with current SEO, only worth paying for if they outperform SEO
 
+### [How would you test LinkedIn’s ‘People You May Know’ feature?](https://stellarpeers.com/cases/how-would-you-test-linkedins-people-you-may-know-feature/)
+
+Overall goal: encourage LinkedIn users to grow their network by connecting to more people
+
+Format for presenting connection suggestions: use thumbnail images of the mutual connections
+
+Order suggestions are listed: use new users' contacts as suggestions, allow users to filter connections based on categories (mutual connection, company, school)
+
+Information shared about a possible connection: provide an additional data point like shared skills
+
 ---
 
 ## Tradeoff Questions
