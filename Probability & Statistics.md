@@ -1,4 +1,17 @@
-# Probability Notes
+# Statistics
+
+<img width="400" alt="image" src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/978d3fd1-acd9-4b83-8360-2074e4266616">
+
+t distribution vs normal distribution
+
+<img width="400" alt="image" src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/0904bb78-7775-4259-9fa1-a089a635c087">
+
+Degree of freedom: number of pieces of info that can vary without violating restrictions
+
+Number of pieces of independent info to estimate others
+
+---
+# Probability
 
 Conditional probability: $P(A|B) = \frac{P(AB)}{P(B)}$
 
