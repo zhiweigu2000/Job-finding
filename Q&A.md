@@ -1,14 +1,94 @@
+## Power
+
+**Technical**
+
+When and where it is used: statistical power is used in a binary hypothesis test
+
+Definition: probability correctly rejects the null hypothesis when the alternative hypothesis is true, likelihood of detecting an effect when the effect is present
+
+When value changed: the higher the statistical power, the better the test is
+
+Application: used in experiment design to calculate minimum sample size
+
+**Non-technical**
+
+A person is infected and tested positive
+
+Power: chance of positive result given the person is infected
+
+## Type I error
+
+**Technical**
+
+When and where it is used: categorize errors in binary hypothesis test
+
+Definition: mistakenly reject true null hypothesis, false positive, conclude findings are significant when they occur by chance
+
+When value changed: larger value, less reliable test
+
+Application: used in AB testing, observe difference when there is no actual difference
+
+**Non-technical**
+
+A person is not infected and tested positive
+
+## Type II error
+
+**Technical**
+
+When and where it is used: categorize errors in binary hypothesis test
+
+Definition: fails to reject false null hypothesis, False negative, conclude no significant effect when there is
+
+When value changed: larger value, less reliable test
+
+Application: used in AB testing, don't observe difference when there is a difference
+
+**Non-technical**
+
+A person is not infected and tested negative
+
+## Confidence interval
+
+**Technical**
+
+When and where it is used: want to know how variable a sample result is, for estimating true value
+
+Definition: an interval of numbers, how likely it covers the true value, P(CI covers the true value) = confidence level
+
+When value changed: wider CI, more uncertain about the sample result; less data, wider CI; higher confidence level, wider CI 
+
+What is the probability of true value is in the CI? CI does not answer. True value is determined but unknown, CI is a variable estimated from the sample and confidence level. 
+
+How likely CI covers the true sample
+
+**Non-technical**
+
+Measure the level of undertainty when estimating a value
+
+Measure average height of men in US: sample height from certain men, gives a 95% interval 168cm to 185cm, it is likely to cover the average height. If we repeat this process, we expect the CI to cover the true average height 95% of the time.
+
+## p-value
+
+**Technical**
+
+When and where it is used: commonly used in hypothesis testing to connect observation and conclusion
+
+Definition: conditional probability, measure the probability of obtaining results as extreme as the observed results, assuming that the null hypothesis is true
+
+When value changed: low p-value means less support for null hypothesis, usually use 0.05, when p<0.05, reject null hypothesis
+
+Application: AB testing, test a metric is different in treatment and control group, smaller p-value, more convinced for the difference
+
+**Non-technical**
+
+Measure average height of men in US, test whether the average height is 175cm, connect measurement and conclusion
+
+p-value = 0.05, assume average height is 175, the chance of observing this data is very low, so the true value should not be 175
+
 ## 1. Metrics you will use to evaluate model performance and tell the advantage for each of them. (F score, ROC curve, recall, etc…)
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/76275089/180141538-d7556b89-9408-44b4-9991-b79f254ddc15.png">
-
-Type I error: False positive, null hypothesis is true but rejected
-
-e.g. Consider someone as guilt when someone is actually not
-
-Type II error: False negative, null hypothesis is false but fails to be rejected 
-
-e.g. Covid negative result for someone who actually has Covid, cause the spread of disease
 
 Accuracy = TP + TN / total = number of correct predictions / total number of predictions
 
@@ -30,13 +110,6 @@ Reference: https://towardsdatascience.com/the-f1-score-bec2bbc38aa6
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/76275089/181431850-830a3df1-5045-4102-803a-bef88d433f71.png">
 
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/76275089/181432034-06e72e65-5b31-448a-8672-9d006cba0eba.png">
-
-
-## 3. p-value
-
-Measure the probability of obtaining the observed results, assuming that the null hypothesis is true
-
-Minimum significance level at which you can reject the null hypothesis
 
 
 ## 4. What is overfitting? 
