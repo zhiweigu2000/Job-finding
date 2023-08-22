@@ -190,6 +190,34 @@ Order suggestions are listed: use new users' contacts as suggestions, allow user
 
 Information shared about a possible connection: provide an additional data point like shared skills
 
+### [How would you launch Google’s driverless car service?](https://stellarpeers.com/cases/how-would-you-launch-googles-driverless-car-service/)
+
+Market: biggest competitor Uber, Google advantages AI technology, its ecosystem of devices & apps, and its developer network
+
+Goals: position Google as #1 in the driverless-technology market and to differentiate Google’s offering
+
+Pre-launch Activities: 
+
+- Launch pilot programs in users and commerce market
+
+- Marketing campaign to emphasize Google's ecosystem
+
+- Learning from data
+
+- Partner with developers
+
+- Public relation campaigns
+
+Product Launch Activities:
+
+- Press event
+  
+- Billboards along major highways
+
+- Develop more partnerships with several carmakers
+
+- Introduce price with a bit above cost, promotional discount
+
 ---
 
 ## Tradeoff Questions
@@ -407,6 +435,22 @@ No ship:
 - Number of posts created per day decreases
 
 - Daily active users decrease
+
+### [High acquisition but low retention, what do you do?](https://stellarpeers.com/cases/high-acquisition-but-low-retention-what-do-you-do/)
+
+You launched a new web application signup flow to encourage new users to add more profile information. A/B test results indicate that the number of people that added additional profile information increased by 8%. However, 7-day retention decreased by 20%. What do you do?
+
+Retention: number of logged in sessions per week
+
+Signups: once the user has answered all the required questions, we count that as a sign-up
+
+- Sign-up process has too many questions, user drops off: users finish answering the required questions but drop off when answering the optional questions, check when users drop off
+
+- User is put off by questions that ask for private information: identify these questions, inform users
+
+- Lousy first experience after signup, ends with cliffhanger: find out what the next step is after sign-up 
+
+- Bugs or poor UI design: offer an easy way to give feedback
 
 
 ---
