@@ -86,6 +86,30 @@ Measure average height of men in US, test whether the average height is 175cm, c
 
 p-value = 0.05, assume average height is 175, the chance of observing this data is very low, so the true value should not be 175
 
+## Simulate coin
+
+**Model a fair coin with unfair coin**
+
+Basic idea: 2 tosses, ignore HH and TT, HT --> H, TH --> T P(H) = P(T) = p(1-p)
+
+Improve efficiency: after HH and TT, flip 2 more times, ignore HHHH and TTTT, HHHT, HHTT, TTHT --> H, HHTH, TTHH, TTTH --> T
+
+Less tosses, more efficient
+
+**Model numbers with a fair coin**
+
+N=4: 2 tosses, 0, 1, 2, 3 --> HH, HT, TH, TT
+
+N=5: 3 tosses, use 5 of the 8 outcomes
+
+**Model a unfair coin with fair coin**
+
+Simulate a biased coin with P(H) = 1/N
+
+N=4: HH --> H, HT, TH, TT --> T
+
+N=5: 3 tosses, use 5 of the 8 outcomes
+
 ## 1. Metrics you will use to evaluate model performance and tell the advantage for each of them. (F score, ROC curve, recall, etc…)
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/76275089/180141538-d7556b89-9408-44b4-9991-b79f254ddc15.png">
