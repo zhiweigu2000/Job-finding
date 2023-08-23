@@ -108,6 +108,10 @@ $E(X) = np$
 
 $Var(X) = np(1 - p)$
 
+e.g. Number of clicks follow binomial distribution
+
+Measure the total number of events of interest
+
 
 ## Normal distribution
 
@@ -137,6 +141,20 @@ $\Phi(-3, 3) = 99.7%$
 
 $P(c < X < d) = P(a < Z < b) = \Phi(b) - \Phi(a)$ where $a = (c-\mu)/\sigma$, $Z = (X-\mu)/\sigma$, $d = (b-\mu)/\sigma$
 
+Central limit theorem: repeated drawing will make distribution of sample means normally distributed
+
+Usually 30 samples, need larger sample when population is very skewed
+
+e.g. Estimate average time spent on a website
+
+Calculate average time spent of 10 users
+
+Repeat for 1000 times, the average time spent follows normal distribution
+
+If sample is large enough, sum also follows normal distribution
+
+Population usually has long tail
+
 
 ## Possion distribution
 
@@ -163,6 +181,13 @@ $SD(T) = \sqrt{1-p} / p$
 
 Distribution of waiting times
 
+e.g Calculate customer life time given customer churn rate
+
+Customer churn rate: percentage of a customer who cancel
+
+Customer lifetime: on average, how many month it takes for a customer to churn
+
+Churn rate = c, average lifetime = 1/c
 
 ## Conditional expectation
 
