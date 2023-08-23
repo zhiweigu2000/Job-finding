@@ -527,6 +527,54 @@ Criteria:
 
 2. Increase incentives to increase driver supply, notify inactive drivers to come back, relax algorithm
 
+### [How would you find the cause of a 15% drop in Facebook Groups usage?](https://stellarpeers.com/cases/how-would-you-find-the-cause-of-a-15-drop-in-facebook-groups-usage/)
+
+**Clarify**
+
+How do you measure engagement? Number of posts created, number of replies to posts, number of reactions to posts, number of shared posts
+
+**List High-level Reasons**
+
+- Users creating, replying, reacting, and sharing fewer posts on Facebook Groups
+
+- Users going to an alternative feature
+
+**Gather Context Information**
+
+TIME: Is the decline in engagement a one-time event or has it happened progressively? technical problem
+
+REGION: Is the decline happening in an isolated region? regulations
+
+PLATFORMS: Is the decline happening on specific platforms, like iOS, Android or others?
+
+OTHER FEATURES: Is the decline in engagement happening in other Facebook features besides Facebook Groups? 
+
+COMPETITORS: Is the decline in engagement also happening in competitive products?
+
+**Establish a Theory of Probable Cause**
+
+If the change is progressive and nothing special
+
+- Creating, replying, reacting, and sharing fewer posts
+
+- Going to an alternative social-group feature
+
+**Test Your Theories and Fix the Problem**
+
+- Is there a problem with the creation of posts? not likely because such change tends to be drastic
+
+- Are the notifications of new group posts working correctly?  not likely because such change tends to be drastic
+
+- Is there a problem with the UI for replying, reacting or sharing of posts on Facebook Group pages? not likely
+
+- Has there been an increase in spam posts on Facebook Groups?
+
+- Is there a new Facebook feature that is cannibalizing Facebook Groups? What is the proportion of users of the new feature that are also users of Facebook Groups? What is the percentage of users that switched that have exhibited a significant decline in engagement with Facebook Groups since the problem started?
+
+- Is there a competitor of Facebook Groups that has increased its engagement numbers while Facebook Groups’ engagement decreased? hard to know, try to implement new ideas
+
+Conclusion: an increase in spam posts, cannibalization by another Facebook feature, an external new competitive feature
+
 ---
 ## Profitability
 
