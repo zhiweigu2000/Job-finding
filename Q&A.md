@@ -314,6 +314,23 @@ If there is no pattern in missing values, missing values can be substituted with
 - Homogeneity of Variance: variance between groups is equal
 
 
+## z-test
+
+**When to use?**
+
+Compare population mean from 2 samples
+
+**Assumptions**
+
+Test statistics follow N(0, 1)
+
+Z = (sample mean - $\mu$) / sample sd
+
+$\mu$: constant or sample mean of the second population
+
+Do not know the exact distribution, but if points are independent, more than 30 points, finite variance, then by CLT, the sample variance is an estimator of true variance and Z is approximately standrad normal
+
+
 ## 20. Paired t-test
 
 Null hypothesis: the difference between the paired population means is equal to 0
