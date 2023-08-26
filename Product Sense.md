@@ -218,6 +218,43 @@ Product Launch Activities:
 
 - Introduce price with a bit above cost, promotional discount
 
+### [How would you measure the success of Facebook Stories?](https://stellarpeers.com/cases/how-would-you-measure-the-success-of-facebook-stories/)
+
+**Goal**
+
+Increase engagement and retention of Facebook users
+
+Attract Snapchat’s segment 
+
+Stories from friends that the user interacts with more frequently are prioritized and displayed before stories from other friends
+
+Facebook Camera has features like filters, stickers and more that people can use to enhance their photos or videos
+
+**Metrics**
+
+Whether Facebook Camera and Facebook Stories are being effective in increase engagement and retention
+
+Facebook Camera:
+
+- Fraction of the Stories that a user embellishes with the widgets on average
+
+- Top 10 most frequently used filters per user
+
+- Measure the average number of times people browse filters but do not send after browsing
+
+- Average length of videos shared per user
+
+Facebook Stories:
+
+- Average number of times a user shares a Story per day, per week, and per month
+
+- Whether people who never post or post seldom are posting Facebook Stories to their news feeds: reverse the decline in the number of personal posts on the News Feed
+
+- How many channels a user shares a Story with on average: Story, Direct Message, Post mean more engagement
+
+- How many times a user clicks on Stories from friends they don’t typically engage with before they click on stories from their close friends
+
+- What fraction of the people that click on a friend’s Story publish their own Story shortly after
 ---
 
 ## Tradeoff Questions
