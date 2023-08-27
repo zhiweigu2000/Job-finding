@@ -316,32 +316,40 @@ If there is no pattern in missing values, missing values can be substituted with
 
 ## z-test
 
-**When to use?**
+Test the mean/proportion of a population against a number or against the mean/proportion of another populationCompare population mean from 2 samples
 
-Compare population mean from 2 samples
+Assumptions:
 
-**Assumptions**
+- Sample size large than 30
 
-Test statistics follow N(0, 1)
+- Population variance is not known
+
+- Test statistics follow N(0, 1) or points are independent, more than 30 points, finite variance, then by CLT, the sample variance is an estimator of true variance and Z is approximately standrad normal
 
 Z = (sample mean - $\mu$) / sample sd
 
 $\mu$: constant or sample mean of the second population
 
-Do not know the exact distribution, but if points are independent, more than 30 points, finite variance, then by CLT, the sample variance is an estimator of true variance and Z is approximately standrad normal
+Compare F-score with critical F-score
 
 
-## 20. Paired t-test
+## 20. t-test
 
-Null hypothesis: the difference between the paired population means is equal to 0
+Assumption:
 
-- The variables are independent of one another.
-- The difference should be approximately normally distributed
+- Sample size is not too large, usually less than 30
+  
+- Population variance is not known
 
-1. Standard error = sd / sqrt(sample size)
-2. t = average difference / standard error
-3. df = sample size - 1, find t-value
-4. t smaller than t-value, cannot reject
+- Data is normally distributed, or sample mean be normally distributed, the sample variance independent of the sample mean
+
+T = (sample mean - $\mu$) / sample sd
+
+t-distribution has heavier tails than the normal distribution
+
+df = sample size - 1
+
+Compare t-score with critical t-score
 
 
 ## 21. F-test
@@ -349,7 +357,9 @@ Null hypothesis: the difference between the paired population means is equal to 
 Null hypothesis: two populations have the same variance
 
 - Data is normal
+  
 - Variance of each treatment group is the same
+  
 - All observations are independent
 
 F = between group / within group
