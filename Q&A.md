@@ -379,6 +379,9 @@ A hierarchical model is a type of statistical model that is organized into a hie
 An example of a hierarchical model is a hierarchical linear model, which is used to model data with multiple levels of grouping or nesting. For example, you might use a hierarchical linear model to analyze test scores for students in different schools, where the schools are the highest level of the hierarchy, and the students are the lowest level. The model would allow you to estimate the average test scores for each school, while also taking into account the variation in scores between students within each school.
 
 
+## Why do we usually choose MSE over MAE?
+
+MSE makes it easier to perform calculations because it does not have sharp turning point. 
 
 
 
