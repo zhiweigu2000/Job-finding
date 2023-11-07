@@ -46,7 +46,7 @@ Application: used in AB testing, don't observe difference when there is a differ
 
 **Non-technical**
 
-A person is not infected and tested negative
+A person is infected and tested negative
 
 ## Confidence interval
 
@@ -64,7 +64,7 @@ How likely CI covers the true sample
 
 **Non-technical**
 
-Measure the level of undertainty when estimating a value
+Measure the level of uncertainty when estimating a value
 
 Measure average height of men in US: sample height from certain men, gives a 95% interval 168cm to 185cm, it is likely to cover the average height. If we repeat this process, we expect the CI to cover the true average height 95% of the time.
 
