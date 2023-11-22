@@ -66,7 +66,7 @@ Facebook: get value when buyers and sellers connect via messaging
 
 **Northstar metric**
 
-Meaning conversation from listing
+Meaningful conversation from listing
 
 **Breakdown northstar**
 
