@@ -1,3 +1,81 @@
+## [Facebook Data Scientist Mock Interview - Segment Influencers](https://www.youtube.com/watch?v=XOJk0AKIqv8)
+
+### Statistics
+
+**How do you derive the beta coefficient from multivariate regression?**
+
+For a multivariate regression, we used multiple independent variables to predict one dependent variable. The coefficient for independent vriables are known as the beta coefficients. It explains how much the dependent variable is going to change on average when the independent variable is changed. 
+
+OLS $\hat{\beta} = (X^TX)^{-1}X^TY$
+
+Maximum likelihood estimator
+
+**Suppose the data with target variable is zero-inflated, how would you deal with your model?**
+
+Why are there so many zero? Is it an error or the actual value?
+
+Model the data for being zero and not being zero, check beta coefficient
+
+**How to interpret confidence interval for logistics regression?**
+
+Confidence interval explains how likely the range will cover the true value, in this case means 95% of the time, this confidence interval range will cover the true beta coefficient for the logistics regression. It represents the uncertainty around the variable. 
+
+What if the interval include 1?
+
+An odds ratio of 1 implies no effect on the odds of the event occurring, which means it is statiscally not significant. 
+
+### SQL
+
+Message table: user_id, user_name, date, message_sent, message_received
+
+**For each day, return the name of user who received the highest message_sent to message_received ratio**
+
+SELECT user_name, date, ROW_NUMBER() OVER (PARTITION BY date ORDER BY message_sent/message_received DESC) AS rnk
+FROM Message 
+WHERE rnk = 1
+
+**For each user, return the first date when the user receive 0 message**
+
+SELECT user_id, MIN(date)
+FROM Message
+WHERE message_received = 0
+GROUP BY user_id
+
+### Case
+
+**How do you determine if a user is an influencer on Ins?**
+
+Influencer is someone who could spread information or ideas through interactions on ins
+
+Number of followers
+
+Number of posts per day
+
+Number of interaction (view, like, comment) received per post
+
+Paid ads
+
+What is the goal? Match advertisers to influencers
+
+How to actually bin users?
+
+- Unsupervised: clustering
+- Supervised: number of paid ads
+
+**How to segment influencer population?**
+
+Group into different categories
+
+Different topics / tags
+
+Features: content of posts (nlp), followers (gender, age, location, interest)
+
+Model: clustering
+
+Evaluation: human labelers
+
+
+
 <img src="https://user-images.githubusercontent.com/76275089/184062202-c227d555-795b-4cf1-b903-631fb36122a7.png" width=800>
 
 ```SQL
