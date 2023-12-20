@@ -1,3 +1,88 @@
+## [Amazon Data Scientist Mock Interview - Fraud Model](https://www.youtube.com/watch?v=68I67w63IpY)
+
+### Machine learning
+
+**What is variance and bias trade off?**
+
+Bias represents the distance between predicted values and the actual values
+
+Variance represents the spread of the data
+
+When a model is too simple, or under-fitted, it has high bias because its preductions are inaccurate. It has low variance because it is less likely to change
+
+When a model is too complicted, or over-fitted, it has low bias, but high variance, meaning that the model could not generalize well to unseen data
+
+The total error of a model is bias^2 + variance + irreducible error. A good model needs to balance between these two factors to have a suitable level of complexity, reaching lowest total error. 
+
+If the flexibility of the decision boundary increase, what will happen?
+
+Overfit, highly flexible model may fit the training data very closely, variance increase, bias decrease
+
+**What is the difference between boosting and bagging?**
+
+Both ensemble techniques
+
+Boosting is building a new model on the top of the old model, focus on where the previous model did not perform well, to form a strong learner, such as adaboost
+
+Bagging is using multiple subsamples of the data to train multiple weak learners, combine these weak models together and giving a majority vote, such as random forest
+
+When you increase the number of trees, how are the bia and variance affected by the boosting and bagging model?
+
+Boosting: tend to overfit, model fits the training data really well, bias decreases, variance increases
+
+Bagging: reduce the impact of noise, variance decreases, less likely to affect bias
+
+### Case
+
+**How would you detect seller fraud on amazon?**
+
+Seller fraud: sellers to misrepresent themselves, or the products they're selling, buyers make purchases they do not expect
+
+Transactions: success vs refund
+
+Seller: review, withdraw money, IP address
+
+Listing: title, image, description
+
+Label: transaction is fraud
+
+**Feature selection**
+
+Target variable: class imblanace, 1/0
+
+If item match description: 1/0
+
+Tenure of listing
+
+Number of reviews
+
+Percentage of positive reviews
+
+Frequency of withdraw money: categorical
+
+Number of past transactions
+
+Percentage of successful transactions
+
+LASSO regularizer, PCA to select features
+
+**Performance**
+
+Train test split
+
+Cross validation
+
+ROC curve
+
+F1 score
+
+Accuracy may be biased / inflated
+
+**Fraud transaction to seller**
+
+Apply on historical data, find decision boundary
+
+
 ## [Facebook Data Scientist Mock Interview - Segment Influencers](https://www.youtube.com/watch?v=XOJk0AKIqv8)
 
 ### Statistics
