@@ -1,3 +1,40 @@
+## [Uber Data Scientist Mock Interview](https://www.youtube.com/watch?v=0kqRsAHHPf0)
+
+### SQL
+
+RideStatus: order_date, number_of_orders, status_of_order, monetary_value, service_name
+
+**Among the services with top 3 highest cancellation rate, find average order value and maximum order count across order_dates**
+
+SELECT service_name, AVG(monetary_value), MAX(number_of_orders)
+FROM RideStatus
+GROUP BY service_name
+ORDER BY SUM(CASE WHEN status_of_order = "cancelled" THEN number_of_orders ELSE 0) / SUM(number_of_orders) DESC
+LIMIT 3
+
+### Product sense
+
+**How would you measure the health of Uber?**
+
+Health vs Success
+
+Audience: executives, managers
+
+Metric: statistical function, action, unit
+
+HEART:
+
+H happiness: survey
+
+E engagement: total number of rides per day/week/month/quarter/year
+
+A adoption acquisition: sign up rate per week/month/quarter/year
+
+R retention: DAU, WAU, MAU
+
+T task success: average ETA
+
+
 ## [Amazon Data Scientist Mock Interview - Fraud Model](https://www.youtube.com/watch?v=68I67w63IpY)
 
 ### Machine learning
