@@ -108,6 +108,39 @@ Stochastic Gradient Descent: draw a simple random sample of data indices, comput
 
 <img src="https://user-images.githubusercontent.com/76275089/147715069-7e8dfb72-5cf7-4aac-8297-148f942c7fe3.png" width = 500>
 
+## Imblanced dataset
+
+Model is only able to learn a simple heuristic (e.g. always predict the dominate class) and it gets stuck in a suboptimal solution
+
+An accuracy of over 90% can be misleading because the model may not have predictive power on the rare class
+
+### Resampling
+
+Oversampling
+
+SMOTE
+
+Downsampling
+
+### Model-level methods
+
+Update loss function
+
+Tree-based models work well on tasks involving small and imbalanced datasets. 
+
+Logistic regression is able to handle class imbalanced relatively well in a standalone manner. Adjust the probability threshold to improve the accuracy for predicting the minority class. 
+
+### Evaluation Metrics
+
+Use unsampled data instead of resampled data to evaluate the model
+
+Accuracy is misleading when classes are imbalanced
+
+AUC of the ROC curve: tune thresholds to increase recall and decrease false positive rate
+
+Precision-Recall curve: identify a threshold that works best for the dataset, gives more importance to the positive class
+
+AUC of the ROC curve: tune thresholds to increase recall and decrease false positive rate
 
 ## Supervised learning
 
