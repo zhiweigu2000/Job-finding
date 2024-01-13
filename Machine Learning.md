@@ -142,7 +142,16 @@ Precision-Recall curve: identify a threshold that works best for the dataset, gi
 
 AUC of the ROC curve: tune thresholds to increase recall and decrease false positive rate
 
+
 ## Supervised learning
+
+### Model choice
+
+Text data: Naive Bayes, neural network BERT
+
+Regression: linear regression
+
+Classification: logistics regression, random forest, SVM
 
 ### Parametric model
 
@@ -447,7 +456,9 @@ Features are independent
 
 3. Disadvantages
 
-Correlated features affects performance
+- Correlated features affects performance, which is impossible in the real life
+
+- Zero frequency issue
 
 4. Whether Feature Scaling is required?
 
