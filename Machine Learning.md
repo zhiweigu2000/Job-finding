@@ -6,7 +6,7 @@
 
 Bias: error between average model prediction and ground truth
 
-Variance: error from sensitivity to small fluctuations
+Variance: the extent to which model prediction error changes based on inputs, error from sensitivity to small fluctuations
 
 Low model complexity, high bias, low variance, underfitting
 
@@ -14,10 +14,111 @@ High model complexiy, low bias, high variance, overfitting
 
 Model error = bias^2 + model variance + random error (observation variance)
 
-<img src="https://user-images.githubusercontent.com/76275089/147712539-0b5d4dd2-e315-41e3-85b6-b83e2d8c16af.png" width = 600>
+
+## Regularization
+
+Overfitting:
+
+Model performs well with training data -- low bias
+
+Model fails to perform well with testing data -- high variance
+
+Underfitting:
+
+Model accuracy is bad with training and testing data -- high bias, high variance
+
+Prevent overfitting, add a extra term into the cost function
+
+<img src="https://user-images.githubusercontent.com/76275089/147713522-703517f0-1b7b-4de4-af87-c2a71a20012b.png" width = 500>
+
+L2 (Ridge) regularization: square value of a coefficient
+
+<img src="https://user-images.githubusercontent.com/76275089/147713569-2dfaa3da-d0bf-4d56-b497-2e1ef537eac1.png" width = 400>
+
+Always exist unique optimal parameter
+
+L1 (LASSO) regularization: absolute value of a coefficient
+
+<img src="https://user-images.githubusercontent.com/76275089/147713624-79ccb5ae-f211-4239-a72e-d7991b12fca8.png" width = 400>
+
+Used for feature selection, shrink coefficients to 0
 
 
-## Coefficients
+## Gradient descent
+
+Optimize loss function
+
+Take small steps in the direction of steepest descent for a particular object function
+
+<img src="https://user-images.githubusercontent.com/76275089/147714298-bd9d1783-7753-4900-9c37-0eef4a6ae3e1.png" width = 300>
+
+alpha: learning rate, too large fails to converge, too small takes too long to converge
+
+L: loss function
+
+Stochastic Gradient Descent: draw a simple random sample of data indices
+
+<img src="https://user-images.githubusercontent.com/76275089/147714719-7bbf8e69-2dc8-4a87-9722-71046724b309.png" width = 400>
+
+<img src="https://user-images.githubusercontent.com/76275089/147715065-7dd48c99-9819-4722-b64d-67853dbbca77.png" width = 500>
+
+<img src="https://user-images.githubusercontent.com/76275089/147715069-7e8dfb72-5cf7-4aac-8297-148f942c7fe3.png" width = 500>
+
+
+## Cross-validation
+
+Avoid over-fitting
+
+Model use k-1 fold for training, validate on remaining fold, select the best parameter
+
+<img src="https://user-images.githubusercontent.com/76275089/147712755-319487e1-0da2-464a-8e41-606341926a2f.png" width = 500>
+
+
+## Imblanced dataset
+
+Model is only able to learn a class (e.g. always predict the dominate class) and it gets stuck in a suboptimal solution
+
+An accuracy of over 90% can be misleading because the model may not have predictive power on the rare class
+
+### Resampling
+
+Oversampling
+
+SMOTE
+
+Downsampling
+
+### Model-level methods
+
+Update loss function
+
+Tree-based models work well on tasks involving small and imbalanced datasets
+
+Logistic regression is able to handle class imbalanced relatively well in a standalone manner. Adjust the probability threshold to improve the accuracy for predicting the minority class
+
+### Evaluation Metrics
+
+Use unsampled data instead of resampled data to evaluate the model
+
+Accuracy is misleading when classes are imbalanced
+
+AUC of the ROC curve: tune thresholds to increase recall and decrease false positive rate
+
+Precision-Recall curve: identify a threshold that works best for the dataset, gives more importance to the positive class
+
+
+## Model choice
+
+Text data: Naive Bayes, neural network BERT
+
+Regression: linear regression, regression tree
+
+Classification: logistics regression, random forest, SVM
+
+![image](https://github.com/zhiweigu2000/Job-finding/assets/76275089/2519a31c-0129-42e7-8d72-3936908b3c1c)
+
+
+## Linear Regression
 
 Correlation coefficient (r): average of the product of x and y, both in standard units
 
@@ -38,133 +139,6 @@ Increase as number of features increase
 <img src="https://user-images.githubusercontent.com/76275089/146849906-30d2fce1-86be-40a6-86f1-cbdc31c6c68a.png" width = 150>
 
 <img src="https://user-images.githubusercontent.com/76275089/146849909-75dc93b9-05b5-4eb2-a58d-07ca33db84bc.png" width = 300>
-
-
-## Feature engineering
-
-Transform raw features into more informative features for modeling
-
-Encode non-numeric features
-
-
-## Cross-validation
-
-Avoid over-fitting
-
-Model use k-1 fold for training, validate on remaining fold, select the best parameter
-
-<img src="https://user-images.githubusercontent.com/76275089/147712755-319487e1-0da2-464a-8e41-606341926a2f.png" width = 500>
-
-
-## Regularization
-
-Overfitting:
-
-Model performs well with training data -- low bias
-
-Model fails to perform well with testing data -- high variance
-
-Underfitting:
-
-Model accuracy is bad with training and testing data -- high bias, high variance
-
-Prevent overfitting, add a extra term into the cost function
-
-<img src="https://user-images.githubusercontent.com/76275089/147713522-703517f0-1b7b-4de4-af87-c2a71a20012b.png" width = 500>
-
-<img src="https://user-images.githubusercontent.com/76275089/147713540-f01286fa-9801-48d3-86ac-d5982b8f17c3.png" width = 400>
-
-L2 (Ridge) regularization:
-
-<img src="https://user-images.githubusercontent.com/76275089/147713569-2dfaa3da-d0bf-4d56-b497-2e1ef537eac1.png" width = 400>
-
-Always exist unique optimal parameter
-
-<img src="https://user-images.githubusercontent.com/76275089/147713580-d18db155-1010-434f-bb46-71b379423724.png" width = 300>
-
-L1 (LASSO) regularization:
-
-<img src="https://user-images.githubusercontent.com/76275089/147713624-79ccb5ae-f211-4239-a72e-d7991b12fca8.png" width = 400>
-
-Purpose:
-
-- Prevent overfitting
-
-- Feature selection
-
-## Gradient descent
-
-<img src="https://user-images.githubusercontent.com/76275089/147714298-bd9d1783-7753-4900-9c37-0eef4a6ae3e1.png" width = 300>
-
-alpha: learning rate, too large fails to converge, too small takes too long to converge
-
-L: loss function
-
-Stochastic Gradient Descent: draw a simple random sample of data indices, compute gradient estimate
-
-<img src="https://user-images.githubusercontent.com/76275089/147714719-7bbf8e69-2dc8-4a87-9722-71046724b309.png" width = 400>
-
-<img src="https://user-images.githubusercontent.com/76275089/147715065-7dd48c99-9819-4722-b64d-67853dbbca77.png" width = 500>
-
-<img src="https://user-images.githubusercontent.com/76275089/147715069-7e8dfb72-5cf7-4aac-8297-148f942c7fe3.png" width = 500>
-
-## Imblanced dataset
-
-Model is only able to learn a simple heuristic (e.g. always predict the dominate class) and it gets stuck in a suboptimal solution
-
-An accuracy of over 90% can be misleading because the model may not have predictive power on the rare class
-
-### Resampling
-
-Oversampling
-
-SMOTE
-
-Downsampling
-
-### Model-level methods
-
-Update loss function
-
-Tree-based models work well on tasks involving small and imbalanced datasets. 
-
-Logistic regression is able to handle class imbalanced relatively well in a standalone manner. Adjust the probability threshold to improve the accuracy for predicting the minority class. 
-
-### Evaluation Metrics
-
-Use unsampled data instead of resampled data to evaluate the model
-
-Accuracy is misleading when classes are imbalanced
-
-AUC of the ROC curve: tune thresholds to increase recall and decrease false positive rate
-
-Precision-Recall curve: identify a threshold that works best for the dataset, gives more importance to the positive class
-
-AUC of the ROC curve: tune thresholds to increase recall and decrease false positive rate
-
-
-## Supervised learning
-
-### Model choice
-
-Text data: Naive Bayes, neural network BERT
-
-Regression: linear regression
-
-Classification: logistics regression, random forest, SVM
-
-### Parametric model
-
-Parametric model: number of paramaters is fixed
-
-e.g Regression, Naive Bayes, Simple Neural Network
-
-Non-parametric model: number of parameters can grow
-
-e.g. KNN, SVM, Decision Tree
-
-
-### Linear Regression
 
 Linear regression: y = ax + b
 
@@ -734,22 +708,6 @@ Robust to Outliers
 Use multiple algorithms to solve a problem
 
 <img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/53e628e1-b387-4373-ad59-b7e7c3801ed7" width = 400>
-
-
-### Bagging 
-
-Row sampling: give different models different data
-
-Each model gives a prediction, select the majority voting
-
-e.g Random forest
-
-
-### Boosting
-
-Weak learner followed by another weak learner to form a strong learner
-
-e.g. Adaboost
 
 
 ## Unsupervised learning
