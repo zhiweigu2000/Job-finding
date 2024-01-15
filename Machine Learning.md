@@ -282,7 +282,7 @@ Sensitive to the unusual observations: outliers, high leverage, and influential 
 Classification
 
 
-### SVM
+## SVM
 
 Support Vector Machine: find out a plane that differentiate two categories, maximize margin
 
@@ -381,7 +381,9 @@ $= \frac{P(y)\displaystyle\prod_{i=1}^{n}{P(x_i|y)}}{P(x_1) P(x_2) ... P(x_n)}$
 
 $P(y|x_1, x_2, .., x_n) \propto P(y)\displaystyle\prod_{i=1}^{n}{P(x_i|y)}$
 
-Normalize, select the result with maximum probability
+Select the result with maximum probability
+
+$\hat{y} = argmax_{y_i} P(Y = y_i)\displaystyle\prod_{i=1}^{n}{P(x_i|Y = y_i)}$
 
 e.g text analysis
 
@@ -389,13 +391,15 @@ Classify sentences as good or bad: remove stop words, stemming, bag of words / T
 
 1. What Are the Basic Assumption?
 
-Features are independent
+Each $X_i$ is independent of any other $_j$X given Y
+
+Features are given the same weight
 
 2. Advantages
 
 - Work very well with many number of features: treat features as independent, curse-of-dimensionality problems do not apply
 
-- Works well with large training dataset, or when dataset is small compared to number of features
+- Works well with small dataset
 
 - It converges faster when we are training the model: based on probability
 
