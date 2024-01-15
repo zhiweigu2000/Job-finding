@@ -120,31 +120,7 @@ Classification: logistics regression, random forest, SVM
 
 ## Linear Regression
 
-Correlation coefficient (r): average of the product of x and y, both in standard units
-
-Represent strength of linear regression
-
-<img src="https://user-images.githubusercontent.com/76275089/146848646-80cd7c48-9bbb-4ada-b79b-78aa83a08e20.png" width = 200>
-
-Root Mean Squared Error(RMSE): average loss
-
-Decrease as number of features decrease
-
-<img src="https://user-images.githubusercontent.com/76275089/146849740-f84c0f5d-1f77-4fb3-ae49-b63ae173b1df.png" width = 300>
-
-Multiple R^2: square of the correlation between true y and predicted y
-
-Increase as number of features increase
-
-<img src="https://user-images.githubusercontent.com/76275089/146849906-30d2fce1-86be-40a6-86f1-cbdc31c6c68a.png" width = 150>
-
-<img src="https://user-images.githubusercontent.com/76275089/146849909-75dc93b9-05b5-4eb2-a58d-07ca33db84bc.png" width = 300>
-
 Linear regression: y = ax + b
-
-Minimize cost function = $\frac{1}{2m} \displaystyle\sum{(y_i - \hat{y_i})^2}$ with gradient descent
-
-Convergence theorem: $y = y - \frac{dy}{dx} * \alpha$
 
 Root Mean Squared Error(RMSE): how far apart the predicted values are from the observed values in a dataset
 
@@ -164,13 +140,11 @@ $RegSS = TSS-RSS = \displaystyle\sum{(\bar{y} - \hat{y_i})^2}$
 
 $R^2 = 1 - \frac{RSS}{TSS} = \frac{RegSS}{TSS}$
 
-Residual: $e_i = y_i - \hat{y_i}$
+Residual $e_i = y_i - \hat{y_i}$
 
-Least square estimate for theta
+Least square estimate for theta $\hat{\theta} = (X^{T}X)^{-1}X^{T}Y$
 
-$\hat{\theta} = (X^{T}X)^{-1}X^{T}Y$
-
-1. What Are the Basic Assumption?(favourite)
+1. What Are the Basic Assumption?
 
 There are four assumptions associated with a linear regression model:
 
@@ -178,9 +152,9 @@ There are four assumptions associated with a linear regression model:
 
 - Homoscedasticity: The variance of residual is the same for any value of X.
 
-- Independence: Observations are independent of each other.
+- Independence: Observations are independent of each other. Multicollinearity could cause coefficients to flip sign. Test with VIF
 
-- Normality: For any fixed value of X, Y is normally distributed, if data is not normal, apply transformation
+- Normality: For any fixed value of X, Y is normally distributed. If data is not normal, apply transformation. Test with QQ plot
 
 2. Advantages
 
@@ -217,7 +191,7 @@ Linear regression needs the relationship between the independent and dependent v
 - Flight Price Prediction
 
 
-### Logistic Regression
+## Logistic Regression
 
 $h_{\theta}(x) = \theta_0 + \theta_1x_1 + ... + \theta_nx_n = \theta^Tx = g(\theta_0 + \theta_1x_1 + ... + \theta_nx_n)$
 
@@ -263,7 +237,7 @@ Linear Relation between independent features and the log odds
 
 2. Advantages
 
-- Logistic Regression Are very easy to understand
+- Logistic regression are very easy to understand
 
 - It requires less training
 
@@ -271,25 +245,25 @@ Linear Relation between independent features and the log odds
 
 - It makes no assumptions about distributions of classes in feature space.
 
-- Logistic regression is less inclined to over-fitting but it can overfit in high dimensional datasets.One may consider Regularization (L1 and L2) techniques to avoid over-fittingin these scenarios.
+- Logistic regression is less inclined to over-fitting but it can overfit in high dimensional datasets. One may consider Regularization (L1 and L2) techniques to avoid over-fittingin these scenarios.
 
 - Logistic regression is easier to implement, interpret, and very efficient to train.
 
 3. Disadvantages
 
-- Sometimes Lot of Feature Engineering Is required
+- Sometimes lot of feature engineering is required
 
 - If the independent features are correlated it may affect performance
 
 - It is often quite prone to noise and overfitting
 
-- If the number of observations is lesser than the number of features, Logistic Regression should not be used, otherwise, it may lead to overfitting.
+- If the number of observations is lesser than the number of features, logistic regression should not be used, otherwise, it may lead to overfitting
 
 - Non-linear problems can’t be solved with logistic regression because it has a linear decision surface. Linearly separable data is rarely found in real-world scenarios.
 
 - It is tough to obtain complex relationships using logistic regression. More powerful and compact algorithms such as Neural Networks can easily outperform this algorithm.
 
-- In Linear Regression independent and dependent variables are related linearly. But Logistic Regression needs that independent variables are linearly related to the log odds (log(p/(1-p)).
+- Logistic regression needs independent variables are linearly related to the log odds (log(p/(1-p)).
 
 4. Whether Feature Scaling is required?
 
@@ -328,9 +302,15 @@ $w^T(x_2 - x_1)= 2$
 
 $\frac{w^T}{||w||}(x_2 - x_1)= \frac{2}{||w||}$
 
-Optimize function $(max \frac{2}{||w||}$ to find two marginal plane that have the maximum distance
+Optimize function $max \frac{2}{||w||}$ to find two marginal plane that have the maximum distance
 
 $min \frac{||w||}{2} + c_i \sum{n}{i=1}{e_i}$ to include some errors
+
+Kernel: transform data into higher dimensional space
+
+Linear problem: linear kernal
+
+Nonlinear problem: RBF
 
 1. What Are the Basic Assumption?
 
@@ -338,25 +318,27 @@ There are no such assumptions
 
 2. Advantages
    
-- SVM is more effective in high dimensional spaces.
+- SVM is more effective in high dimensional spaces
 
-- SVM is relatively memory efficient.
+- SVM is relatively memory efficient
 
-- SVM’s are very good when we have no idea on the data.
+- SVM’s are very good when we have no idea on the data
 
-- Works well with even unstructured and semi structured data like text, Images and trees.
+- Works well with even unstructured and semi structured data like text, images and trees
 
-- The kernel trick is real strength of SVM. With an appropriate kernel function, we can solve any complex problem.
+- The kernel trick is real strength of SVM. With an appropriate kernel function, we can solve any complex problem
 
-- SVM models have generalization in practice, the risk of over-fitting is less in SVM.
+- SVM models have generalization in practice, the risk of over-fitting is less in SVM
 
 3. Disadvantages
 
-- More training time is required for larger dataset
+- More training time is required for larger dataset, do not work well for large dataset
 
 - It is difficult to choose a good kernel function
 
-- The SVM hyper parameters are Cost -C and gamma. It is not that easy to fine-tune these hyper-parameters. It is hard to visualize their impact
+- The SVM hyper parameters are cost and gamma. It is not that easy to fine-tune these hyper-parameters
+
+- It is hard to interprete
 
 4. Whether Feature Scaling is required?
 
@@ -364,7 +346,7 @@ Yes
 
 5. Impact of Missing Values?
 
-Although SVMs are an attractive option when constructing a classifier, SVMs do not easily accommodate missing covariate information. Similar to other prediction and classification methods, in-attention to missing data when constructing an SVM can impact the accuracy and utility of the resulting classifier.
+Although SVMs are an attractive option when constructing a classifier, SVMs do not easily accommodate missing covariate information. Similar to other prediction and classification methods, attention to missing data when constructing an SVM can impact the accuracy and utility of the resulting classifier.
 
 6. Types of Problems it can solve(Supervised)
 
@@ -383,16 +365,7 @@ Classification: confusion Matrix, precision, recall, F1 score
 Regression: R2, Adjusted R2, MSE, RMSE, MAE
 
 
-### KNN
-
-K-Nearest Neighbor: calculate distance between query example and current example, pick first K entries, return mode of labels/average
-
-Larger K, more stable, end when there are more errors
-
-Disadvanatge: slower when number of examples and variables increases
-
-
-### Navie Bayes
+## Navie Bayes
 
 Bayes theorem: $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
 
@@ -457,7 +430,7 @@ It is usually robust to outliers
 - Document categorization
 
 
-### Decision tree
+## Decision tree
 
 Decision tree: divide based on different properties
 
@@ -554,7 +527,7 @@ It is not sensitive to outliers. Since, extreme values or outliers, never cause 
 - Regression
 
 
-### Random Forest
+## Random Forest
 
 Use a sample of data and features at each split to build decision tree
 
@@ -603,7 +576,7 @@ Robust to outliers
 - Regression
 
 
-### Adaboost 
+## Adaboost 
 
 Combine weak classifier algorithm to form strong classifier based on decision stumps (trees with one node and two leaves)
 
@@ -656,7 +629,7 @@ Sensitive to outliers
 - Regression
 
 
-### Xgboost 
+## Xgboost 
 
 Extreme gradient boosting
 
@@ -702,12 +675,20 @@ Robust to Outliers
 
 - Regression
 
-
-## Ensemble Techniques
+### Ensemble Techniques
 
 Use multiple algorithms to solve a problem
 
 <img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/53e628e1-b387-4373-ad59-b7e7c3801ed7" width = 400>
+
+
+## KNN
+
+K-Nearest Neighbor: calculate distance between query example and current example, pick first K entries, return mode of labels/average
+
+Larger K, more stable, end when there are more errors
+
+Disadvanatge: slower when number of examples and variables increases
 
 
 ## Unsupervised learning
