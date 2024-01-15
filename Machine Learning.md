@@ -436,9 +436,7 @@ It is usually robust to outliers
 
 ## Decision tree
 
-Decision tree: divide based on different properties
-
-Classification or regression
+Divide based on different properties
 
 All data starts in the root node
 
@@ -448,39 +446,23 @@ Split data into two nodes
 
 Repeat until every node is pure or unsplittable (has duplicate data that could not be split)
 
-Purity: entropy, Gini impurity
-
 Entropy:
 
-$H(s) = -p_+ log_2 (p_+) - p_- log_2 (p_-)$
+$H(s) = -p_+ log(p_+) - p_- log(p_-)$
 
 $p_+$: probability of yes
 
 Between 0 to 1, when entropy = 0, the node is pure split
 
-Gini impurity:
-
-$GI = 1 - \displaystyle\sum_{i=1}^{n}{p^2}$
-
-$= 1-\[(p_+)^2 + (p_-)^2 \]$
-
 Which feature to split: information gain
 
-$Gain(s, f_1) = H(s) - \displaystyle\sum_{v} \frac{|s_v|}{|s|}H(s_v)$
+$IG(Y, X) = H(Y) - H(Y|X)$
 
 Compare the gain the two features, choose the feature with higher gain
 
-Decision square regressor: MSE
-
-$MSE = \frac{1}{2m} \displaystyle\sum_{i=1}^{n}{(y_i- \hat{y_i})^2}$
-
 Hyperparameters: max_depth, max_leaf
 
-Avoid overfitting: don't allow fully grown tree
-
-Set more specific rules to prevent growth
-
-Cut off less useful branches
+Avoid overfitting: don't allow fully grown tree, set rules to prevent growth, cut off less useful branches
 
 1. What Are the Basic Assumption?
 
@@ -488,23 +470,21 @@ There are no such assumptions
 
 2. Advantages
 
-- Clear visualization: The algorithm is simple to understand, interpret and visualize as the idea is mostly used in our daily lives. 
+- Clear visualization: The algorithm is simple to understand, interpret and visualize as the idea is mostly used in our daily lives
 
-- Simple and easy to understand: Decision Tree looks like simple if-else statements which are very easy to understand.
+- Decision tree can be used for both classification and regression problems
 
-- Decision Tree can be used for both classification and regression problems.
+- Decision tree can handle both continuous and categorical variables
 
-- Decision Tree can handle both continuous and categorical variables.
+- No feature scaling required: No feature scaling (standardization and normalization) required in case of decision tree as it uses rule based approach instead of distance calculation.
 
-- No feature scaling required: No feature scaling (standardization and normalization) required in case of Decision Tree as it uses rule based approach instead of distance calculation.
+- Handles non-linear parameters efficiently: Non linear parameters don't affect the performance of a decision tree unlike curve based algorithms. So, if there is high non-linearity between the independent variables, decision trees may outperform as compared to other curve based algorithms.
 
-- Handles non-linear parameters efficiently: Non linear parameters don't affect the performance of a Decision Tree unlike curve based algorithms. So, if there is high non-linearity between the independent variables, Decision Trees may outperform as compared to other curve based algorithms.
+- Decision tree can automatically handle missing values.
 
-- Decision Tree can automatically handle missing values.
+- Decision tree is usually robust to outliers and can handle them automatically.
 
-- Decision Tree is usually robust to outliers and can handle them automatically.
-
-- Less Training Period: Training period is less as compared to Random Forest because it generates only one tree unlike forest of trees in the Random Forest
+- Less training period: Training period is less as compared to random forest because it generates only one tree unlike forest of trees in the Random Forest
 
 3. Disadvantages
 
@@ -535,13 +515,11 @@ It is not sensitive to outliers. Since, extreme values or outliers, never cause 
 
 Use a sample of data and features at each split to build decision tree
 
-ach node is most common predictions from each model
+Each node is most common predictions from each model, a kind of bagging
 
-A kind of bagging
+Random subset of features: prevent important features from always being present
 
 Prevent overfitting of decision tree
-
-Reduce high variance to low variance: with majority voting
 
 1. What Are the Basic Assumption?
 
@@ -553,17 +531,19 @@ There are no such assumptions
 
 - Less parameter tuning required
 
-- Decision Tree can handle both continuous and categorical variables.
+- Can handle both continuous and categorical variables
 
-- No feature scaling required: uses Decision Tree internally
+- No feature scaling required: uses decision tree internally
 
 - Suitable for any kind of ML problems
 
 3. Disadvantages
 
-- Biased With features having many categories
+- Biased in multiclass classification problems towards more frequent classes
 
-- Biased in multiclass classification problems towards more frequent classes.
+- Loss of interpretability: It’s difficult to draw very precise business insights through bagging because due to the averaging involved across predictions
+
+- Computationally expensive: Bagging slows down and grows more intensive as the number of iterations increase
 
 4. Whether Feature Scaling is required?
 
@@ -578,6 +558,19 @@ Robust to outliers
 - Classification
 
 - Regression
+
+
+## Ensemble Techniques
+
+Use multiple algorithms to solve a problem
+
+<img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/53e628e1-b387-4373-ad59-b7e7c3801ed7" width = 400>
+
+In bagging, weak learners are trained in parallel, but in boosting, they learn sequentially.
+
+Bagging: a random sample of data in a training set is selected with replacement—meaning that the individual data points can be chosen more than once. After several data samples are generated, these weak models are then trained independently, and depending on the type of task—regression or classification, for example—the average or majority of those predictions yield a more accurate estimate. 
+
+Boosting: combines a set of weak learners into a strong learner to minimize training errors
 
 
 ## Adaboost 
@@ -633,9 +626,9 @@ Sensitive to outliers
 - Regression
 
 
-## Xgboost 
+## XGBoost 
 
-Extreme gradient boosting
+Shortcomings of previous models are identified by the gradient rather than high weight points
 
 1. Create a binary decision tree using the feature based on the residual (baseline-actual)
 
@@ -679,12 +672,6 @@ Robust to Outliers
 
 - Regression
 
-### Ensemble Techniques
-
-Use multiple algorithms to solve a problem
-
-<img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/53e628e1-b387-4373-ad59-b7e7c3801ed7" width = 400>
-
 
 ## KNN
 
@@ -695,11 +682,9 @@ Larger K, more stable, end when there are more errors
 Disadvanatge: slower when number of examples and variables increases
 
 
-## Unsupervised learning
+## PCA
 
-### PCA
-
-Principal Component Analysis: reduce number of variables
+Combine highly correlated variables into a new, smaller set of constructs (principal component), capture most of the variance
 
 Simple value decomposition: X = UΣ * V^T
 
@@ -710,9 +695,9 @@ Orthogonal: most distinct, cover more information
 Recast data along principle component
 
 
-### K-means clustering
+## K-means clustering
 
-K-means clustering:  minimize the distance of the points in a cluster with their centroid
+Minimize the distance of the points in a cluster with their centroid
 
 1. Initialize k centroids
 
@@ -737,7 +722,7 @@ b(i): average distance of points in one cluster to points in the other cluster
 Good clustering: b(i) >> a(i)
 
 
-### Hierarchical clustering
+## Hierarchical clustering
 
 Create Dendrogram
 
@@ -752,7 +737,7 @@ Large dataste: k-means
 Small dataset: hierarchical
 
 
-### DBScan clustering
+## DBScan clustering
 
 <img src="https://github.com/zhiweigu2000/Job-finding/assets/76275089/4ff68036-6443-43be-817a-02980fb41241" width = 400>
 
