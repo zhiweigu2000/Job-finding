@@ -391,7 +391,7 @@ Classify sentences as good or bad: remove stop words, stemming, bag of words / T
 
 1. What Are the Basic Assumption?
 
-Each $X_i$ is independent of any other $_j$X given Y
+Each $X_i$ is independent of any other $X_j$ given Y
 
 Features are given the same weight
 
