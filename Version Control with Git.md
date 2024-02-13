@@ -1,3 +1,5 @@
+Test
+
 Commit: every time you commit, it basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot
 
 Repository: a directory which contains your project work, as well as a few files (hidden by default on Mac OS X) which are used to communicate with Git
