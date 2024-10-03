@@ -29,6 +29,8 @@ Model accuracy is bad with training and testing data -- high bias, high variance
 
 Prevent overfitting, add a extra term into the cost function
 
+### L1 vs L2 Regularization
+
 <img src="https://user-images.githubusercontent.com/76275089/147713522-703517f0-1b7b-4de4-af87-c2a71a20012b.png" width = 500>
 
 L2 (Ridge) regularization: square value of a coefficient
@@ -37,12 +39,15 @@ L2 (Ridge) regularization: square value of a coefficient
 
 Always exist unique optimal parameter
 
+L2 regularization includes a squared penalty proportional to the weight values, when taken derivative, x is still in the function so less likely to be 0.
+
 L1 (LASSO) regularization: absolute value of a coefficient
 
 <img src="https://user-images.githubusercontent.com/76275089/147713624-79ccb5ae-f211-4239-a72e-d7991b12fca8.png" width = 400>
 
 Used for feature selection, shrink coefficients to 0
 
+L1 regularization adds an absolute value term, when taken derivative, it is not differentiable at x = 0 so it will put coefficients to be 0. 
 
 ## Gradient descent
 
