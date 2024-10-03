@@ -136,6 +136,12 @@ Reference: https://towardsdatascience.com/the-f1-score-bec2bbc38aa6
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/76275089/181432034-06e72e65-5b31-448a-8672-9d006cba0eba.png">
 
 
+## 3. Log loss
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/2ec50e3e-f1fd-4f87-be7d-9c8425be9df4">
+
+Log loss penalizes incorrect predictions with a heavier penalty as the predicted probability diverges from the actual class. This characteristic makes it very sensitive to the confidence of predictions, making it a useful measure for evaluating models that produce probability estimates.
+
 ## 4. What is overfitting? 
 
 Overfitting means that the model fits the sample dataset so well that it fails to generalize. Overfitting model cannot perform well with unseen datasets. When the model is trained on sample dataset for too long, or the model is too complex, it is likely to cause overfitting. Overfitting model has low bias and high variance as it gets very sensitive to small changes. Therefore, it is common to separate datasets into training and testing sets. If the model has low error rate on training set, but high error rate on testing set, it is likely to be overfitted. A common method used to detect overfitting is k-fold cross-validation. Training with more data, selecting features, applying regularization could help prevent overfitting.
@@ -278,9 +284,11 @@ Reference: https://programmathically.com/principal-components-analysis-explained
 https://www.i2tutorials.com/what-are-the-pros-and-cons-of-the-pca/
 
 
-## 15. Why doesn't logistic regression use R^2?
+## 15. Why doesn't logistic regression use R^2 and MSE?
 
 R^2 equals to 1 minus the error squared divided by the total variance, which equals to the variance explained by the model divided by total variance. It has the assumption that total variance equals to the variance explained by the model plus the error variance (from the ordinary least square). This assumption no longer holds in logistics regression.
+
+Logistic regression involves a sigmoid function to predict probabilities, and when you apply the MSE loss function to these predictions, the result is a non-convex curve. This non-convexity creates multiple local minima, making optimization difficult because gradient-based methods like gradient descent may not always converge to the global minimum. MLE is convex and designed for classification tasks, making it the preferred choice for logistic regression.
 
 Reference: https://statisticsbyjim.com/regression/r-squared-invalid-nonlinear-regression/
 https://en.wikipedia.org/wiki/Coefficient_of_determination
@@ -379,7 +387,7 @@ A hierarchical model is a type of statistical model that is organized into a hie
 An example of a hierarchical model is a hierarchical linear model, which is used to model data with multiple levels of grouping or nesting. For example, you might use a hierarchical linear model to analyze test scores for students in different schools, where the schools are the highest level of the hierarchy, and the students are the lowest level. The model would allow you to estimate the average test scores for each school, while also taking into account the variation in scores between students within each school.
 
 
-## Why do we usually choose MSE over MAE?
+## 24. Why do we usually choose MSE over MAE?
 
 MSE makes it easier to perform calculations because it does not have sharp turning point. 
 
