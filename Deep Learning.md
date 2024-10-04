@@ -102,13 +102,56 @@ During training, the mean and variance are calculated based on the specific batc
 
 ## 12. Compare common activation functions 
 
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/05011b52-2da7-4204-9cc3-cabe151db44c">
 
+**Sigmoid**
 
+Range: 0 to 1
 
+Advantages:
+- Suitable for binary classification tasks in the output layer because output is between 0 and 1.
+- Its derivative is easy to compute, which simplifies backpropagation.
 
+Disadvantages:
+- Vanishing Gradient Problem: for very high or very low inputs, the gradient becomes very small, slowing down learning and making it hard for the network to learn effectively.
+- Outputs are not zero-centered, gradients can consistently push in one direction.
 
+**Tanh**
 
+Range: -1 to 1
 
+Advantages:
+- Outputs are zero-centered, which can help with convergence during training as gradients can be positive or negative.
+- Generally performs better than sigmoid in practice, especially for hidden layers, as the output is normalized.
+
+Disadvantages:
+- Suffer from the vanishing gradient problem, less severe than sigmoid.
+
+**ReLU**
+
+Range: 0 to inifinite
+
+Advantages:
+
+- Computationally efficient, easy to compute, allowing for faster training.
+- Help mitigate the vanishing gradient problem, as the gradient is constant (1) for positive values.
+- Encourages sparsity in activations as many outputs are zero, which can lead to better feature learning.
+
+Disadvantages:
+
+- Dying ReLU Problem: Neurons can become inactive and stop learning if they output zero consistently (i.e., for negative inputs), use Leaky ReLU
+- Outputs are not zero-centered, which can affect convergence
+
+**Leaky ReLU**
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/2cd81e2e-ebab-47cc-a83a-95db75fd9d16">
+
+Range: negative infinite to infinite
+
+Advantages:
+
+- Addresses the dying ReLU problem by allowing a small, non-zero gradient for negative inputs, enabling the model to continue learning.
+- Maintains many of the benefits of ReLU in terms of computational efficiency and convergence.
 
 
 
