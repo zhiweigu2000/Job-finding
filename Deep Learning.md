@@ -31,7 +31,7 @@ Common solutions:
 2. Use residual networks.
 3. Use batch normalization.
 
-## 4. Exploding gradient
+## 4. What it exploding gradient
 
 The large error gradients accumulate and result in very large updates to neural network model weights during training. 
 
@@ -43,4 +43,34 @@ Common solutions:
 2. L2 regularization on weights
 3. Change the error derivative before back propagating it
 
+## 5. Can we initialize weights with 0?
 
+This causes every neuron to behave the same during training since they receive the same gradient, making it impossible for the network to learn.
+
+## 6. Compare logistic regression and neural network
+
+We can think of logistic regression as a one layer neural network.
+
+Logistic regression is more interpretable.
+
+NN fit data better than logistic regression because the complicated structure of MLP make neural network able to extract useful features, also more prone to overfitting.
+
+## 7. How to perform hyperparameter tuning?
+
+- Grid Search: search through a manually specified subset of the hyperparameter space, evaluates all combinations of specified hyperparameter values.
+
+- Random Search: randomly samples combinations of hyperparameters from specified distributions, doesn't evaluate all combinations.
+
+## 8. How to prevent overfitting?
+
+- Data Augmentation: introduce variations to the training data to make the model more robust, such as rotations, flips, scaling, adding noise to image data.
+
+- Use dropout layer: randomly drops a fraction of neurons during training.
+  
+- Regularization
+
+- Early stopping: stop training when the model’s performance on a validation set starts to degrade.
+
+- Cross-validation
+
+- Batch normalization: normalizes activations in the network
