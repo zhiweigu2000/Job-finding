@@ -102,56 +102,74 @@ During training, the mean and variance are calculated based on the specific batc
 
 ## 12. Compare common activation functions 
 
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/05011b52-2da7-4204-9cc3-cabe151db44c">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/0b1a0175-51a8-49f9-a6a0-728f3852bf07">
 
-**Sigmoid**
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/929de84a-46a4-490b-bd57-ac0f198bf09f">
 
-Range: 0 to 1
+## 13. Compare common optimizers 
 
-Advantages:
-- Suitable for binary classification tasks in the output layer because output is between 0 and 1.
-- Its derivative is easy to compute, which simplifies backpropagation.
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/05311312-cb75-40ff-9c08-eab02205dbe5">
 
-Disadvantages:
-- Vanishing Gradient Problem: for very high or very low inputs, the gradient becomes very small, slowing down learning and making it hard for the network to learn effectively.
-- Outputs are not zero-centered, gradients can consistently push in one direction.
+SGD: update the model parameters based on the gradient of the loss function calculated from a small subset (mini-batch) of the training data.
 
-**Tanh**
+Momentum: build up velocity in the relevant direction by considering past gradients, thus smoothing out the updates and speeding up convergence.
 
-Range: -1 to 1
+Adagrad: adapt the learning rate for each parameter individually based on the historical gradient information. It increases the learning rate for infrequent parameters and decreases it for frequent parameters.
 
-Advantages:
-- Outputs are zero-centered, which can help with convergence during training as gradients can be positive or negative.
-- Generally performs better than sigmoid in practice, especially for hidden layers, as the output is normalized.
+RMSprop: use a moving average of squared gradients to scale the learning rate.
 
-Disadvantages:
-- Suffer from the vanishing gradient problem, less severe than sigmoid.
+Adam: combines the advantages of RMSprop and Momentum by maintaining a moving average of both the gradients and their squared values.
 
-**ReLU**
+## 14. Impact of batch size
 
-Range: 0 to inifinite
+Smaller batch sizes lead to more frequent updates, introducing noise that can help the model escape local minima and potentially improve generalization, though they may result in longer training times. 
 
-Advantages:
+Conversely, larger batch sizes provide smoother and more stable gradient estimates, allowing for faster convergence in terms of epochs, but they can increase the risk of overfitting and require more memory. 
 
-- Computationally efficient, easy to compute, allowing for faster training.
-- Help mitigate the vanishing gradient problem, as the gradient is constant (1) for positive values.
-- Encourages sparsity in activations as many outputs are zero, which can lead to better feature learning.
+## 15. Impact of learning rate
 
-Disadvantages:
+A high learning rate can accelerate convergence, allowing the model to learn quickly, but it risks overshooting the optimal solution, leading to divergence or instability. 
 
-- Dying ReLU Problem: Neurons can become inactive and stop learning if they output zero consistently (i.e., for negative inputs), use Leaky ReLU
-- Outputs are not zero-centered, which can affect convergence
+Conversely, a low learning rate ensures more stable and precise updates but can result in excessively slow convergence, potentially getting stuck in local minima. Additionally, an inappropriate learning rate can lead to poor generalization, as it may cause the model to either underfit or overfit the training data. 
 
-**Leaky ReLU**
+## 16. Problem of Plateau
 
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/2cd81e2e-ebab-47cc-a83a-95db75fd9d16">
+A plateau refers to a flat region in the loss landscape where the gradients are very small or zero.
 
-Range: negative infinite to infinite
+When a model encounters a plateau, the training process can slow down significantly.
 
-Advantages:
+Strategies:
+- Adaptive learning rates
+- Momentum methods
+- Adaptive Optimizers
 
-- Addresses the dying ReLU problem by allowing a small, non-zero gradient for negative inputs, enabling the model to continue learning.
-- Maintains many of the benefits of ReLU in terms of computational efficiency and convergence.
+## 17. Problem of saddle point
+
+A saddle point is a point in the loss landscape where the gradient is zero, but it is not a local minimum. In a saddle point, the surface curves upwards in some directions and downwards in others.
+
+Difficult for the optimizer to find the optimal path.
+
+Strategies:
+- Stochasticity, introduce noise in the training process
+- Momentum methods
+- Adaptive Optimizers
+
+## 18. When will transfer learning make sense?
+
+- Limited data availability
+- Similar tasks
+- High computational cost
+- Improve generalization
+
+
+
+
+
+
+
+
+
+
 
 
 
