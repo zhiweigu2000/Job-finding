@@ -74,3 +74,42 @@ NN fit data better than logistic regression because the complicated structure of
 - Cross-validation
 
 - Batch normalization: normalizes activations in the network
+
+## 9. What is dropout?
+
+During training, it randomly sets a fraction p of the neurons to zero at each training step. This means that they do not contribute to the forward pass (the output) and do not participate in backpropagation (the gradient updates).
+
+Not needed during testing
+
+- Reduce overfitting
+- Promote Redundancy
+
+## 10. What is batch normalization?
+
+Standardizes the inputs to a layer for each mini-batch. This has the effect of stabilizing the learning process and dramatically reducing the number of the training epochs.
+
+During training, the mean and variance are calculated based on the specific batch while they are calculated based on all the batches during testing phase.
+
+- Accelerate training
+- Improve stability
+- Reduce overfitting
+
+## 11. Why is non linear activation function needed?
+
+- Produce a nonlinear decision boundary via nonlinear combinations of the weights and inputs.
+
+- Capture complex pattern, build hierarchical representations of data
+
+## 12. Compare common activation functions 
+
+
+
+
+
+
+
+
+
+
+
+
