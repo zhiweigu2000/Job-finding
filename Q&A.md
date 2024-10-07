@@ -357,7 +357,20 @@ Reference: https://towardsdatascience.com/understanding-gradient-boosting-machin
 https://www.baeldung.com/cs/gradient-boosting-trees-vs-random-forests
 
 
-## 16. Clustering
+## 16. Explain how XGB work
+
+Step 1: XGBoost starts with an initial prediction, typically a simple model like predicting the mean for regression or the log-odds for classification.
+
+Step 2: Next, it calculates the residuals. These residuals are what the new tree tries to predict.
+
+Step 3: A new decision tree is then trained to predict the residuals. The predictions from this tree are added to the previous predictions to make the overall prediction better.
+
+Step 4: XGBoost introduces a learning rate parameter to control how much each tree contributes to the final prediction, preventing overfitting by making smaller updates. After each new tree is trained, its predictions are multiplied by the learning rate, and the scaled predictions are then combined with the existing ensemble’s predictions. A smaller learning rate means that each tree makes a smaller update to the predictions. This requires more trees to achieve good performance and takes more time but helps the model learn more slowly and carefully, which can prevent overfitting and lead to a more generalized model.
+
+Step 5: This process is repeated, with each new tree aiming to correct the errors of the previous model. After a predefined number of iterations or trees, the final model is an ensemble of all these trees.
+
+
+## 17. Clustering
 
 Objective: entities within a group are similar, but groups are different from each other
 
@@ -368,7 +381,7 @@ Gini impurity metric: measure the homogeneity of a set of items, from 0 to 1
 <img width="200" alt="image" src="https://user-images.githubusercontent.com/76275089/182051406-2e0ed1e7-4797-4848-a2c5-e00d90525266.png">
 
 
-## 17. Briefly rephrase PCA in your own way. How does it work? And tell some goods and bads about it.
+## 18. Briefly rephrase PCA in your own way. How does it work? And tell some goods and bads about it.
 
 PCA is principal component analysis. It is a method used when there are a lot of variables, it helps reduce the dimension of feature space. First standardized the data. Using simple value decomposition, we could find out the principal components. They are actually combination of features. Principal components are orthogonal to each other so they can capture more variance.  
 
@@ -378,7 +391,7 @@ Reference: https://programmathically.com/principal-components-analysis-explained
 https://www.i2tutorials.com/what-are-the-pros-and-cons-of-the-pca/
 
 
-## 18. Imbalanced data
+## 19. Imbalanced data
 
 - Oversampling the Minority Class: SMOTE
 - Undersampling the Majority Class
@@ -386,7 +399,7 @@ https://www.i2tutorials.com/what-are-the-pros-and-cons-of-the-pca/
 - Use F1 score for evaluation
 
 
-## 19. Missing values
+## 20. Missing values
 
 - Investigate, understand reason
 - Remove
@@ -394,7 +407,7 @@ https://www.i2tutorials.com/what-are-the-pros-and-cons-of-the-pca/
 - Use tree-based models
 
 
-## 20. Outliers
+## 21. Outliers
 
 - Change it with a mean or median
 - Standardize the feature, smooth the outliers
@@ -402,7 +415,7 @@ https://www.i2tutorials.com/what-are-the-pros-and-cons-of-the-pca/
 - Drop the values
 
 
-## 21. Hierarchical model
+## 22. Hierarchical model
 
 A hierarchical model is a type of statistical model that is organized into a hierarchy of different levels or layers. Each level of the hierarchy represents a different aspect or component of the data being modeled, and the levels are connected to one another in a way that allows information to flow from one level to another.
 
