@@ -100,3 +100,42 @@ def bfs(matrix):
       traverse(i, j)
 ```
 
+## Linked List
+
+https://leetcode.com/problems/reorder-list/
+
+```
+def reorderList(self, head: Optional[ListNode]) -> None:
+    """
+    Do not return anything, modify head in-place instead.
+    """
+    # Find mid point
+    slow = head
+    fast = head
+    while fast.next and fast.next.next:
+        fast = fast.next.next
+        slow = slow.next
+    
+    # Reverse second half
+    prev = None
+    curr = slow
+    while curr:
+        after = curr.next
+        curr.next = prev
+        prev = curr
+        curr = after
+    slow.next = None
+
+    # Merge forward and backward
+    A, B = head, prev
+    while A and B:
+        A_next = A.next
+        B_next = B.next
+        
+        A.next = B
+        B.next = A_next
+
+        A = A_next
+        B = B_next
+```
+
