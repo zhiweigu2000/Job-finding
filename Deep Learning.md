@@ -59,7 +59,11 @@ Simpler than the standard LSTM
 - Reset gate: determines how much of the previous hidden state to forget
 - Update gate: combines the forget and input gates, controls how much of the previous hidden state to keep and how much of the current input to pass to the next hidden state
 
+## Transformer
 
+Attention mechanism allows the model to focus on different parts of the input sequence when generating each element of the output sequence, instead of relying solely on the hidden state passed through each time step
+
+Transformer processes the entire sequence in parallel, using self-attention to figure out which parts of the sequence are important in relation to each other
 
 ## 1. Why is bias used in NN?
 
