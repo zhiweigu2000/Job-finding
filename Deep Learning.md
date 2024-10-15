@@ -1,3 +1,66 @@
+## Convolutional Neural Network CNN 
+
+Best suited for spatial data like images
+
+e.g. ResNet, VGG, Efficient Net
+
+Input layer
+
+Convolutional layer: perform convolution operations by sliding learnable filters (kernels) over the input to detect features such as edges, textures, or more complex structures
+
+Max pooling layer: reduce the spatial dimensions (height and width) of the feature maps by summarizing sub-regions, take the maximum value in each window
+
+Fully Connected Layer: combine extracted features and perform the final classification, apply non-linear activation functions e.g. ReLu
+
+Dropout layer: randomly dropping out (setting to zero) a fraction of the neurons during training, prevent overfitting
+
+Output Layer: softmax for classification
+
+## Recurrent Neural Network RNN
+
+Best suited for sequencial data like text
+
+Input layer: batch size for number of sequences processed at once, time steps for length of the sequence
+
+Recurrent layer: each time step in the sequence one at a time, while maintaining a hidden state that captures the context of previous time steps
+
+Dropout layer
+
+Fully Connected layer
+
+Output layer
+
+### Long Short-Term Memory LSTM
+
+An improved version of RNN
+
+Vanilla RNNs struggle to learn from long sequences because they tend to forget information after many time steps due to vanishing gradient problem
+
+LSTM introduces the concept of memory cells and gates (input, forget, and output gates) that allow it to explicitly control what information is kept, updated, or forgotten
+
+Selectively chooses what it remembers
+
+Selectively decides to forget
+
+Selects how much of it’s memory to output
+
+- Cell state: a memory unit that can carry information across many time steps
+- Hidden state: the hidden state is updated at each time step, but it interacts with the cell state via gates
+
+- Input gate: controls how much of the new input to store in the cell state
+- Forget gate: decides which part of the cell state to forget
+- Output gate: determines how much of the current cell state to pass to the next hidden state and the output
+
+### Gated Recurrent Unit GRU
+
+Simpler than the standard LSTM
+
+- Merge the cell state and hidden state
+- Reset gate: determines how much of the previous hidden state to forget
+- Update gate: combines the forget and input gates, controls how much of the previous hidden state to keep and how much of the current input to pass to the next hidden state
+
+
+
 ## 1. Why is bias used in NN?
 
 Bias term is a constant value that shifts the output. 
