@@ -70,34 +70,36 @@ def dfs(matrix):
 ```
 
 ## BFS
+
+https://leetcode.com/problems/number-of-islands/
+
 ```
-from collections import deque
+def numIslands(self, grid: List[List[str]]) -> int:
+    island = 0
+    rows, cols = len(grid), len(grid[0])
+    visited = set()
 
-def bfs(matrix):
-  # Check for an empty matrix/graph.
-  if not matrix:
-    return []
+    def bfs(r, c):
+        queue = deque()
+        queue.append((r, c))
+        visited.add((r, c))
+        
+        while queue:
+            curr_i, curr_j = queue.popleft()
+            directions = [[1,0],[-1,0],[0,1],[0,-1]]
 
-  rows, cols = len(matrix), len(matrix[0])
-  visited = set()
-  directions = ((0, 1), (0, -1), (1, 0), (-1, 0))
-
-  def traverse(i, j):
-    queue = deque([(i, j)])
-    while queue:
-      curr_i, curr_j = queue.popleft()
-      if (curr_i, curr_j) not in visited:
-        visited.add((curr_i, curr_j))
-        # Traverse neighbors.
-        for direction in directions:
-          next_i, next_j = curr_i + direction[0], curr_j + direction[1]
-          if 0 <= next_i < rows and 0 <= next_j < cols:
-            # Add in question-specific checks, where relevant.
-            queue.append((next_i, next_j))
-
-  for i in range(rows):
-    for j in range(cols):
-      traverse(i, j)
+            for dr, dc in directions:
+                next_i, next_j = curr_i + dr, curr_j + dc
+                if 0 <= next_i < rows and 0 <= next_j < cols and grid[next_i][next_j] == "1" and (next_i, next_j) not in visited:
+                    queue.append((next_i, next_j))
+                    visited.add((next_i, next_j))
+    
+    for r in range(rows):
+        for c in range(cols):
+            if grid[r][c] == "1" and (r, c) not in visited:
+                island = island + 1
+                bfs(r, c)
+    return island
 ```
 
 ## Linked List
