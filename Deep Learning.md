@@ -63,7 +63,17 @@ Simpler than the standard LSTM
 
 Attention mechanism allows the model to focus on different parts of the input sequence when generating each element of the output sequence, instead of relying solely on the hidden state passed through each time step
 
+Attention assigns weights to different parts of the input data
+
 Transformer processes the entire sequence in parallel, using self-attention to figure out which parts of the sequence are important in relation to each other
+
+Self-attention mechanism computes the relationships between different positions in a single sequence by using query, key, and value vectors
+
+### BERT
+
+A pre-trained language model that uses the encoder part of the Transformer to capture bidirectional context, meaning it looks at both the left and right contexts of a word in a sentence during training
+
+BERT processes a sentence in both directions simultaneously
 
 ## 1. Why is bias used in NN?
 
