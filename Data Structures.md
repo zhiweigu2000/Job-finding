@@ -141,3 +141,24 @@ def reorderList(self, head: Optional[ListNode]) -> None:
         B = B_next
 ```
 
+## Backtrack
+
+https://leetcode.com/problems/combinations/description/
+
+```
+def combine(self, n: int, k: int) -> List[List[int]]:
+    res = []
+    comb = []
+    def backtrack(start):
+        if len(comb) == k:
+            res.append(comb[:])
+            return
+        for i in range(start, n + 1):
+            comb.append(i)
+            backtrack(i + 1)
+            comb.pop()
+    backtrack(1)
+    return res
+```
+
+
