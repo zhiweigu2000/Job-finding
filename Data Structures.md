@@ -143,22 +143,26 @@ def reorderList(self, head: Optional[ListNode]) -> None:
 
 ## Backtrack
 
-https://leetcode.com/problems/combinations/description/
+https://leetcode.com/problems/combination-sum/
 
 ```
-def combine(self, n: int, k: int) -> List[List[int]]:
+def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
     res = []
-    comb = []
-    def backtrack(start):
-        if len(comb) == k:
+
+    def backtrack(idx, comb, total):
+        if total == target:
             res.append(comb[:])
             return
-        for i in range(start, n + 1):
-            comb.append(i)
-            backtrack(i + 1)
-            comb.pop()
-    backtrack(1)
-    return res
+        if total > target or idx >= len(candidates):
+            return
+        comb.append(candidates[idx])
+        backtrack(idx, comb, total + candidates[idx])
+        comb.pop()
+        backtrack(idx + 1, comb, total)
+
+        return res
+    
+    return backtrack(0, [], 0)
 ```
 
 
