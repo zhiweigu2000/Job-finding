@@ -113,8 +113,8 @@ def reorderList(self, head: Optional[ListNode]) -> None:
     """
     # Find mid point
     slow = head
-    fast = head
-    while fast.next and fast.next.next:
+    fast = head.next
+    while fast and fast.next:
         fast = fast.next.next
         slow = slow.next
     
@@ -140,7 +140,6 @@ def reorderList(self, head: Optional[ListNode]) -> None:
         A = A_next
         B = B_next
 ```
-
 ## Backtrack
 
 https://leetcode.com/problems/combination-sum/
