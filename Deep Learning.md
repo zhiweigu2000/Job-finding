@@ -46,7 +46,6 @@ Selects how much of it’s memory to output
 
 - Cell state: a memory unit that can carry information across many time steps
 - Hidden state: the hidden state is updated at each time step, but it interacts with the cell state via gates
-
 - Input gate: controls how much of the new input to store in the cell state
 - Forget gate: decides which part of the cell state to forget
 - Output gate: determines how much of the current cell state to pass to the next hidden state and the output
