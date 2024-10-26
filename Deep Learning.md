@@ -68,11 +68,17 @@ Transformer processes the entire sequence in parallel, using self-attention to f
 
 Self-attention mechanism computes the relationships between different positions in a single sequence by using query, key, and value vectors
 
+Task: translation
+
 ### BERT
 
 A pre-trained language model that uses the encoder part of the Transformer to capture bidirectional context, meaning it looks at both the left and right contexts of a word in a sentence during training
 
 BERT processes a sentence in both directions simultaneously
+
+Tasks: masked language model, next sentence prediction
+
+Input = token embedding + segment embedding + position embedding
 
 ## 1. Why is bias used in NN?
 
