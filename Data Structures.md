@@ -1,3 +1,23 @@
+## Array Sliding Window
+
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
+```
+def lengthOfLongestSubstring(self, s: str) -> int:
+    left = 0
+    max_length = 0
+    char_set = set()
+
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left = left + 1
+        char_set.add(s[right])
+        max_length = max(max_length, right - left + 1)
+    
+    return max_length
+```
+
 ## Binary Search
 
 https://leetcode.com/problems/binary-search/
