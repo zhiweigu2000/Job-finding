@@ -37,6 +37,24 @@ def search(self, nums: List[int], target: int) -> int:
     return -1
 ```
 
+## Inorder traversal
+
+https://leetcode.com/problems/kth-smallest-element-in-a-bst/
+
+```
+def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+    values = []
+    self.inorder(root, values)
+    return values[k - 1]
+
+def inorder(self, root, values):
+    if root is None:
+        return
+    self.inorder(root.left, values)
+    values.append(root.val)
+    self.inorder(root.right, values)
+```
+
 ## Binary Tree Level Order Traversal
 
 https://leetcode.com/problems/binary-tree-level-order-traversal/
